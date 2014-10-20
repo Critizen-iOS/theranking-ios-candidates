@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  TRCodeTest
+
+  Created by Oscar on 18/10/14.
+  Copyright (c) 2014 Skyweb Production. All rights reserved.
+*/
+
+"_APP_NAME" = "500px";
+"_HOME_LOADING_HUD" = "Loading...";
+
+"_SECTION_PICTURE" = "Photo";
+"_SECTION_USER" = "User";
+"_SECTION_CAMERA" = "Camera Information";
+
+"_PICTURE_NAME" = "Name";
+"_PICTURE_DESCRIPTION" = "Description";
+"_CAMERA_NAME" = "Camera";
