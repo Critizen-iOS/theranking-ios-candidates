@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FHDPopularViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularCell" id="gTV-IL-0wX" customClass="FHDPopularViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nCC-Ok-6v8">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="nCC-Ok-6v8" secondAttribute="height" multiplier="1:1" id="Isa-wr-9Ym"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVH-2s-3Vn">
+                        <rect key="frame" x="112" y="0.0" width="38" height="38"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="jVH-2s-3Vn" secondAttribute="height" multiplier="1:1" id="QrA-Hb-OXi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="m5b-nY-Fte">
+                        <rect key="frame" x="57" y="57" width="37" height="37"/>
+                    </activityIndicatorView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of item" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heg-A7-FLg">
+                        <rect key="frame" x="2" y="134" width="148" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="nCC-Ok-6v8" secondAttribute="bottom" id="0dN-l7-gmK"/>
+                <constraint firstAttribute="trailing" secondItem="nCC-Ok-6v8" secondAttribute="trailing" id="CcI-8N-vur"/>
+                <constraint firstAttribute="trailing" secondItem="jVH-2s-3Vn" secondAttribute="trailing" id="IYv-8D-ZBw"/>
+                <constraint firstAttribute="centerY" secondItem="m5b-nY-Fte" secondAttribute="centerY" id="M7T-Uq-7pA"/>
+                <constraint firstItem="nCC-Ok-6v8" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P8I-SF-reZ"/>
+                <constraint firstItem="nCC-Ok-6v8" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Rgc-rO-Q8A"/>
+                <constraint firstAttribute="bottom" secondItem="heg-A7-FLg" secondAttribute="bottom" id="aLq-Xl-s5C"/>
+                <constraint firstItem="heg-A7-FLg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="fhv-te-zPy"/>
+                <constraint firstAttribute="trailing" secondItem="heg-A7-FLg" secondAttribute="trailing" id="kYM-7n-Ctj"/>
+                <constraint firstItem="jVH-2s-3Vn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="p7S-fN-wNg"/>
+                <constraint firstAttribute="centerX" secondItem="m5b-nY-Fte" secondAttribute="centerX" id="yOb-zl-vcR"/>
+            </constraints>
+            <connections>
+                <outlet property="activityView" destination="m5b-nY-Fte" id="SuU-vi-xpO"/>
+                <outlet property="imageView" destination="nCC-Ok-6v8" id="rj7-PT-m1H"/>
+                <outlet property="nameLbl" destination="heg-A7-FLg" id="beF-nH-vav"/>
+                <outlet property="ratingLbl" destination="jVH-2s-3Vn" id="brY-Tm-eXu"/>
+            </connections>
+            <point key="canvasLocation" x="362" y="265"/>
+        </collectionViewCell>
+    </objects>
+</document>
