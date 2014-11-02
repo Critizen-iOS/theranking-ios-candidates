@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Camera" representedClassName="Camera" syncable="YES">
+        <attribute name="camera_aperture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="camera_focal_length" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="camera_iso" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="camera_lens" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="camera_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="camera_shutter_speed" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Photo" inverseName="photo_camera_info" inverseEntity="Photo" syncable="YES"/>
+    </entity>
+    <entity name="Photo" representedClassName="Photo" syncable="YES">
+        <attribute name="photo_description" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo_id" optional="YES" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="photo_imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo_latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="photo_longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="photo_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo_rating" optional="YES" attributeType="Double" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <relationship name="photo_camera_info" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Camera" inverseName="photo" inverseEntity="Camera" syncable="YES"/>
+        <relationship name="photo_user_info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="photo" inverseEntity="User" spotlightIndexingEnabled="YES" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="user_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="user_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photo" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Photo" inverseName="photo_user_info" inverseEntity="Photo" spotlightIndexingEnabled="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Camera" positionX="-36" positionY="63" width="128" height="148"/>
+        <element name="Photo" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="User" positionX="-54" positionY="-9" width="128" height="103"/>
+    </elements>
+</model>

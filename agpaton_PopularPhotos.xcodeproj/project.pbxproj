@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92544D9C1A06363700D8AB7C /* PhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92544D9A1A06363700D8AB7C /* PhotoViewCell.m */; };
+		92544D9D1A06363700D8AB7C /* PhotoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92544D9B1A06363700D8AB7C /* PhotoViewCell.xib */; };
+		92544DA11A064A1300D8AB7C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92544D9F1A064A1300D8AB7C /* DetailViewController.m */; };
+		92544DA21A064A1300D8AB7C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92544DA01A064A1300D8AB7C /* DetailViewController.xib */; };
+		92544DA61A064DB600D8AB7C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92544DA51A064DB600D8AB7C /* ViewController.xib */; };
+		92544DAA1A06C55600D8AB7C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 92544DA91A06C55600D8AB7C /* Photo.m */; };
+		92869D061A03C440001DE220 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D051A03C440001DE220 /* main.m */; };
+		92869D091A03C440001DE220 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D081A03C440001DE220 /* AppDelegate.m */; };
+		92869D0C1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92869D0A1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodeld */; };
+		92869D0F1A03C440001DE220 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D0E1A03C440001DE220 /* ViewController.m */; };
+		92869D121A03C440001DE220 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92869D101A03C440001DE220 /* Main.storyboard */; };
+		92869D141A03C440001DE220 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92869D131A03C440001DE220 /* Images.xcassets */; };
+		92869D171A03C440001DE220 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92869D151A03C440001DE220 /* LaunchScreen.xib */; };
+		92869D231A03C440001DE220 /* agpaton_PopularPhotosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D221A03C440001DE220 /* agpaton_PopularPhotosTests.m */; };
+		92869D2E1A03C506001DE220 /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D2D1A03C506001DE220 /* Services.m */; };
+		92869D471A03D67C001DE220 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D461A03D67C001DE220 /* Camera.m */; };
+		92869D4D1A03D67D001DE220 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D4C1A03D67D001DE220 /* User.m */; };
+		92869D521A03DEC7001DE220 /* ImageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 92869D511A03DEC7001DE220 /* ImageTools.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92869D1D1A03C440001DE220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92869CF81A03C43F001DE220 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92869CFF1A03C43F001DE220;
+			remoteInfo = agpaton_PopularPhotos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92544D991A06363700D8AB7C /* PhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewCell.h; path = ../PhotoViewCell.h; sourceTree = "<group>"; };
+		92544D9A1A06363700D8AB7C /* PhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewCell.m; path = ../PhotoViewCell.m; sourceTree = "<group>"; };
+		92544D9B1A06363700D8AB7C /* PhotoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoViewCell.xib; path = ../PhotoViewCell.xib; sourceTree = "<group>"; };
+		92544D9E1A064A1300D8AB7C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		92544D9F1A064A1300D8AB7C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		92544DA01A064A1300D8AB7C /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		92544DA51A064DB600D8AB7C /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		92544DA81A06C55600D8AB7C /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		92544DA91A06C55600D8AB7C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		92869D001A03C440001DE220 /* agpaton_PopularPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = agpaton_PopularPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92869D041A03C440001DE220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92869D051A03C440001DE220 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92869D071A03C440001DE220 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92869D081A03C440001DE220 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92869D0B1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = agpaton_PopularPhotos.xcdatamodel; sourceTree = "<group>"; };
+		92869D0D1A03C440001DE220 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		92869D0E1A03C440001DE220 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		92869D111A03C440001DE220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92869D131A03C440001DE220 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		92869D161A03C440001DE220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		92869D1C1A03C440001DE220 /* agpaton_PopularPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = agpaton_PopularPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92869D211A03C440001DE220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92869D221A03C440001DE220 /* agpaton_PopularPhotosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = agpaton_PopularPhotosTests.m; sourceTree = "<group>"; };
+		92869D2C1A03C506001DE220 /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
+		92869D2D1A03C506001DE220 /* Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Services.m; sourceTree = "<group>"; };
+		92869D451A03D67C001DE220 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		92869D461A03D67C001DE220 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		92869D4B1A03D67D001DE220 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		92869D4C1A03D67D001DE220 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		92869D501A03DEC7001DE220 /* ImageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTools.h; sourceTree = "<group>"; };
+		92869D511A03DEC7001DE220 /* ImageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTools.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92869CFD1A03C43F001DE220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92869D191A03C440001DE220 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92869CF71A03C43E001DE220 = {
+			isa = PBXGroup;
+			children = (
+				92869D021A03C440001DE220 /* agpaton_PopularPhotos */,
+				92869D1F1A03C440001DE220 /* agpaton_PopularPhotosTests */,
+				92869D011A03C440001DE220 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		92869D011A03C440001DE220 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92869D001A03C440001DE220 /* agpaton_PopularPhotos.app */,
+				92869D1C1A03C440001DE220 /* agpaton_PopularPhotosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92869D021A03C440001DE220 /* agpaton_PopularPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				92869D071A03C440001DE220 /* AppDelegate.h */,
+				92869D081A03C440001DE220 /* AppDelegate.m */,
+				92869D0D1A03C440001DE220 /* ViewController.h */,
+				92869D0E1A03C440001DE220 /* ViewController.m */,
+				92544DA51A064DB600D8AB7C /* ViewController.xib */,
+				92544D991A06363700D8AB7C /* PhotoViewCell.h */,
+				92544D9A1A06363700D8AB7C /* PhotoViewCell.m */,
+				92544D9B1A06363700D8AB7C /* PhotoViewCell.xib */,
+				92544D9E1A064A1300D8AB7C /* DetailViewController.h */,
+				92544D9F1A064A1300D8AB7C /* DetailViewController.m */,
+				92544DA01A064A1300D8AB7C /* DetailViewController.xib */,
+				92869D4F1A03DEA1001DE220 /* Tools */,
+				92869D2F1A03C788001DE220 /* Model */,
+				92869D101A03C440001DE220 /* Main.storyboard */,
+				92869D131A03C440001DE220 /* Images.xcassets */,
+				92869D151A03C440001DE220 /* LaunchScreen.xib */,
+				92869D0A1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodeld */,
+				92869D031A03C440001DE220 /* Supporting Files */,
+			);
+			path = agpaton_PopularPhotos;
+			sourceTree = "<group>";
+		};
+		92869D031A03C440001DE220 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92869D041A03C440001DE220 /* Info.plist */,
+				92869D051A03C440001DE220 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92869D1F1A03C440001DE220 /* agpaton_PopularPhotosTests */ = {
+			isa = PBXGroup;
+			children = (
+				92869D221A03C440001DE220 /* agpaton_PopularPhotosTests.m */,
+				92869D201A03C440001DE220 /* Supporting Files */,
+			);
+			path = agpaton_PopularPhotosTests;
+			sourceTree = "<group>";
+		};
+		92869D201A03C440001DE220 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92869D211A03C440001DE220 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92869D2F1A03C788001DE220 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92869D4B1A03D67D001DE220 /* User.h */,
+				92544DA81A06C55600D8AB7C /* Photo.h */,
+				92544DA91A06C55600D8AB7C /* Photo.m */,
+				92869D4C1A03D67D001DE220 /* User.m */,
+				92869D451A03D67C001DE220 /* Camera.h */,
+				92869D461A03D67C001DE220 /* Camera.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		92869D4F1A03DEA1001DE220 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				92869D2C1A03C506001DE220 /* Services.h */,
+				92869D2D1A03C506001DE220 /* Services.m */,
+				92869D501A03DEC7001DE220 /* ImageTools.h */,
+				92869D511A03DEC7001DE220 /* ImageTools.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92869CFF1A03C43F001DE220 /* agpaton_PopularPhotos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92869D261A03C440001DE220 /* Build configuration list for PBXNativeTarget "agpaton_PopularPhotos" */;
+			buildPhases = (
+				92869CFC1A03C43F001DE220 /* Sources */,
+				92869CFD1A03C43F001DE220 /* Frameworks */,
+				92869CFE1A03C43F001DE220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = agpaton_PopularPhotos;
+			productName = agpaton_PopularPhotos;
+			productReference = 92869D001A03C440001DE220 /* agpaton_PopularPhotos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92869D1B1A03C440001DE220 /* agpaton_PopularPhotosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92869D291A03C440001DE220 /* Build configuration list for PBXNativeTarget "agpaton_PopularPhotosTests" */;
+			buildPhases = (
+				92869D181A03C440001DE220 /* Sources */,
+				92869D191A03C440001DE220 /* Frameworks */,
+				92869D1A1A03C440001DE220 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92869D1E1A03C440001DE220 /* PBXTargetDependency */,
+			);
+			name = agpaton_PopularPhotosTests;
+			productName = agpaton_PopularPhotosTests;
+			productReference = 92869D1C1A03C440001DE220 /* agpaton_PopularPhotosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92869CF81A03C43F001DE220 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Alejandro González Patón";
+				TargetAttributes = {
+					92869CFF1A03C43F001DE220 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					92869D1B1A03C440001DE220 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 92869CFF1A03C43F001DE220;
+					};
+				};
+			};
+			buildConfigurationList = 92869CFB1A03C43F001DE220 /* Build configuration list for PBXProject "agpaton_PopularPhotos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92869CF71A03C43E001DE220;
+			productRefGroup = 92869D011A03C440001DE220 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92869CFF1A03C43F001DE220 /* agpaton_PopularPhotos */,
+				92869D1B1A03C440001DE220 /* agpaton_PopularPhotosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92869CFE1A03C43F001DE220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92869D121A03C440001DE220 /* Main.storyboard in Resources */,
+				92869D171A03C440001DE220 /* LaunchScreen.xib in Resources */,
+				92544DA21A064A1300D8AB7C /* DetailViewController.xib in Resources */,
+				92869D141A03C440001DE220 /* Images.xcassets in Resources */,
+				92544DA61A064DB600D8AB7C /* ViewController.xib in Resources */,
+				92544D9D1A06363700D8AB7C /* PhotoViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92869D1A1A03C440001DE220 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92869CFC1A03C43F001DE220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92869D4D1A03D67D001DE220 /* User.m in Sources */,
+				92869D0C1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodeld in Sources */,
+				92869D091A03C440001DE220 /* AppDelegate.m in Sources */,
+				92869D2E1A03C506001DE220 /* Services.m in Sources */,
+				92544D9C1A06363700D8AB7C /* PhotoViewCell.m in Sources */,
+				92869D0F1A03C440001DE220 /* ViewController.m in Sources */,
+				92544DA11A064A1300D8AB7C /* DetailViewController.m in Sources */,
+				92869D521A03DEC7001DE220 /* ImageTools.m in Sources */,
+				92544DAA1A06C55600D8AB7C /* Photo.m in Sources */,
+				92869D471A03D67C001DE220 /* Camera.m in Sources */,
+				92869D061A03C440001DE220 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92869D181A03C440001DE220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92869D231A03C440001DE220 /* agpaton_PopularPhotosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92869D1E1A03C440001DE220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92869CFF1A03C43F001DE220 /* agpaton_PopularPhotos */;
+			targetProxy = 92869D1D1A03C440001DE220 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92869D101A03C440001DE220 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92869D111A03C440001DE220 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92869D151A03C440001DE220 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92869D161A03C440001DE220 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92869D241A03C440001DE220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92869D251A03C440001DE220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92869D271A03C440001DE220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = agpaton_PopularPhotos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		92869D281A03C440001DE220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = agpaton_PopularPhotos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		92869D2A1A03C440001DE220 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = agpaton_PopularPhotosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/agpaton_PopularPhotos.app/agpaton_PopularPhotos";
+			};
+			name = Debug;
+		};
+		92869D2B1A03C440001DE220 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = agpaton_PopularPhotosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/agpaton_PopularPhotos.app/agpaton_PopularPhotos";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92869CFB1A03C43F001DE220 /* Build configuration list for PBXProject "agpaton_PopularPhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92869D241A03C440001DE220 /* Debug */,
+				92869D251A03C440001DE220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92869D261A03C440001DE220 /* Build configuration list for PBXNativeTarget "agpaton_PopularPhotos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92869D271A03C440001DE220 /* Debug */,
+				92869D281A03C440001DE220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92869D291A03C440001DE220 /* Build configuration list for PBXNativeTarget "agpaton_PopularPhotosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92869D2A1A03C440001DE220 /* Debug */,
+				92869D2B1A03C440001DE220 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		92869D0A1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				92869D0B1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodel */,
+			);
+			currentVersion = 92869D0B1A03C440001DE220 /* agpaton_PopularPhotos.xcdatamodel */;
+			path = agpaton_PopularPhotos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 92869CF81A03C43F001DE220 /* Project object */;
+}
