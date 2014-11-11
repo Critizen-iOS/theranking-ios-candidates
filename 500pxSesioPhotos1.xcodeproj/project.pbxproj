@@ -12,6 +12,8 @@
 		E21516151A129ABD00BA6991 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E21516141A129ABD00BA6991 /* Images.xcassets */; };
 		E21516181A129ABD00BA6991 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E21516161A129ABD00BA6991 /* LaunchScreen.xib */; };
 		E21516241A129ABD00BA6991 /* _00pxSesioPhotos1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E21516231A129ABD00BA6991 /* _00pxSesioPhotos1Tests.m */; };
+		E2C99B4E1A12CAD300400F9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C99B4C1A12CAD300400F9C /* ViewController.m */; };
+		E2C99B4F1A12CAD300400F9C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C99B4D1A12CAD300400F9C /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 		E215161D1A129ABD00BA6991 /* 500pxSesioPhotos1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 500pxSesioPhotos1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E21516221A129ABD00BA6991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E21516231A129ABD00BA6991 /* _00pxSesioPhotos1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _00pxSesioPhotos1Tests.m; sourceTree = "<group>"; };
+		E2C99B4B1A12CAD300400F9C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E2C99B4C1A12CAD300400F9C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E2C99B4D1A12CAD300400F9C /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,9 @@
 			children = (
 				E21516111A129ABD00BA6991 /* AppDelegate.h */,
 				E21516121A129ABD00BA6991 /* AppDelegate.m */,
+				E2C99B4B1A12CAD300400F9C /* ViewController.h */,
+				E2C99B4C1A12CAD300400F9C /* ViewController.m */,
+				E2C99B4D1A12CAD300400F9C /* ViewController.xib */,
 				E21516141A129ABD00BA6991 /* Images.xcassets */,
 				E21516161A129ABD00BA6991 /* LaunchScreen.xib */,
 				E215160D1A129ABD00BA6991 /* Supporting Files */,
@@ -192,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E21516181A129ABD00BA6991 /* LaunchScreen.xib in Resources */,
+				E2C99B4F1A12CAD300400F9C /* ViewController.xib in Resources */,
 				E21516151A129ABD00BA6991 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C99B4E1A12CAD300400F9C /* ViewController.m in Sources */,
 				E21516131A129ABD00BA6991 /* AppDelegate.m in Sources */,
 				E21516101A129ABD00BA6991 /* main.m in Sources */,
 			);
@@ -394,6 +404,7 @@
 				E21516291A129ABD00BA6991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E215162A1A129ABD00BA6991 /* Build configuration list for PBXNativeTarget "500pxSesioPhotos1Tests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +413,7 @@
 				E215162C1A129ABD00BA6991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
