@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Ponemos nombre al Navigation
+    self.navigationItem.title = @"500pxSesioPhotos";
+    
     //Registramos la celda customizada
     [self.photosCollectionView registerNib:[UINib nibWithNibName:@"CustomCellCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     
