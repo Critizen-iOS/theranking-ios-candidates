@@ -21,6 +21,8 @@
 @implementation AppDelegate
 
 
+//https://api.500px.com/v1/photos?feature=popular&page=1&consumer_key=Rspv4Pq9q2DzvrBFcQdvisEh5xedohf7pgHZWU3o
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -29,7 +31,16 @@
     
     //Decimos a nuestro App Delegate la vista principal que debe cargar
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;    [self.window makeKeyAndVisible];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    
+    //[[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
+    //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    navController.navigationBar.translucent = YES;
+    
+    self.window.rootViewController = navController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

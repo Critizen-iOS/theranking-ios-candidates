@@ -8,6 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class DetailViewController;
+
+@interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>{
+    
+    
+    NSMutableArray *datos;
+    
+}
+
+@property (strong, nonatomic) NSDictionary *datosFotos;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *photosCollectionView;
+
+@property (strong, nonatomic) DetailViewController *detailViewController;
+
+
 
 @end

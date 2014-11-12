@@ -6,14 +6,38 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="photosCollectionView" destination="hRS-dL-LJY" id="10u-R4-K1M"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="GJp-jL-suS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hRS-dL-LJY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="9pL-cj-coc">
+                        <size key="itemSize" width="155" height="155"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Nvk-Yr-bsk"/>
+                        <outlet property="delegate" destination="-1" id="8nU-pa-n8e"/>
+                    </connections>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hRS-dL-LJY" secondAttribute="bottom" id="WIH-5H-3Ne"/>
+                <constraint firstAttribute="centerY" secondItem="hRS-dL-LJY" secondAttribute="centerY" id="ZFn-ev-bPK"/>
+                <constraint firstAttribute="trailing" secondItem="hRS-dL-LJY" secondAttribute="trailing" id="k8Z-Of-iEg"/>
+                <constraint firstItem="hRS-dL-LJY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rqI-TG-ctm"/>
+                <constraint firstItem="hRS-dL-LJY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="stA-Wz-lOX"/>
+            </constraints>
             <point key="canvasLocation" x="413" y="447"/>
         </view>
     </objects>
