@@ -19,9 +19,9 @@
 
 @property (strong,nonatomic) IBOutlet UIImageView *userPicture;
 
-@property (strong,nonatomic) IBOutlet UILabel *infoCamera;
+@property (strong,nonatomic) IBOutlet UILabel *nameUser;
 
-@property (strong,nonatomic) IBOutlet UILabel *infoCountry;
+@property (strong,nonatomic) IBOutlet UILabel *infoCamera;
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 

@@ -91,9 +91,9 @@
         self.infoCamera.text = descriptionCamera;
     }
     
-    if([NSNull null] != [[self.detailItem valueForKey:@"user"] objectForKey:@"country"]) {
-        NSString *countryCapture = [[self.detailItem valueForKey:@"user"] objectForKey:@"country"];
-        self.infoCountry.text = countryCapture;
+    if([NSNull null] != [[self.detailItem valueForKey:@"user"] objectForKey:@"firstname"]) {
+        NSString *countryCapture = [[self.detailItem valueForKey:@"user"] objectForKey:@"firstname"];
+        self.nameUser.text = countryCapture;
     }
     }
 
@@ -115,7 +115,7 @@
         location.latitude = [latitudUser floatValue];
     }else{
         
-        location.latitude = 40.476724;
+        location.latitude = 0;
     
 
     }
@@ -125,7 +125,7 @@
         location.longitude = [longitudeUser floatValue];
     }else{
         
-        location.longitude = -3.685765;
+        location.longitude = 0;
     }
     
     region.span = span;
