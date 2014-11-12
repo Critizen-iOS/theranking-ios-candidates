@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+//Importamos el ViewController
+#import "ViewController.h"
+
+//Importamos esta clase para utilizar la API de 500px
+#import <PXAPI/PXAPI.h>
+
 
 @interface AppDelegate ()
 
@@ -17,9 +23,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor greenColor];
-    [self.window makeKeyAndVisible];
+    
+    //Establecemos las keys
+     [PXRequest setConsumerKey:@"Rspv4Pq9q2DzvrBFcQdvisEh5xedohf7pgHZWU3o" consumerSecret:@"5z012ZZRJ7BrhMNqNGgzbhjLpEkou5M4liGDfgqo"];
+    
+    //Decimos a nuestro App Delegate la vista principal que debe cargar
+    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;    [self.window makeKeyAndVisible];
     return YES;
 }
 
