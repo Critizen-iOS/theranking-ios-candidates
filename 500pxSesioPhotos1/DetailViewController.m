@@ -17,20 +17,30 @@
 
 @synthesize detailImage;
 
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self configureView];
+    
+
+}
+
+#pragma mark CREACIÓN Y ACTUALIZACIÓN DE LA VISTA
+
 - (void)setDetailItem:(id)newDetailItem
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
         
-        // Update the view.
+        //Actualizamos la Vista
         [self configureView];
     }
 }
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-    
+    //Actualizamos la vista
     self.detailImage.image = nil;
     self.detailImage.clipsToBounds = YES;
     
@@ -85,10 +95,9 @@
         NSString *countryCapture = [[self.detailItem valueForKey:@"user"] objectForKey:@"country"];
         self.infoCountry.text = countryCapture;
     }
-    
-    
     }
 
+#pragma mark CREACIÓN DEL MAPA
 
 -(void)viewDidAppear:(BOOL)animated{
     
@@ -119,9 +128,6 @@
         location.longitude = -3.685765;
     }
     
-    //location.latitude = 40.436659;
-    //location.longitude = -3.668805;
-    
     region.span = span;
     
     region.center = location;
@@ -143,32 +149,7 @@
     [marca setSubtitle:@"Una foto genial"];
     
     [self.mapView addAnnotation:marca];
-
     
 }
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self configureView];
-    
-    
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

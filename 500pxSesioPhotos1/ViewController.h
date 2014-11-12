@@ -10,12 +10,9 @@
 
 @class DetailViewController;
 
-@interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>{
-    
-    
-    NSMutableArray *datos;
-    
-}
+@interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property (strong, nonatomic) NSMutableArray *datos;
 
 @property (strong, nonatomic) NSDictionary *datosFotos;
 

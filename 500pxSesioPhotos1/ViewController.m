@@ -32,16 +32,19 @@
     // indicamos la url desde donde tomaremos los datos y los convertimos a un objeto NSDATA
     NSURL *url = [NSURL URLWithString:@"https://api.500px.com/v1/photos?feature=popular&page=1&consumer_key=Rspv4Pq9q2DzvrBFcQdvisEh5xedohf7pgHZWU3o"];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
+    
     //Llamamos al método aParsear pasándole como parámetro el objeto NSData
     [self aParsear:urlData];
     
 }
 
 
+#pragma mark PARSEO DE LOS DATOS
+
 - (void) aParsear:(NSData *)urlData
 {
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         
         NSError *error = nil;
         
@@ -56,17 +59,17 @@
             NSLog(@"ERROR: %@", [error localizedDescription]);
         }
         else {
-            datos = [jsonDic objectForKey:@"photos"];
-            
-            NSLog(@"%@", datos = [jsonDic objectForKey:@"photos"] );
+            self.datos = [jsonDic objectForKey:@"photos"];
         }
         
     });
     
 }
 
+#pragma mark COLLECTION VIEW DELEGADOS
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return datos.count;
+    return self.datos.count;
 }
 
 
@@ -74,7 +77,7 @@
     
     CustomCellCollectionViewCell *cell = [self.photosCollectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    self.datosFotos = [datos objectAtIndex:indexPath.row];
+    self.datosFotos = [self.datos objectAtIndex:indexPath.row];
     
     UILabel *rating = (UILabel *) [cell viewWithTag:300];
     
@@ -104,7 +107,7 @@
     if (!self.detailViewController) {
         self.detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     }
-    NSDate *object = [datos objectAtIndex:indexPath.row];
+    NSDate *object = [self.datos objectAtIndex:indexPath.row];
     self.detailViewController.detailItem = object;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
     
