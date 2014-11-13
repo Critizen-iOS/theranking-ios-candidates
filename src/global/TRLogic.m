@@ -126,7 +126,10 @@
                 return;
             }
 
-            DLOG(@"Maybe I should use the callback here… %@", photos);
+            dispatch_async_ui(^{
+                    [TRLogic get].thumbs = photos;
+                    callback(nil);
+                });
         }];
     [task resume];
 }
