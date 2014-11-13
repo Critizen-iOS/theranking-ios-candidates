@@ -1,6 +1,6 @@
 #import "AppDelegate.h"
 
-#import "DummyVC.h"
+#import "TRGridVC.h"
 
 @implementation AppDelegate
 
@@ -10,7 +10,7 @@
     self.window = [[UIWindow alloc]
         initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor redColor];
-    self.window.rootViewController = [DummyVC new];
+    self.window.rootViewController = [TRGridVC new];
     [self.window makeKeyAndVisible];
     return YES;
 }

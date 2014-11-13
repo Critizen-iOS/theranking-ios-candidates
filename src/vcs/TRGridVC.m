@@ -1,10 +1,10 @@
-#import "DummyVC.h"
+#import "TRGridVC.h"
 
 #import "TRLogic.h"
 #import "ELHASO.h"
 
 
-@implementation DummyVC
+@implementation TRGridVC
 
 - (void)viewDidAppear:(BOOL)animated
 {
