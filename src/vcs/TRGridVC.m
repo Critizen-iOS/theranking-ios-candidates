@@ -4,6 +4,7 @@
 #import "TRGridCell.h"
 #import "TRLogic.h"
 #import "TRPhotoData.h"
+#import "TRPhotoDetailVC.h"
 
 
 #define kTRGridCell @"TRGridCell"
@@ -82,10 +83,13 @@
 - (void)collectionView:(UICollectionView*)collectionView
     didSelectItemAtIndexPath:(NSIndexPath*)indexPath
 {
-    TRPhotoData* photoData = self.items[indexPath.row];
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 
-    DLOG(@"Should do something with %@, like maybe show it", photoData);
+    TRPhotoDetailVC* vc = [TRPhotoDetailVC new];
+    vc.photoData = self.items[indexPath.row];
+    UINavigationController *navVc = [[UINavigationController alloc]
+        initWithRootViewController:vc];
+    [self presentViewController:navVc animated:YES completion:nil];
 }
 
 @end
