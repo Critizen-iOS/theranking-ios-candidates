@@ -12,8 +12,9 @@ Obtain list of thumbnails
 
 Prototype:
 
-[https://api.500px.com/v1/photos?feature=highest_rated&image_size=2](https://api.500px.com/v1/photos?feature=highest_rated&image_size=2&consumer_key=AVN1T2dh0PbZffBoLsQHlqToFUUUfptMhVM5whV8)
+[https://api.500px.com/v1/photos?feature=popular&sort=rating&image_size=2](https://api.500px.com/v1/photos?feature=popular&sort=rating&image_size=2&consumer_key=AVN1T2dh0PbZffBoLsQHlqToFUUUfptMhVM5whV8)
 
+[Reference](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md).
 The available sizes for the images are:
 
 * [1 70px](https://gp1.wac.edgecastcdn.net/806614/photos/photos.500px.net/89305411/e12531201093b619692261025a5ad69f6a8b1934/1.jpg?v=6).
@@ -31,5 +32,7 @@ Presuming we obtain from the previous list of images the picture with **id**
 89535267 this would be the query to obtain its detailed information:
 
 [https://api.500px.com/v1/photos/89535267?image_size=2](https://api.500px.com/v1/photos/89535267?image_size=2&consumer_key=AVN1T2dh0PbZffBoLsQHlqToFUUUfptMhVM5whV8)
+
+[Reference](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id.md).
 
 
