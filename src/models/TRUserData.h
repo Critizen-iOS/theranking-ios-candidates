@@ -8,4 +8,6 @@
 @property (nonatomic, strong) NSString* country;
 @property (nonatomic, strong) NSURL* avatarUrl;
 
++ (TRUserData*)fromDict:(id)dict;
+
 @end

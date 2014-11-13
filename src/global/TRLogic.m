@@ -1,6 +1,7 @@
 #import "TRLogic.h"
 
 #import "ELHASO.h"
+#import "TRPhotoData.h"
 #import "TRSecrets.h"
 
 
@@ -81,8 +82,8 @@
             }
 
             NSDictionary* dict = CAST(json, NSDictionary);
-            // Did we get no dictionary or the JSON object was not an array?
             if (!dict) {
+                DLOG(@"We didn't get a proper dictionary from %@", json);
                 dispatch_async_ui(^{
                     callback([NSError errorWithDomain:kErrorLogic
                         code:0 userInfo:nil]);
@@ -90,8 +91,42 @@
                 return;
             }
 
-            DLOG(@"Got %@ raw objects", dict);
-            DLOG(@"Maybe I should use the callback here…");
+            NSArray* rawPhotos = CAST(dict[@"photos"], NSArray);
+            if (rawPhotos.count < 1) {
+                DLOG(@"We didn't get a proper photo array from %@", dict);
+                dispatch_async_ui(^{
+                    callback([NSError errorWithDomain:kErrorLogic
+                        code:0 userInfo:nil]);
+                });
+                return;
+            }
+
+            NSMutableArray* photos = [NSMutableArray
+                arrayWithCapacity:rawPhotos.count];
+            // Transform as many JSON objects as we can ignoring errors.
+            for (id rawPhoto in rawPhotos) {
+                TRPhotoData* photoData = [TRPhotoData fromDict:rawPhoto];
+                if (photoData) {
+                    [photos addObject:photoData];
+                } else {
+                    DLOG(@"Error parsing photo, ignoring %@", rawPhoto);
+                }
+            }
+
+            if (photos.count != rawPhotos.count)
+                DLOG(@"Hugh, there were some conversion errors. Oh well…");
+
+            // Were we not able to transform any objects?
+            if (photos.count < 1) {
+                DLOG(@"Could not transform any objects at all!");
+                dispatch_async_ui(^{
+                    callback([NSError errorWithDomain:kErrorLogic
+                        code:0 userInfo:nil]);
+                });
+                return;
+            }
+
+            DLOG(@"Maybe I should use the callback here… %@", photos);
         }];
     [task resume];
 }
