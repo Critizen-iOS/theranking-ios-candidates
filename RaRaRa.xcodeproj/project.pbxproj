@@ -32,6 +32,7 @@
 		D581C43F1A1522AB000D4E0B /* TRLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLogic.m; sourceTree = "<group>"; };
 		D581C4411A15232F000D4E0B /* ELHASO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELHASO.h; sourceTree = "<group>"; };
 		D581C4421A15232F000D4E0B /* ELHASO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELHASO.m; sourceTree = "<group>"; };
+		D581C4441A1529FF000D4E0B /* TRSecrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSecrets.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,7 @@
 				D581C4361A150948000D4E0B /* main.m */,
 				D581C43E1A1522AB000D4E0B /* TRLogic.h */,
 				D581C43F1A1522AB000D4E0B /* TRLogic.m */,
+				D581C4441A1529FF000D4E0B /* TRSecrets.h */,
 			);
 			path = global;
 			sourceTree = "<group>";
