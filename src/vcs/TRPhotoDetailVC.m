@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *cameraLabel;
 @property (strong, nonatomic) IBOutlet UILabel *locationLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *mapHeightConstraint;
+
 @end
 
 @implementation TRPhotoDetailVC
