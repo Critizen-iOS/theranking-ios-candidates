@@ -7,20 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D581C3FE1A1500BA000D4E0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C3FD1A1500BA000D4E0B /* main.m */; };
-		D581C4011A1500BA000D4E0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4001A1500BA000D4E0B /* AppDelegate.m */; };
 		D581C4091A1500BA000D4E0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D581C4081A1500BA000D4E0B /* Images.xcassets */; };
 		D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C40A1A1500BA000D4E0B /* LaunchScreen.xib */; };
+		D581C4311A1508EF000D4E0B /* DummyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C4301A1508EF000D4E0B /* DummyVC.xib */; };
+		D581C43B1A150948000D4E0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4351A150948000D4E0B /* AppDelegate.m */; };
+		D581C43C1A150948000D4E0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4361A150948000D4E0B /* main.m */; };
+		D581C43D1A150948000D4E0B /* DummyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C43A1A150948000D4E0B /* DummyVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D581C3F81A1500BA000D4E0B /* RaRaRa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaRaRa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D581C3FC1A1500BA000D4E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D581C3FD1A1500BA000D4E0B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/global/main.m; sourceTree = "<group>"; };
-		D581C3FF1A1500BA000D4E0B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/global/AppDelegate.h; sourceTree = "<group>"; };
-		D581C4001A1500BA000D4E0B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/global/AppDelegate.m; sourceTree = "<group>"; };
 		D581C4081A1500BA000D4E0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D581C40B1A1500BA000D4E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D581C4301A1508EF000D4E0B /* DummyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DummyVC.xib; sourceTree = "<group>"; };
+		D581C4341A150948000D4E0B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D581C4351A150948000D4E0B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D581C4361A150948000D4E0B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D581C4391A150948000D4E0B /* DummyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyVC.h; sourceTree = "<group>"; };
+		D581C43A1A150948000D4E0B /* DummyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				D581C4211A150496000D4E0B /* resources */,
-				D581C3FA1A1500BA000D4E0B /* src */,
+				D581C4321A150948000D4E0B /* src */,
 				D581C3F91A1500BA000D4E0B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,15 +54,6 @@
 				D581C3F81A1500BA000D4E0B /* RaRaRa.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D581C3FA1A1500BA000D4E0B /* src */ = {
-			isa = PBXGroup;
-			children = (
-				D581C4281A150553000D4E0B /* global */,
-			);
-			name = src;
-			path = RaRaRa;
 			sourceTree = "<group>";
 		};
 		D581C4211A150496000D4E0B /* resources */ = {
@@ -73,6 +69,7 @@
 		D581C4221A1504A6000D4E0B /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				D581C4301A1508EF000D4E0B /* DummyVC.xib */,
 				D581C40A1A1500BA000D4E0B /* LaunchScreen.xib */,
 			);
 			path = ui;
@@ -86,14 +83,40 @@
 			path = plist;
 			sourceTree = "<group>";
 		};
-		D581C4281A150553000D4E0B /* global */ = {
+		D581C4321A150948000D4E0B /* src */ = {
 			isa = PBXGroup;
 			children = (
-				D581C3FF1A1500BA000D4E0B /* AppDelegate.h */,
-				D581C4001A1500BA000D4E0B /* AppDelegate.m */,
-				D581C3FD1A1500BA000D4E0B /* main.m */,
+				D581C4331A150948000D4E0B /* global */,
+				D581C4371A150948000D4E0B /* models */,
+				D581C4381A150948000D4E0B /* vcs */,
 			);
-			name = global;
+			path = src;
+			sourceTree = "<group>";
+		};
+		D581C4331A150948000D4E0B /* global */ = {
+			isa = PBXGroup;
+			children = (
+				D581C4341A150948000D4E0B /* AppDelegate.h */,
+				D581C4351A150948000D4E0B /* AppDelegate.m */,
+				D581C4361A150948000D4E0B /* main.m */,
+			);
+			path = global;
+			sourceTree = "<group>";
+		};
+		D581C4371A150948000D4E0B /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D581C4381A150948000D4E0B /* vcs */ = {
+			isa = PBXGroup;
+			children = (
+				D581C4391A150948000D4E0B /* DummyVC.h */,
+				D581C43A1A150948000D4E0B /* DummyVC.m */,
+			);
+			path = vcs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */,
+				D581C4311A1508EF000D4E0B /* DummyVC.xib in Resources */,
 				D581C4091A1500BA000D4E0B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,8 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D581C4011A1500BA000D4E0B /* AppDelegate.m in Sources */,
-				D581C3FE1A1500BA000D4E0B /* main.m in Sources */,
+				D581C43C1A150948000D4E0B /* main.m in Sources */,
+				D581C43B1A150948000D4E0B /* AppDelegate.m in Sources */,
+				D581C43D1A150948000D4E0B /* DummyVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RaRaRa/Info.plist;
+				INFOPLIST_FILE = resources/plist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -274,7 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RaRaRa/Info.plist;
+				INFOPLIST_FILE = resources/plist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

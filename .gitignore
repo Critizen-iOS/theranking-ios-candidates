@@ -18,5 +18,5 @@ DerivedData
 build/
 xcuserdata
 
-./tags
+tags
 tags.sh
