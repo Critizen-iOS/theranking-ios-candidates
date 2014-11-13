@@ -11,9 +11,9 @@
 
 @interface TRGridVC ()
 
-@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) IBOutlet UICollectionView* collectionView;
 /// Just a copy of the latest global fetch.
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSArray* items;
 
 @end
 
@@ -48,7 +48,7 @@
                     DLOG(@"Error fetching photos: %@", error);
                 } else {
                     self.items = [TRLogic getPhotos];
-                    DLOG(@"Got %lu items", self.items.count);
+                    DLOG(@"Got %u items", self.items.count);
                     [self.collectionView reloadData];
                 }
             }];
@@ -58,22 +58,34 @@
 #pragma mark -
 #pragma mark UICollectionViewDataSource protocol
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView
+- (NSInteger)collectionView:(UICollectionView*)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
     return self.items.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
-    cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView
+    cellForItemAtIndexPath:(NSIndexPath*)indexPath
 {
-    TRPhotoData *photoData = self.items[indexPath.row];
-    TRGridCell *cell = [self.collectionView
+    TRPhotoData* photoData = self.items[indexPath.row];
+    TRGridCell* cell = [self.collectionView
         dequeueReusableCellWithReuseIdentifier:kTRGridCell
         forIndexPath:indexPath];
 
     [cell configure:photoData];
     return cell;
+}
+
+#pragma mark -
+#pragma mark UICollectionViewDelegate protocol
+
+- (void)collectionView:(UICollectionView*)collectionView
+    didSelectItemAtIndexPath:(NSIndexPath*)indexPath
+{
+    TRPhotoData* photoData = self.items[indexPath.row];
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+
+    DLOG(@"Should do something with %@, like maybe show it", photoData);
 }
 
 @end
