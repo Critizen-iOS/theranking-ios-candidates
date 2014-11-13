@@ -4,6 +4,13 @@
 #import "TRUserData.h"
 
 
+@interface TRPhotoData ()
+
+@property (nonatomic, assign) double rating;
+
+@end
+
+
 @implementation TRPhotoData
 
 #pragma mark -
@@ -87,6 +94,12 @@
     return [NSString stringWithFormat:@"TRPhotoData{name:%@, desc:%@, "
         @"url:%@, user:%@}",
         _photoName, _photoDesc, _imageUrl, _user];
+}
+
+/// Returns a formatted string with the rating of the photo.
+- (NSString*)ratingText
+{
+    return [NSString stringWithFormat:@"%0.1f", self.rating];
 }
 
 @end

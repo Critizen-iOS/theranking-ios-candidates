@@ -5,7 +5,6 @@
 
 @interface TRPhotoData : NSObject
 
-@property (nonatomic, assign) double rating;
 @property (nonatomic, strong) NSString* photoName;
 @property (nonatomic, strong) NSString* photoDesc;
 @property (nonatomic, strong) NSURL* imageUrl;
@@ -19,5 +18,6 @@
 @property (nonatomic, strong) NSString* shutterSpeed;
 
 + (TRPhotoData*)fromDict:(id)dict;
+- (NSString*)ratingText;
 
 @end
