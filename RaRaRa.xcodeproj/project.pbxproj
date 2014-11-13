@@ -15,6 +15,8 @@
 		D581C43D1A150948000D4E0B /* DummyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C43A1A150948000D4E0B /* DummyVC.m */; };
 		D581C4401A1522AB000D4E0B /* TRLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C43F1A1522AB000D4E0B /* TRLogic.m */; };
 		D581C4431A15232F000D4E0B /* ELHASO.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4421A15232F000D4E0B /* ELHASO.m */; };
+		D581C4491A154725000D4E0B /* TRPhotoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4461A154725000D4E0B /* TRPhotoData.m */; };
+		D581C44A1A154725000D4E0B /* TRUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4481A154725000D4E0B /* TRUserData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		D581C4411A15232F000D4E0B /* ELHASO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELHASO.h; sourceTree = "<group>"; };
 		D581C4421A15232F000D4E0B /* ELHASO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELHASO.m; sourceTree = "<group>"; };
 		D581C4441A1529FF000D4E0B /* TRSecrets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSecrets.h; sourceTree = "<group>"; };
+		D581C4451A154725000D4E0B /* TRPhotoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPhotoData.h; sourceTree = "<group>"; };
+		D581C4461A154725000D4E0B /* TRPhotoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPhotoData.m; sourceTree = "<group>"; };
+		D581C4471A154725000D4E0B /* TRUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUserData.h; sourceTree = "<group>"; };
+		D581C4481A154725000D4E0B /* TRUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUserData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 		D581C4371A150948000D4E0B /* models */ = {
 			isa = PBXGroup;
 			children = (
+				D581C4451A154725000D4E0B /* TRPhotoData.h */,
+				D581C4461A154725000D4E0B /* TRPhotoData.m */,
+				D581C4471A154725000D4E0B /* TRUserData.h */,
+				D581C4481A154725000D4E0B /* TRUserData.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -201,10 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D581C4491A154725000D4E0B /* TRPhotoData.m in Sources */,
 				D581C4401A1522AB000D4E0B /* TRLogic.m in Sources */,
 				D581C4431A15232F000D4E0B /* ELHASO.m in Sources */,
 				D581C43C1A150948000D4E0B /* main.m in Sources */,
 				D581C43B1A150948000D4E0B /* AppDelegate.m in Sources */,
+				D581C44A1A154725000D4E0B /* TRUserData.m in Sources */,
 				D581C43D1A150948000D4E0B /* DummyVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

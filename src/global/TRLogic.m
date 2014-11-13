@@ -48,7 +48,7 @@
  *
  * This method doesn't take into account concurrency nor reentrancy, the UI is
  * meant to block while waiting for an answer. This method deals with the
- * parsing of thumbnail objects.
+ * parsing of thumbnail objects and doesn't do paging at all.
  */
 + (void)fetchThumbnailsWithCallback:(logicCallback)callback
 {
