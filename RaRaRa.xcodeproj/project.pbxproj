@@ -13,18 +13,7 @@
 		D581C4071A1500BA000D4E0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D581C4051A1500BA000D4E0B /* Main.storyboard */; };
 		D581C4091A1500BA000D4E0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D581C4081A1500BA000D4E0B /* Images.xcassets */; };
 		D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C40A1A1500BA000D4E0B /* LaunchScreen.xib */; };
-		D581C4181A1500BA000D4E0B /* RaRaRaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4171A1500BA000D4E0B /* RaRaRaTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D581C4121A1500BA000D4E0B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D581C3F01A1500BA000D4E0B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D581C3F71A1500BA000D4E0B;
-			remoteInfo = RaRaRa;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D581C3F81A1500BA000D4E0B /* RaRaRa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaRaRa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +26,10 @@
 		D581C4061A1500BA000D4E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D581C4081A1500BA000D4E0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D581C40B1A1500BA000D4E0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D581C4111A1500BA000D4E0B /* RaRaRaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaRaRaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D581C4161A1500BA000D4E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D581C4171A1500BA000D4E0B /* RaRaRaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RaRaRaTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D581C3F51A1500BA000D4E0B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D581C40E1A1500BA000D4E0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				D581C3FA1A1500BA000D4E0B /* RaRaRa */,
-				D581C4141A1500BA000D4E0B /* RaRaRaTests */,
 				D581C3F91A1500BA000D4E0B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				D581C3F81A1500BA000D4E0B /* RaRaRa.app */,
-				D581C4111A1500BA000D4E0B /* RaRaRaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,23 +79,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D581C4141A1500BA000D4E0B /* RaRaRaTests */ = {
-			isa = PBXGroup;
-			children = (
-				D581C4171A1500BA000D4E0B /* RaRaRaTests.m */,
-				D581C4151A1500BA000D4E0B /* Supporting Files */,
-			);
-			path = RaRaRaTests;
-			sourceTree = "<group>";
-		};
-		D581C4151A1500BA000D4E0B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D581C4161A1500BA000D4E0B /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,24 +99,6 @@
 			productReference = D581C3F81A1500BA000D4E0B /* RaRaRa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D581C4101A1500BA000D4E0B /* RaRaRaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D581C41E1A1500BA000D4E0B /* Build configuration list for PBXNativeTarget "RaRaRaTests" */;
-			buildPhases = (
-				D581C40D1A1500BA000D4E0B /* Sources */,
-				D581C40E1A1500BA000D4E0B /* Frameworks */,
-				D581C40F1A1500BA000D4E0B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D581C4131A1500BA000D4E0B /* PBXTargetDependency */,
-			);
-			name = RaRaRaTests;
-			productName = RaRaRaTests;
-			productReference = D581C4111A1500BA000D4E0B /* RaRaRaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +110,6 @@
 				TargetAttributes = {
 					D581C3F71A1500BA000D4E0B = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					D581C4101A1500BA000D4E0B = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = D581C3F71A1500BA000D4E0B;
 					};
 				};
 			};
@@ -189,7 +127,6 @@
 			projectRoot = "";
 			targets = (
 				D581C3F71A1500BA000D4E0B /* RaRaRa */,
-				D581C4101A1500BA000D4E0B /* RaRaRaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,13 +139,6 @@
 				D581C4071A1500BA000D4E0B /* Main.storyboard in Resources */,
 				D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */,
 				D581C4091A1500BA000D4E0B /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D581C40F1A1500BA000D4E0B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,23 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D581C40D1A1500BA000D4E0B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D581C4181A1500BA000D4E0B /* RaRaRaTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D581C4131A1500BA000D4E0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D581C3F71A1500BA000D4E0B /* RaRaRa */;
-			targetProxy = D581C4121A1500BA000D4E0B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D581C4051A1500BA000D4E0B /* Main.storyboard */ = {
@@ -359,40 +273,6 @@
 			};
 			name = Release;
 		};
-		D581C41F1A1500BA000D4E0B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RaRaRaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaRaRa.app/RaRaRa";
-			};
-			name = Debug;
-		};
-		D581C4201A1500BA000D4E0B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RaRaRaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RaRaRa.app/RaRaRa";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,14 +292,7 @@
 				D581C41D1A1500BA000D4E0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		D581C41E1A1500BA000D4E0B /* Build configuration list for PBXNativeTarget "RaRaRaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D581C41F1A1500BA000D4E0B /* Debug */,
-				D581C4201A1500BA000D4E0B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
