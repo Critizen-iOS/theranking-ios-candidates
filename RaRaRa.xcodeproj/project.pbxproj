@@ -13,6 +13,8 @@
 		D581C43B1A150948000D4E0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4351A150948000D4E0B /* AppDelegate.m */; };
 		D581C43C1A150948000D4E0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4361A150948000D4E0B /* main.m */; };
 		D581C43D1A150948000D4E0B /* DummyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C43A1A150948000D4E0B /* DummyVC.m */; };
+		D581C4401A1522AB000D4E0B /* TRLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C43F1A1522AB000D4E0B /* TRLogic.m */; };
+		D581C4431A15232F000D4E0B /* ELHASO.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4421A15232F000D4E0B /* ELHASO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D581C4361A150948000D4E0B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D581C4391A150948000D4E0B /* DummyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyVC.h; sourceTree = "<group>"; };
 		D581C43A1A150948000D4E0B /* DummyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyVC.m; sourceTree = "<group>"; };
+		D581C43E1A1522AB000D4E0B /* TRLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLogic.h; sourceTree = "<group>"; };
+		D581C43F1A1522AB000D4E0B /* TRLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLogic.m; sourceTree = "<group>"; };
+		D581C4411A15232F000D4E0B /* ELHASO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELHASO.h; sourceTree = "<group>"; };
+		D581C4421A15232F000D4E0B /* ELHASO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELHASO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,11 @@
 			children = (
 				D581C4341A150948000D4E0B /* AppDelegate.h */,
 				D581C4351A150948000D4E0B /* AppDelegate.m */,
+				D581C4411A15232F000D4E0B /* ELHASO.h */,
+				D581C4421A15232F000D4E0B /* ELHASO.m */,
 				D581C4361A150948000D4E0B /* main.m */,
+				D581C43E1A1522AB000D4E0B /* TRLogic.h */,
+				D581C43F1A1522AB000D4E0B /* TRLogic.m */,
 			);
 			path = global;
 			sourceTree = "<group>";
@@ -189,6 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D581C4401A1522AB000D4E0B /* TRLogic.m in Sources */,
+				D581C4431A15232F000D4E0B /* ELHASO.m in Sources */,
 				D581C43C1A150948000D4E0B /* main.m in Sources */,
 				D581C43B1A150948000D4E0B /* AppDelegate.m in Sources */,
 				D581C43D1A150948000D4E0B /* DummyVC.m in Sources */,
