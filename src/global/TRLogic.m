@@ -17,8 +17,8 @@
 
 @interface TRLogic ()
 
-/// List of thumbnails retrieved so far. Might be empty.
-@property (nonatomic, strong) NSArray* thumbs;
+/// List of photos retrieved so far. Might be empty.
+@property (nonatomic, strong) NSArray* photos;
 
 @end
 
@@ -36,22 +36,22 @@
 
     dispatch_once(&onceToken, ^{
             logic = [TRLogic new];
-            logic.thumbs = [NSArray array];
+            logic.photos = [NSArray array];
         });
 
     return logic;
 }
 
-/** Starts to request the data for the thumbnails of the app.
+/** Starts to request the data for the photos of the app.
  *
  * The returned data will be cached in the global variables which you need to
  * query on success. If any error happens an NSError is relayed.
  *
  * This method doesn't take into account concurrency nor reentrancy, the UI is
  * meant to block while waiting for an answer. This method deals with the
- * parsing of thumbnail objects and doesn't do paging at all.
+ * parsing of photos objects and doesn't do paging at all.
  */
-+ (void)fetchThumbnailsWithCallback:(logicCallback)callback
++ (void)fetchPhotosWithCallback:(logicCallback)callback
 {
     LASSERT(callback, @"No callback?");
     BLOCK_UI();
@@ -127,11 +127,20 @@
             }
 
             dispatch_async_ui(^{
-                    [TRLogic get].thumbs = photos;
+                    [TRLogic get].photos = photos;
                     callback(nil);
                 });
         }];
     [task resume];
+}
+
+/** Returns the current list of downloaded TRPhotoData objects.
+ *
+ * If this is empty maybe you should call fetchPhotosWithCallback.
+ */
++ (NSArray*)getPhotos
+{
+    return [TRLogic get].photos;
 }
 
 @end

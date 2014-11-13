@@ -9,6 +9,7 @@ typedef void(^logicCallback)(NSError* error);
 
 @interface TRLogic : NSObject
 
-+ (void)fetchThumbnailsWithCallback:(logicCallback)callback;
++ (void)fetchPhotosWithCallback:(logicCallback)callback;
++ (NSArray*)getPhotos;
 
 @end
