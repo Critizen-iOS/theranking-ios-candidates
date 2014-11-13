@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8E528043-1581-4383-9983-BBC34AA9CF4F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>500pxSesioPhotos1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>25455688C8EF69FC433DD87008F79AF26FECAAF3</key>
+		<string>https://github.com/Sesio/prueba.git</string>
+		<key>F61CEFF40C38AB39D45E610CD50CF548DAD36D2F</key>
+		<string>git://github.com/500px/500px-iOS-api.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>500pxSesioPhotos1.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>25455688C8EF69FC433DD87008F79AF26FECAAF3</key>
+		<string>../..</string>
+		<key>F61CEFF40C38AB39D45E610CD50CF548DAD36D2F</key>
+		<string>../../500px-iOS-api/</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Sesio/prueba.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>25455688C8EF69FC433DD87008F79AF26FECAAF3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F61CEFF40C38AB39D45E610CD50CF548DAD36D2F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>500px-iOS-api</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>25455688C8EF69FC433DD87008F79AF26FECAAF3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>500pxSesioPhotos1</string>
+		</dict>
+	</array>
+</dict>
+</plist>
