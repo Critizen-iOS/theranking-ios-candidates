@@ -1,7 +1,7 @@
 #import "TRGridVC.h"
 
 #import "ELHASO.h"
-#import "TRGridCell.h"
+#import "TRGridPhotoCell.h"
 #import "TRLogic.h"
 #import "TRPhotoData.h"
 #import "TRPhotoDetailVC.h"
@@ -132,7 +132,7 @@
     cellForItemAtIndexPath:(NSIndexPath*)indexPath
 {
     TRPhotoData* photoData = self.items[indexPath.row];
-    TRGridCell* cell = [self.collectionView
+    TRGridPhotoCell* cell = [self.collectionView
         dequeueReusableCellWithReuseIdentifier:kTRGridCell
         forIndexPath:indexPath];
 
