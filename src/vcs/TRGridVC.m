@@ -116,7 +116,7 @@
                 self.items = [TRLogic getPhotos];
                 [self.collectionView reloadData];
             }
-        }];
+        } startPage:YES];
 }
 
 #pragma mark -

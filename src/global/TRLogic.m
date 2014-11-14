@@ -5,14 +5,22 @@
 #import "TRSecrets.h"
 
 
+#define kPageSize 20
+
 #if 1
 #define kBaseHost @"https://api.500px.com"
 #else
 #define kBaseHost @"http://localhost:8080"
 #endif
 
+// See http://stackoverflow.com/a/5459929/172690
+#define STR_HELPER(x) #x
+#define STR(x) STR_HELPER(x)
 
-#define kURLThumbnails (kBaseHost @"/v1/photos?feature=popular&sort=rating&image_size=2&consumer_key=" kConsumerKey)
+
+#define kURLThumbnailsMask (kBaseHost \
+    @"/v1/photos?feature=popular&sort=rating&image_size=2&consumer_key=" \
+    kConsumerKey @"&rpp=" STR(kPageSize) @"&page=%d")
 
 
 @interface TRLogic ()
@@ -45,19 +53,31 @@
 /** Starts to request the data for the photos of the app.
  *
  * The returned data will be cached in the global variables which you need to
- * query on success. If any error happens an NSError is relayed.
+ * query on success. If any error happens an NSError is relayed. The
+ * `startPage` boolean indicates if the query is meant to *replace* the current
+ * set of photos or simply add more pages. Pass YES if you want to flush
+ * everything, NO if you want to append more pages of photos to the current
+ * collection.
  *
  * This method doesn't take into account concurrency nor reentrancy, the UI is
  * meant to block while waiting for an answer. This method deals with the
- * parsing of photos objects and doesn't do paging at all.
+ * parsing of photos objects.
  */
 + (void)fetchPhotosWithCallback:(logicCallback)callback
+    startPage:(BOOL)startPage
 {
     LASSERT(callback, @"No callback?");
     BLOCK_UI();
 
+    // Calculate which page should we get in case it is not the beginning.
+    TRLogic *logic = [TRLogic get];
+    NSInteger page = 1;
+    if (!startPage)
+        page = 1 + (logic.photos.count / kPageSize);
+
     NSURLSession* session = [NSURLSession sharedSession];
-    NSURL* url = [NSURL URLWithString:kURLThumbnails];
+    NSURL* url = [NSURL URLWithString:[NSString
+        stringWithFormat:kURLThumbnailsMask, page]];
     DLOG(@"Fetching %@", url);
 
     NSURLSessionDataTask* task = [session dataTaskWithURL:url
@@ -127,7 +147,16 @@
             }
 
             dispatch_async_ui(^{
-                    [TRLogic get].photos = photos;
+                    if (1 == page) {
+                        // Replace existing stuff.
+                        logic.photos = photos;
+                    } else {
+                        // Only append pictures, presume correct sorting et all.
+                        NSMutableArray *temp = [NSMutableArray
+                            arrayWithArray:logic.photos];
+                        [temp addObjectsFromArray:photos];
+                        logic.photos = temp;
+                    }
                     callback(nil);
                 });
         }];
