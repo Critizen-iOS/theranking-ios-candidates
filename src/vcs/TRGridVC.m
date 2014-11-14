@@ -7,17 +7,21 @@
 #import "TRPhotoDetailVC.h"
 
 
+#import <QuartzCore/CALayer.h>
+
 #define kTRGridCell @"TRGridCell"
 
 
 @interface TRGridVC ()
 
-@property (nonatomic, strong) IBOutlet UICollectionView* collectionView;
+@property (strong, nonatomic) IBOutlet UICollectionView* collectionView;
 /// Just a copy of the latest global fetch.
-@property (nonatomic, strong) NSArray* items;
+@property (strong, nonatomic) NSArray* items;
 /// Parent which fades in/out with some timeouts.
-@property (strong, nonatomic) IBOutlet UIView *errorView;
-@property (strong, nonatomic) IBOutlet UILabel *errorLabel;
+@property (strong, nonatomic) IBOutlet UIView* errorView;
+@property (strong, nonatomic) IBOutlet UILabel* errorLabel;
+/// Keeps track of the refresh control so we can reset it on network finish.
+@property (strong, nonatomic) UIRefreshControl* refreshControl;
 
 @end
 
@@ -34,7 +38,14 @@
         registerNib:[UINib nibWithNibName:kTRGridCell bundle:nil]
         forCellWithReuseIdentifier:kTRGridCell];
 
+    // Add UIRefreshControl to our collection.
+    self.refreshControl = [UIRefreshControl new];
+    [self.refreshControl addTarget:self action:@selector(startRefresh:)
+        forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refreshControl];
+
     self.items = [TRLogic getPhotos];
+    self.errorView.layer.cornerRadius = 10;
     self.errorView.hidden = YES;
     self.errorView.alpha = 0;
 }
@@ -50,30 +61,7 @@
     [super viewWillAppear:animated];
     if (self.items.count < 1) {
         DLOG(@"No photos? Go get some…");
-
-        [TRLogic fetchPhotosWithCallback:^(NSError* error){
-                BLOCK_UI();
-                if (error) {
-                    DLOG(@"Error fetching photos: %@", error);
-                    self.errorLabel.text =
-                        NON_NIL_STRING(error.localizedDescription);
-                    self.errorView.hidden = NO;
-                    // Fade in the error, from whatever state it was.
-                    [UIView animateWithDuration:kFadeInterval delay:0
-                        options:kFadeOptions animations:^{
-                            self.errorView.alpha = 1;
-                        } completion:^(BOOL finished) {
-                            // Discard the error if there are items.
-                            if (self.items.count)
-                                RUN_AFTER(2, ^{ [self fadeOutErrorView]; });
-                        }];
-                } else {
-                    // Discard any previous error message should if reloading.
-                    [self fadeOutErrorView];
-                    self.items = [TRLogic getPhotos];
-                    [self.collectionView reloadData];
-                }
-            }];
+        [self startRefresh:nil];
     }
 }
 
@@ -92,6 +80,43 @@
     BLOCK_UI();
     [UIView animateWithDuration:kFadeInterval delay:0 options:kFadeOptions
         animations:^{ self.errorView.alpha = 0; } completion:nil];
+}
+
+/** Starts the network fetch operation.
+ *
+ * Split here so it can be called as target of the collection view refresh
+ * control.
+ */
+- (void)startRefresh:(id)sender
+{
+    BLOCK_UI();
+    [self.refreshControl beginRefreshing];
+
+    [TRLogic fetchPhotosWithCallback:^(NSError* error){
+            BLOCK_UI();
+            [self.refreshControl endRefreshing];
+
+            if (error) {
+                DLOG(@"Error fetching photos: %@", error);
+                self.errorLabel.text =
+                    NON_NIL_STRING(error.localizedDescription);
+                self.errorView.hidden = NO;
+                // Fade in the error, from whatever state it was.
+                [UIView animateWithDuration:kFadeInterval delay:0
+                    options:kFadeOptions animations:^{
+                        self.errorView.alpha = 1;
+                    } completion:^(BOOL finished) {
+                        // Discard the error if there are items.
+                        if (self.items.count)
+                            RUN_AFTER(2, ^{ [self fadeOutErrorView]; });
+                    }];
+            } else {
+                // Discard any previous error message should if reloading.
+                [self fadeOutErrorView];
+                self.items = [TRLogic getPhotos];
+                [self.collectionView reloadData];
+            }
+        }];
 }
 
 #pragma mark -

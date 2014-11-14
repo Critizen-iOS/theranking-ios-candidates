@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="h7I-dU-Yg4">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="h7I-dU-Yg4">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YFw-cd-Vou">
@@ -32,21 +32,30 @@
                     </connections>
                 </collectionView>
                 <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LG3-KC-FrU" userLabel="error holder">
-                    <rect key="frame" x="119" y="254" width="82" height="60.5"/>
+                    <rect key="frame" x="85.5" y="233.5" width="149" height="101"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="WVi-WC-7SV">
-                            <rect key="frame" x="20" y="20" width="42" height="20.5"/>
+                            <rect key="frame" x="20" y="20" width="109" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pull to refresh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njL-K3-5Du">
+                            <rect key="frame" x="20" y="60.5" width="109" height="20.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.71866446167883213" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.20999999999999999" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="WVi-WC-7SV" firstAttribute="leading" secondItem="LG3-KC-FrU" secondAttribute="leading" constant="20" id="1vM-0p-mDa"/>
                         <constraint firstItem="WVi-WC-7SV" firstAttribute="top" secondItem="LG3-KC-FrU" secondAttribute="top" constant="20" id="IcX-Ox-Jb0"/>
-                        <constraint firstAttribute="bottom" secondItem="WVi-WC-7SV" secondAttribute="bottom" constant="20" id="LlB-tU-tBF"/>
                         <constraint firstAttribute="trailing" secondItem="WVi-WC-7SV" secondAttribute="trailing" constant="20" id="OYe-vJ-Wob"/>
+                        <constraint firstAttribute="trailing" secondItem="njL-K3-5Du" secondAttribute="trailing" constant="20" id="bNr-e9-SVA"/>
+                        <constraint firstItem="njL-K3-5Du" firstAttribute="leading" secondItem="LG3-KC-FrU" secondAttribute="leading" constant="20" id="gpF-qe-drh"/>
+                        <constraint firstItem="njL-K3-5Du" firstAttribute="top" secondItem="WVi-WC-7SV" secondAttribute="bottom" constant="20" id="jCm-Ly-xHS"/>
+                        <constraint firstAttribute="bottom" secondItem="njL-K3-5Du" secondAttribute="bottom" constant="20" id="rXY-nr-cFF"/>
                     </constraints>
                 </view>
             </subviews>
