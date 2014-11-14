@@ -48,6 +48,11 @@
             placeholderImage:nil];
     }
 
+    if (self.photoData.user.avatarUrl) {
+        [self.avatarImageView sd_setImageWithURL:self.photoData.user.avatarUrl
+            placeholderImage:nil];
+    }
+
     if (self.photoData.location) {
         self.locationLabel.text = self.photoData.locationText;
         // Calculate a nice map region and add the pin to it.
