@@ -41,7 +41,7 @@
     self.imageDescriptionLabel.text = self.photoData.photoDesc;
     self.userNameLabel.text = self.photoData.user.combinedName;
     self.userDescriptionLabel.text = self.photoData.user.descriptionText;
-    self.cameraLabel.text = @"TODO";
+    self.cameraLabel.text = self.photoData.cameraText;
 
     if (self.photoData.location) {
         self.locationLabel.text = self.photoData.locationText;
