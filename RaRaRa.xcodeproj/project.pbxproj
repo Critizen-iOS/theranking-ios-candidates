@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		85E4C4B8C06E9391DE0C0F1E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8810CA22019209D14ACB5BF2 /* libPods.a */; };
+		D5044E951A160F6E00FBFD37 /* TRGridAutoloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5044E931A160F6E00FBFD37 /* TRGridAutoloadCell.xib */; };
 		D581C4091A1500BA000D4E0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D581C4081A1500BA000D4E0B /* Images.xcassets */; };
 		D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C40A1A1500BA000D4E0B /* LaunchScreen.xib */; };
 		D581C4311A1508EF000D4E0B /* TRGridVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C4301A1508EF000D4E0B /* TRGridVC.xib */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		8810CA22019209D14ACB5BF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4905A43F91C2E16766BE4CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D5044E931A160F6E00FBFD37 /* TRGridAutoloadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRGridAutoloadCell.xib; sourceTree = "<group>"; };
 		D581C3F81A1500BA000D4E0B /* RaRaRa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaRaRa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D581C3FC1A1500BA000D4E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D581C4081A1500BA000D4E0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				D581C40A1A1500BA000D4E0B /* LaunchScreen.xib */,
+				D5044E931A160F6E00FBFD37 /* TRGridAutoloadCell.xib */,
 				D581C4511A155E65000D4E0B /* TRGridPhotoCell.xib */,
 				D581C4301A1508EF000D4E0B /* TRGridVC.xib */,
 				D581C4581A1570FD000D4E0B /* TRPhotoDetailVC.xib */,
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5044E951A160F6E00FBFD37 /* TRGridAutoloadCell.xib in Resources */,
 				D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */,
 				D581C4311A1508EF000D4E0B /* TRGridVC.xib in Resources */,
 				D581C4591A1570FD000D4E0B /* TRPhotoDetailVC.xib in Resources */,
