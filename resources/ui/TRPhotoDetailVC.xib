@@ -8,12 +8,14 @@
             <connections>
                 <outlet property="avatarImageView" destination="2dK-Wg-IlN" id="hM4-zt-XeY"/>
                 <outlet property="cameraLabel" destination="coh-HU-pMp" id="jSX-ZN-3XT"/>
+                <outlet property="containerView" destination="jah-xj-Uey" id="SEd-Us-6Jz"/>
                 <outlet property="imageDescriptionLabel" destination="JH7-3v-esr" id="gJl-uh-YgZ"/>
                 <outlet property="imageNameLabel" destination="5tw-Uc-NUP" id="7XW-wB-VFs"/>
                 <outlet property="imageView" destination="cHe-Ad-mMu" id="GnK-a9-4s1"/>
                 <outlet property="locationLabel" destination="3uc-6v-QD8" id="rOT-5S-GGR"/>
                 <outlet property="mapHeightConstraint" destination="ZN6-eN-RuF" id="aQf-DE-ndc"/>
                 <outlet property="mapView" destination="WwO-hu-tMb" id="Ggc-W8-A3M"/>
+                <outlet property="scrollView" destination="xSa-V3-84c" id="V4J-gW-RtO"/>
                 <outlet property="userDescriptionLabel" destination="6nN-DJ-BUS" id="y33-wz-MZY"/>
                 <outlet property="userNameLabel" destination="Tfr-KB-1Ah" id="7fF-zj-2Fa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,7 +30,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jah-xj-Uey" userLabel="container">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="448.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="448.5"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cHe-Ad-mMu" userLabel="photo">
                                     <rect key="frame" x="8" y="8" width="70" height="70"/>
@@ -37,25 +39,30 @@
                                         <constraint firstAttribute="width" constant="70" id="Qwg-dj-2KJ"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="226" translatesAutoresizingMaskIntoConstraints="NO" id="5tw-Uc-NUP" userLabel="image name">
-                                    <rect key="frame" x="86" y="8" width="226" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tw-Uc-NUP" userLabel="image name">
+                                    <rect key="frame" x="86" y="8" width="78.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="226" translatesAutoresizingMaskIntoConstraints="NO" id="JH7-3v-esr" userLabel="image description">
-                                    <rect key="frame" x="86" y="36" width="226" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JH7-3v-esr" userLabel="image description">
+                                    <rect key="frame" x="86" y="36" width="78.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdS-X6-Lui" userLabel="separator">
-                                    <rect key="frame" x="8" y="86" width="304" height="1"/>
+                                    <rect key="frame" x="8" y="86" width="156.5" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="XMw-fP-lhN"/>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="304" id="ixM-Bq-pwD"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="ixM-Bq-pwD"/>
+                                        </mask>
+                                    </variation>
                                 </view>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2dK-Wg-IlN" userLabel="avatar">
                                     <rect key="frame" x="8" y="95" width="70" height="70"/>
@@ -64,39 +71,39 @@
                                         <constraint firstAttribute="width" constant="70" id="uy2-KR-UuG"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="226" translatesAutoresizingMaskIntoConstraints="NO" id="Tfr-KB-1Ah" userLabel="name + nick">
-                                    <rect key="frame" x="86" y="95" width="226" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfr-KB-1Ah" userLabel="name + nick">
+                                    <rect key="frame" x="86" y="95" width="78.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="226" translatesAutoresizingMaskIntoConstraints="NO" id="6nN-DJ-BUS" userLabel="user desc">
-                                    <rect key="frame" x="86" y="123" width="226" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nN-DJ-BUS" userLabel="user desc">
+                                    <rect key="frame" x="86" y="123" width="78.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-5e-MDS" userLabel="separator">
-                                    <rect key="frame" x="8" y="173" width="304" height="1"/>
+                                    <rect key="frame" x="8" y="173" width="156.5" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="VvH-O4-Lrc"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera information." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="coh-HU-pMp">
-                                    <rect key="frame" x="8" y="182" width="304" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera information." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coh-HU-pMp">
+                                    <rect key="frame" x="8" y="182" width="156.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location position" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="304" translatesAutoresizingMaskIntoConstraints="NO" id="3uc-6v-QD8">
-                                    <rect key="frame" x="8" y="211" width="304" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location position" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uc-6v-QD8">
+                                    <rect key="frame" x="8" y="211" width="156.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwO-hu-tMb">
-                                    <rect key="frame" x="8" y="239" width="304" height="200"/>
+                                    <rect key="frame" x="8" y="239" width="156.5" height="200"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="ZN6-eN-RuF"/>
                                     </constraints>
@@ -105,7 +112,7 @@
                                     </connections>
                                 </mapView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p69-gN-tWw" userLabel="content end">
-                                    <rect key="frame" x="8" y="447" width="304" height="1"/>
+                                    <rect key="frame" x="8" y="447" width="156.5" height="1"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="0lf-8n-BtR"/>

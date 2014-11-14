@@ -9,6 +9,8 @@
 
 @interface TRPhotoDetailVC ()
 
+@property (strong, nonatomic) IBOutlet UIView *containerView;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *imageNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *imageDescriptionLabel;
@@ -56,6 +58,17 @@
         self.mapView.hidden = YES;
         self.mapHeightConstraint.constant = 0;
     }
+
+    // Add addtional constraint to always expand horizontally the content.
+    // See http://stackoverflow.com/a/16843937/172690.
+    UIView* mainView = self.view;
+    UIView* containerView = self.containerView;
+    NSDictionary* viewDict = NSDictionaryOfVariableBindings(
+        self.scrollView, containerView, mainView);
+
+    [self.view addConstraints:[NSLayoutConstraint
+        constraintsWithVisualFormat:@"H:[containerView(==mainView)]"
+        options:0 metrics:0 views:viewDict]];
 }
 
 /// The user got tired, bring them back to the thumbnail view.
