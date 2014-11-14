@@ -49,7 +49,6 @@
                     DLOG(@"Error fetching photos: %@", error);
                 } else {
                     self.items = [TRLogic getPhotos];
-                    DLOG(@"Got %u items", self.items.count);
                     [self.collectionView reloadData];
                 }
             }];

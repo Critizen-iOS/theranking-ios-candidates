@@ -5,6 +5,7 @@
 #import "TRUserData.h"
 
 #import <MapKit/MapKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 @interface TRPhotoDetailVC ()
@@ -42,6 +43,10 @@
     self.userNameLabel.text = self.photoData.user.combinedName;
     self.userDescriptionLabel.text = self.photoData.user.descriptionText;
     self.cameraLabel.text = self.photoData.cameraText;
+    if (self.photoData.imageUrl) {
+        [self.imageView sd_setImageWithURL:self.photoData.imageUrl
+            placeholderImage:nil];
+    }
 
     if (self.photoData.location) {
         self.locationLabel.text = self.photoData.locationText;

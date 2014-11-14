@@ -3,6 +3,8 @@
 #import "ELHASO.h"
 #import "TRPhotoData.h"
 
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface TRGridCell ()
 
@@ -20,6 +22,8 @@
 {
     self.nameLabel.text = NON_NIL_STRING(data.photoName);
     self.ratingLabel.text = data.ratingText;
+    if (data.imageUrl)
+        [self.imageView sd_setImageWithURL:data.imageUrl placeholderImage:nil];
 }
 
 @end
