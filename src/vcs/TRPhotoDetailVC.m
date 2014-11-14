@@ -45,12 +45,12 @@
     self.cameraLabel.text = self.photoData.cameraText;
     if (self.photoData.imageUrl) {
         [self.imageView sd_setImageWithURL:self.photoData.imageUrl
-            placeholderImage:nil];
+            placeholderImage:[UIImage imageNamed:@"grayPlaceholder"]];
     }
 
     if (self.photoData.user.avatarUrl) {
         [self.avatarImageView sd_setImageWithURL:self.photoData.user.avatarUrl
-            placeholderImage:nil];
+            placeholderImage:[UIImage imageNamed:@"grayPlaceholder"]];
     }
 
     if (self.photoData.location) {
