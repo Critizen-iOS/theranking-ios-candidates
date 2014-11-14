@@ -15,11 +15,17 @@
 @property (nonatomic, strong) IBOutlet UICollectionView* collectionView;
 /// Just a copy of the latest global fetch.
 @property (nonatomic, strong) NSArray* items;
+/// Parent which fades in/out with some timeouts.
+@property (strong, nonatomic) IBOutlet UIView *errorView;
+@property (strong, nonatomic) IBOutlet UILabel *errorLabel;
 
 @end
 
 
 @implementation TRGridVC
+
+#pragma mark -
+#pragma mark Life
 
 - (void)viewDidLoad
 {
@@ -29,6 +35,8 @@
         forCellWithReuseIdentifier:kTRGridCell];
 
     self.items = [TRLogic getPhotos];
+    self.errorView.hidden = YES;
+    self.errorView.alpha = 0;
 }
 
 /** Starts an automatic loading of photos the fist time.
@@ -47,12 +55,43 @@
                 BLOCK_UI();
                 if (error) {
                     DLOG(@"Error fetching photos: %@", error);
+                    self.errorLabel.text =
+                        NON_NIL_STRING(error.localizedDescription);
+                    self.errorView.hidden = NO;
+                    // Fade in the error, from whatever state it was.
+                    [UIView animateWithDuration:kFadeInterval delay:0
+                        options:kFadeOptions animations:^{
+                            self.errorView.alpha = 1;
+                        } completion:^(BOOL finished) {
+                            // Discard the error if there are items.
+                            if (self.items.count)
+                                RUN_AFTER(2, ^{ [self fadeOutErrorView]; });
+                        }];
                 } else {
+                    // Discard any previous error message should if reloading.
+                    [self fadeOutErrorView];
                     self.items = [TRLogic getPhotos];
                     [self.collectionView reloadData];
                 }
             }];
     }
+}
+
+#pragma mark -
+#pragma mark Methods
+
+/** Fades out the error view.
+ *
+ * The fadeing is done from whatever current state there is and without
+ * interrupting animations, so it should be safe to call this always.
+ *
+ * Reimplementing existing HUD libraries because it's fun… not.
+ */
+- (void)fadeOutErrorView
+{
+    BLOCK_UI();
+    [UIView animateWithDuration:kFadeInterval delay:0 options:kFadeOptions
+        animations:^{ self.errorView.alpha = 0; } completion:nil];
 }
 
 #pragma mark -

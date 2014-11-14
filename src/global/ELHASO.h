@@ -134,7 +134,7 @@ void wait_for_ui(dispatch_block_t block);
  */
 #define RUN_AFTER(SECONDS, BLOCK) \
 	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, SECONDS * NSEC_PER_SEC), \
-		dispatch_get_current_queue(), BLOCK)
+		dispatch_get_main_queue(), BLOCK)
 
 /// Transforms degrees to radians. You need to import math.h.
 #define DEG2RAD(X)              ((X) * M_PI / 180.0)
@@ -149,6 +149,10 @@ do { \
     Stuff; \
     _Pragma("clang diagnostic pop") \
 } while (0)
+
+#define kFadeInterval 0.5
+#define kFadeOptions (UIViewAnimationOptionAllowUserInteraction | \
+    UIViewAnimationOptionBeginFromCurrentState)
 
 #endif // __ELHASO_MACRO_H__
 
