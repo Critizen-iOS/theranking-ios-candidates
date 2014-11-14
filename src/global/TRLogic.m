@@ -27,6 +27,8 @@
 
 /// List of photos retrieved so far. Might be empty.
 @property (nonatomic, strong) NSArray* photos;
+/// Pending network task to fetch more pages, should we need to cancel it.
+@property (nonatomic, weak) NSURLSessionDataTask* pageRequest;
 
 @end
 
@@ -59,9 +61,15 @@
  * everything, NO if you want to append more pages of photos to the current
  * collection.
  *
- * This method doesn't take into account concurrency nor reentrancy, the UI is
- * meant to block while waiting for an answer. This method deals with the
- * parsing of photos objects.
+ * When you are requesting the start page you are meant to do it in a UI
+ * blocking fashion, meaning that you should not request again a starting page
+ * until the previous one has finished. With the limited scope of the UI this
+ * is reasonable.
+ *
+ * For page requests the class will keep track of any pending paging requests.
+ * So the autoload cell can request as many pages as it wants, it will only get
+ * one request each time.  Requesting the start page will abort any paging
+ * requests too.
  */
 + (void)fetchPhotosWithCallback:(logicCallback)callback
     startPage:(BOOL)startPage
@@ -74,6 +82,18 @@
     NSInteger page = 1;
     if (!startPage)
         page = 1 + (logic.photos.count / kPageSize);
+
+    if (startPage) {
+        // Cancel any previous paging fetches if we are starting fresh.
+        [logic.pageRequest cancel];
+    } else {
+        // OTOH if there is a going paging request, avoid repeating it.
+        NSURLSessionDataTask *task = logic.pageRequest;
+        if (task && NSURLSessionTaskStateRunning == task.state) {
+            DLOG(@"There is a previous pending page request, aborting");
+            return;
+        }
+    }
 
     NSURLSession* session = [NSURLSession sharedSession];
     NSURL* url = [NSURL URLWithString:[NSString
@@ -160,6 +180,11 @@
                     callback(nil);
                 });
         }];
+
+    // Should we keep track of pending paging requests?
+    if (startPage > 1)
+        logic.pageRequest = task;
+
     [task resume];
 }
 
