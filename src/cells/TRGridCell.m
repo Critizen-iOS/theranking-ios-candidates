@@ -22,8 +22,10 @@
 {
     self.nameLabel.text = NON_NIL_STRING(data.photoName);
     self.ratingLabel.text = data.ratingText;
-    if (data.imageUrl)
-        [self.imageView sd_setImageWithURL:data.imageUrl placeholderImage:nil];
+    if (data.imageUrl) {
+        [self.imageView sd_setImageWithURL:data.imageUrl
+            placeholderImage:[UIImage imageNamed:@"grayPlaceholder"]];
+    }
 }
 
 @end
