@@ -20,7 +20,7 @@
 
 #define kURLThumbnailsMask (kBaseHost \
     @"/v1/photos?feature=popular&sort=rating&image_size=2&consumer_key=" \
-    kConsumerKey @"&rpp=" STR(kPageSize) @"&page=%d")
+    kConsumerKey @"&rpp=" STR(kPageSize) @"&page=%ld")
 
 
 @interface TRLogic ()
@@ -77,7 +77,7 @@
 
     NSURLSession* session = [NSURLSession sharedSession];
     NSURL* url = [NSURL URLWithString:[NSString
-        stringWithFormat:kURLThumbnailsMask, page]];
+        stringWithFormat:kURLThumbnailsMask, (long)page]];
     DLOG(@"Fetching %@", url);
 
     NSURLSessionDataTask* task = [session dataTaskWithURL:url

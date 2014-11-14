@@ -9,7 +9,8 @@
 
 #import <QuartzCore/CALayer.h>
 
-#define kTRGridCell @"TRGridCell"
+#define kTRGridPhotoCell @"TRGridPhotoCell"
+#define kTRGridAutoloadCell @"TRGridAutoloadCell"
 
 
 @interface TRGridVC ()
@@ -34,13 +35,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Register the cells we want to display.
     [self.collectionView
-        registerNib:[UINib nibWithNibName:kTRGridCell bundle:nil]
-        forCellWithReuseIdentifier:kTRGridCell];
+        registerNib:[UINib nibWithNibName:kTRGridPhotoCell bundle:nil]
+        forCellWithReuseIdentifier:kTRGridPhotoCell];
+    [self.collectionView
+        registerNib:[UINib nibWithNibName:kTRGridAutoloadCell bundle:nil]
+        forCellWithReuseIdentifier:kTRGridAutoloadCell];
 
     // Add UIRefreshControl to our collection.
     self.refreshControl = [UIRefreshControl new];
-    [self.refreshControl addTarget:self action:@selector(startRefresh:)
+    [self.refreshControl addTarget:self action:@selector(didRequestRefresh:)
         forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
 
@@ -61,7 +66,7 @@
     [super viewWillAppear:animated];
     if (self.items.count < 1) {
         DLOG(@"No photos? Go get some…");
-        [self startRefresh:nil];
+        [self didRequestRefresh:nil];
     }
 }
 
@@ -82,16 +87,25 @@
         animations:^{ self.errorView.alpha = 0; } completion:nil];
 }
 
-/** Starts the network fetch operation.
+/** Callback for the refresh control.
  *
- * Split here so it can be called as target of the collection view refresh
- * control.
+ * Small wrapper over startFetchFromScratch: to pass the parameter and indicate
+ * the control to animate the refresh.
  */
-- (void)startRefresh:(id)sender
+- (void)didRequestRefresh:(id)sender
 {
     BLOCK_UI();
     [self.refreshControl beginRefreshing];
+    [self startFetchFromScratch:YES];
+}
 
+/** Starts a network fetch operation for either paging or refreshes.
+ *
+ * Pass YES as `restart` to force reloading everything, NO if you only want
+ * more pages.
+ */
+- (void)startFetchFromScratch:(BOOL)restart
+{
     [TRLogic fetchPhotosWithCallback:^(NSError* error){
             BLOCK_UI();
             [self.refreshControl endRefreshing];
@@ -116,28 +130,55 @@
                 self.items = [TRLogic getPhotos];
                 [self.collectionView reloadData];
             }
-        } startPage:YES];
+        } startPage:restart];
 }
 
 #pragma mark -
 #pragma mark UICollectionViewDataSource protocol
 
+/** Returns always two sections.
+ * The first section will contain the actual data. The second section is used
+ * to sperately hold the autoload cell which triggers further network requests.
+ */
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 2;
+}
+
+/** Returns the items for the collection.
+ * In the case of the second fake section it will returns 1 only if there have
+ * previously been loaded other items, to avoid having the more cell in the
+ * empty view during the first load.
+ */
 - (NSInteger)collectionView:(UICollectionView*)collectionView
     numberOfItemsInSection:(NSInteger)section
 {
-    return self.items.count;
+    if (section)
+        return (self.items.count ? 1 : 0);
+    else
+        return self.items.count;
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView
     cellForItemAtIndexPath:(NSIndexPath*)indexPath
 {
-    TRPhotoData* photoData = self.items[indexPath.row];
-    TRGridPhotoCell* cell = [self.collectionView
-        dequeueReusableCellWithReuseIdentifier:kTRGridCell
-        forIndexPath:indexPath];
+    if (indexPath.section) {
+        // Return the fake autoload cell and perform a network request.
+        UICollectionViewCell *cell = [self.collectionView
+            dequeueReusableCellWithReuseIdentifier:kTRGridAutoloadCell
+            forIndexPath:indexPath];
+        [self startFetchFromScratch:NO];
+        return cell;
+    } else {
+        // Return the real cells.
+        TRPhotoData* photoData = self.items[indexPath.row];
+        TRGridPhotoCell* cell = [self.collectionView
+            dequeueReusableCellWithReuseIdentifier:kTRGridPhotoCell
+            forIndexPath:indexPath];
 
-    [cell configure:photoData];
-    return cell;
+        [cell configure:photoData];
+        return cell;
+    }
 }
 
 #pragma mark -
@@ -147,6 +188,8 @@
     didSelectItemAtIndexPath:(NSIndexPath*)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    if (0 != indexPath.section)
+        return;
 
     TRPhotoDetailVC* vc = [TRPhotoDetailVC new];
     vc.photoData = self.items[indexPath.row];
