@@ -50,7 +50,7 @@
     self.user = [TRUserData fromDict:dict[@"user"]];
 
     NSNumber* latitude = CAST(dict[@"latitude"], NSNumber);
-    NSNumber* longitude = CAST(dict[@"latitude"], NSNumber);
+    NSNumber* longitude = CAST(dict[@"longitude"], NSNumber);
     if (latitude && longitude) {
         self.location = [[CLLocation alloc]
             initWithLatitude:[latitude doubleValue]
@@ -100,6 +100,21 @@
 - (NSString*)ratingText
 {
     return [NSString stringWithFormat:@"%0.1f", self.rating];
+}
+
+/** Returns a formatted string with the location information.
+ *
+ * Returns the empty string when there is no location.
+ */
+- (NSString*)locationText
+{
+    if (!self.location)
+        return @"";
+    else
+        return [NSString stringWithFormat:NSLocalizedString(@"Longitude: %0.4f "
+            @"Latitude: %0.4f", nil),
+            self.location.coordinate.longitude,
+            self.location.coordinate.latitude];
 }
 
 #pragma mark -

@@ -20,5 +20,6 @@
 
 + (TRPhotoData*)fromDict:(id)dict;
 - (NSString*)ratingText;
+- (NSString*)locationText;
 
 @end

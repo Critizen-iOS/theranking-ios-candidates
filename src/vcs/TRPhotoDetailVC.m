@@ -42,13 +42,11 @@
     self.cameraLabel.text = @"TODO";
 
     if (self.photoData.location) {
-        self.locationLabel.text = @"TODO";
-        // Calculate a nice map region.
-        MKCoordinateRegion region = { { 0, 0 }, { 10, 10} };
-
+        self.locationLabel.text = self.photoData.locationText;
+        // Calculate a nice map region and add the pin to it.
+        MKCoordinateRegion region = { { 0, 0 }, { 1, 1} };
         region.center.latitude = self.photoData.location.coordinate.latitude;
         region.center.longitude = self.photoData.location.coordinate.longitude;
-
         [self.mapView setRegion:region animated:NO];
         [self.mapView addAnnotations:@[self.photoData]];
     } else {
