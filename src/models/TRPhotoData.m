@@ -1,0 +1,171 @@
+#import "TRPhotoData.h"
+
+#import "ELHASO.h"
+#import "TRUserData.h"
+
+
+@interface TRPhotoData ()
+
+@property (nonatomic, assign) double rating;
+@property (nonatomic, strong) NSString* cameraModel;
+@property (nonatomic, strong) NSString* cameraLens;
+@property (nonatomic, strong) NSString* photoAperture;
+@property (nonatomic, strong) NSString* focalLength;
+@property (nonatomic, strong) NSString* iso;
+@property (nonatomic, strong) NSString* shutterSpeed;
+
+@end
+
+
+@implementation TRPhotoData
+
+#pragma mark -
+#pragma mark Life
+
+/** Transforms a dictionary into an TRPhotoData object.
+ *
+ * Returns nil if something went wrong.
+ */
++ (TRPhotoData*)fromDict:(id)dict
+{
+    NSDictionary* jsonDict = CAST(dict, NSDictionary);
+    if (!jsonDict) {
+        DLOG(@"Didn't get a valid dict!");
+        return nil;
+    }
+
+    return [[TRPhotoData alloc] initWithDict:jsonDict];
+}
+
+/** Constructs a photo data object from a dictionary.
+ *
+ * Will return a nil object if something went wrong during parsing.
+ */
+- (id)initWithDict:(NSDictionary*)dict
+{
+    LASSERT([dict isKindOfClass:[NSDictionary class]], @"Bad type");
+    if (!(self = [super init]))
+        return nil;
+
+    NSNumber *number = CAST(dict[@"rating"], NSNumber);
+    self.rating = [number doubleValue];
+
+    self.photoName = CAST(dict[@"name"], NSString);
+    self.photoDesc = CAST(dict[@"description"], NSString);
+    self.imageUrl = [NSURL URLWithString:CAST(dict[@"image_url"], NSString)];
+    self.user = [TRUserData fromDict:dict[@"user"]];
+
+    NSNumber* latitude = CAST(dict[@"latitude"], NSNumber);
+    NSNumber* longitude = CAST(dict[@"longitude"], NSNumber);
+    if (latitude && longitude) {
+        self.location = [[CLLocation alloc]
+            initWithLatitude:[latitude doubleValue]
+            longitude:[longitude doubleValue]];
+    }
+
+    self.cameraModel = CAST(dict[@"camera"], NSString);
+    self.cameraLens = CAST(dict[@"lens"], NSString);
+    self.photoAperture = CAST(dict[@"aperture"], NSString);
+    self.focalLength = CAST(dict[@"focal_length"], NSString);
+    self.iso = CAST(dict[@"iso"], NSString);
+    self.shutterSpeed = CAST(dict[@"shutter_speed"], NSString);
+
+    if (![self isValid])
+        return nil;
+
+    return self;
+}
+
+#pragma mark -
+#pragma mark Methods
+
+/** Returns YES if the object has all the necessary fields.
+ *
+ * At best the only values we really care about are the URL, the name and the
+ * user information since these are the juicy bits that we need to show in the
+ * detail view of a picture. Empty photo names are OK, I guess.
+ */
+- (BOOL)isValid
+{
+    if (!self.photoName) return NO;
+    if (!self.imageUrl) return NO;
+    if (!self.user) return NO;
+
+    return YES;
+}
+
+/// Debug helper to see if we are parsing interesting data.
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"TRPhotoData{name:%@, desc:%@, "
+        @"url:%@, user:%@}",
+        _photoName, _photoDesc, _imageUrl, _user];
+}
+
+/// Returns a formatted string with the rating of the photo.
+- (NSString*)ratingText
+{
+    return [NSString stringWithFormat:@"%0.1f", self.rating];
+}
+
+/** Returns a formatted string with the location information.
+ *
+ * Returns the empty string when there is no location.
+ */
+- (NSString*)locationText
+{
+    if (!self.location)
+        return @"";
+    else
+        return [NSString stringWithFormat:NSLocalizedString(@"Longitude: %0.4f "
+            @"Latitude: %0.4f", nil),
+            self.location.coordinate.longitude,
+            self.location.coordinate.latitude];
+}
+
+/** Returns and formats camera information.
+ *
+ * The different variables of the camera will be gathered as a single multiline
+ * text. If no camera parameters are present the empty string will be returned.
+ */
+- (NSString*)cameraText
+{
+    NSMutableArray *values = [NSMutableArray arrayWithCapacity:6];
+
+#define _ADD(VAR,STR) do { \
+    if (VAR.length) { \
+        [values addObject:[NSString \
+            stringWithFormat:NSLocalizedString(STR, nil), VAR]]; \
+    } \
+} while(0)
+
+    _ADD(self.cameraModel, @"Camera model: %@");
+    _ADD(self.cameraLens, @"Camera lens: %@");
+    _ADD(self.photoAperture, @"Photo aperture: %@");
+    _ADD(self.focalLength, @"Focal length: %@");
+    _ADD(self.iso, @"ISO: %@");
+    _ADD(self.shutterSpeed, @"Shutter speed: %@");
+
+    if (values.count)
+        return [values componentsJoinedByString:@"\n"];
+    else
+        return @"";
+}
+
+#pragma mark -
+#pragma mark MKAnnotation protocol
+
+/** Returns the coordinate of the object.
+ *
+ * However, this should not be used with an empty location.
+ */
+- (CLLocationCoordinate2D)coordinate
+{
+    LASSERT(self.location, @"Should have a location");
+    if (self.location)
+        return self.location.coordinate;
+    else
+        return CLLocationCoordinate2DMake(0, 0);
+}
+
+@end
