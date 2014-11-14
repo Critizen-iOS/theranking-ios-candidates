@@ -12,7 +12,7 @@ Obtain list of thumbnails
 
 Prototype:
 
-[https://api.500px.com/v1/photos?feature=popular&sort=rating&image_size=2](https://api.500px.com/v1/photos?feature=popular&sort=rating&image_size=2&consumer_key=AVN1T2dh0PbZffBoLsQHlqToFUUUfptMhVM5whV8)
+[https://api.500px.com/v1/photos?feature=popular&sort=rating&image_size=2&page=1rpp=20](https://api.500px.com/v1/photos?feature=popular&sort=rating&image_size=2&page=1rpp=20&consumer_key=AVN1T2dh0PbZffBoLsQHlqToFUUUfptMhVM5whV8)
 
 [Reference](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos.md).
 The available sizes for the images are:
@@ -25,14 +25,5 @@ The available sizes for the images are:
 With regards to the iphone app, 70px fits neatly in a 320px with screen with
 some spacing, so we can use number 2 due to screens being retina.
 
-Obtain image details
---------------------
-
-Presuming we obtain from the previous list of images the picture with **id**
-89535267 this would be the query to obtain its detailed information:
-
-[https://api.500px.com/v1/photos/89535267?image_size=2](https://api.500px.com/v1/photos/89535267?image_size=2&consumer_key=AVN1T2dh0PbZffBoLsQHlqToFUUUfptMhVM5whV8)
-
-[Reference](https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id.md).
-
-
+The ``rpp`` parameter forces a specific page result set. 20 looks good. Page
+numbering starts with 1.

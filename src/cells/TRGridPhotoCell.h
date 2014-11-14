@@ -3,7 +3,7 @@
 @class TRPhotoData;
 
 
-@interface TRGridCell : UICollectionViewCell
+@interface TRGridPhotoCell : UICollectionViewCell
 
 - (void)configure:(TRPhotoData*)data;
 

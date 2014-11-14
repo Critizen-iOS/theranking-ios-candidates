@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		85E4C4B8C06E9391DE0C0F1E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8810CA22019209D14ACB5BF2 /* libPods.a */; };
+		D5044E951A160F6E00FBFD37 /* TRGridAutoloadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5044E931A160F6E00FBFD37 /* TRGridAutoloadCell.xib */; };
 		D581C4091A1500BA000D4E0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D581C4081A1500BA000D4E0B /* Images.xcassets */; };
 		D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C40A1A1500BA000D4E0B /* LaunchScreen.xib */; };
 		D581C4311A1508EF000D4E0B /* TRGridVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C4301A1508EF000D4E0B /* TRGridVC.xib */; };
@@ -18,8 +19,8 @@
 		D581C4431A15232F000D4E0B /* ELHASO.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4421A15232F000D4E0B /* ELHASO.m */; };
 		D581C4491A154725000D4E0B /* TRPhotoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4461A154725000D4E0B /* TRPhotoData.m */; };
 		D581C44A1A154725000D4E0B /* TRUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4481A154725000D4E0B /* TRUserData.m */; };
-		D581C44F1A155E4F000D4E0B /* TRGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C44D1A155E4F000D4E0B /* TRGridCell.m */; };
-		D581C4521A155E65000D4E0B /* TRGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C4511A155E65000D4E0B /* TRGridCell.xib */; };
+		D581C44F1A155E4F000D4E0B /* TRGridPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C44D1A155E4F000D4E0B /* TRGridPhotoCell.m */; };
+		D581C4521A155E65000D4E0B /* TRGridPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C4511A155E65000D4E0B /* TRGridPhotoCell.xib */; };
 		D581C4561A1570C6000D4E0B /* TRPhotoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D581C4541A1570C6000D4E0B /* TRPhotoDetailVC.m */; };
 		D581C4591A1570FD000D4E0B /* TRPhotoDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D581C4581A1570FD000D4E0B /* TRPhotoDetailVC.xib */; };
 		D581C45B1A157982000D4E0B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D581C45A1A157982000D4E0B /* MapKit.framework */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		8810CA22019209D14ACB5BF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4905A43F91C2E16766BE4CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D5044E931A160F6E00FBFD37 /* TRGridAutoloadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRGridAutoloadCell.xib; sourceTree = "<group>"; };
 		D581C3F81A1500BA000D4E0B /* RaRaRa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaRaRa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D581C3FC1A1500BA000D4E0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D581C4081A1500BA000D4E0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -47,9 +49,9 @@
 		D581C4461A154725000D4E0B /* TRPhotoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPhotoData.m; sourceTree = "<group>"; };
 		D581C4471A154725000D4E0B /* TRUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUserData.h; sourceTree = "<group>"; };
 		D581C4481A154725000D4E0B /* TRUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUserData.m; sourceTree = "<group>"; };
-		D581C44C1A155E4F000D4E0B /* TRGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGridCell.h; sourceTree = "<group>"; };
-		D581C44D1A155E4F000D4E0B /* TRGridCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGridCell.m; sourceTree = "<group>"; };
-		D581C4511A155E65000D4E0B /* TRGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRGridCell.xib; sourceTree = "<group>"; };
+		D581C44C1A155E4F000D4E0B /* TRGridPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGridPhotoCell.h; sourceTree = "<group>"; };
+		D581C44D1A155E4F000D4E0B /* TRGridPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGridPhotoCell.m; sourceTree = "<group>"; };
+		D581C4511A155E65000D4E0B /* TRGridPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRGridPhotoCell.xib; sourceTree = "<group>"; };
 		D581C4531A1570C6000D4E0B /* TRPhotoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPhotoDetailVC.h; sourceTree = "<group>"; };
 		D581C4541A1570C6000D4E0B /* TRPhotoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPhotoDetailVC.m; sourceTree = "<group>"; };
 		D581C4581A1570FD000D4E0B /* TRPhotoDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRPhotoDetailVC.xib; sourceTree = "<group>"; };
@@ -121,7 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				D581C40A1A1500BA000D4E0B /* LaunchScreen.xib */,
-				D581C4511A155E65000D4E0B /* TRGridCell.xib */,
+				D5044E931A160F6E00FBFD37 /* TRGridAutoloadCell.xib */,
+				D581C4511A155E65000D4E0B /* TRGridPhotoCell.xib */,
 				D581C4301A1508EF000D4E0B /* TRGridVC.xib */,
 				D581C4581A1570FD000D4E0B /* TRPhotoDetailVC.xib */,
 			);
@@ -187,8 +190,8 @@
 		D581C44B1A155E25000D4E0B /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				D581C44C1A155E4F000D4E0B /* TRGridCell.h */,
-				D581C44D1A155E4F000D4E0B /* TRGridCell.m */,
+				D581C44C1A155E4F000D4E0B /* TRGridPhotoCell.h */,
+				D581C44D1A155E4F000D4E0B /* TRGridPhotoCell.m */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -252,11 +255,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5044E951A160F6E00FBFD37 /* TRGridAutoloadCell.xib in Resources */,
 				D581C40C1A1500BA000D4E0B /* LaunchScreen.xib in Resources */,
 				D581C4311A1508EF000D4E0B /* TRGridVC.xib in Resources */,
 				D581C4591A1570FD000D4E0B /* TRPhotoDetailVC.xib in Resources */,
 				D581C4091A1500BA000D4E0B /* Images.xcassets in Resources */,
-				D581C4521A155E65000D4E0B /* TRGridCell.xib in Resources */,
+				D581C4521A155E65000D4E0B /* TRGridPhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +307,7 @@
 				D581C4491A154725000D4E0B /* TRPhotoData.m in Sources */,
 				D581C4401A1522AB000D4E0B /* TRLogic.m in Sources */,
 				D581C4431A15232F000D4E0B /* ELHASO.m in Sources */,
-				D581C44F1A155E4F000D4E0B /* TRGridCell.m in Sources */,
+				D581C44F1A155E4F000D4E0B /* TRGridPhotoCell.m in Sources */,
 				D581C43C1A150948000D4E0B /* main.m in Sources */,
 				D581C43B1A150948000D4E0B /* AppDelegate.m in Sources */,
 				D581C4561A1570C6000D4E0B /* TRPhotoDetailVC.m in Sources */,

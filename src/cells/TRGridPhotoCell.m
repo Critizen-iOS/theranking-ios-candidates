@@ -1,4 +1,4 @@
-#import "TRGridCell.h"
+#import "TRGridPhotoCell.h"
 
 #import "ELHASO.h"
 #import "TRPhotoData.h"
@@ -6,7 +6,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
-@interface TRGridCell ()
+@interface TRGridPhotoCell ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
@@ -16,7 +16,7 @@
 @end
 
 
-@implementation TRGridCell
+@implementation TRGridPhotoCell
 
 - (void)configure:(TRPhotoData*)data
 {
