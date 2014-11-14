@@ -102,4 +102,20 @@
     return [NSString stringWithFormat:@"%0.1f", self.rating];
 }
 
+#pragma mark -
+#pragma mark MKAnnotation protocol
+
+/** Returns the coordinate of the object.
+ *
+ * However, this should not be used with an empty location.
+ */
+- (CLLocationCoordinate2D)coordinate
+{
+    LASSERT(self.location, @"Should have a location");
+    if (self.location)
+        return self.location.coordinate;
+    else
+        return CLLocationCoordinate2DMake(0, 0);
+}
+
 @end
