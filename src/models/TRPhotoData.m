@@ -7,6 +7,12 @@
 @interface TRPhotoData ()
 
 @property (nonatomic, assign) double rating;
+@property (nonatomic, strong) NSString* cameraModel;
+@property (nonatomic, strong) NSString* cameraLens;
+@property (nonatomic, strong) NSString* photoAperture;
+@property (nonatomic, strong) NSString* focalLength;
+@property (nonatomic, strong) NSString* iso;
+@property (nonatomic, strong) NSString* shutterSpeed;
 
 @end
 
@@ -50,7 +56,7 @@
     self.user = [TRUserData fromDict:dict[@"user"]];
 
     NSNumber* latitude = CAST(dict[@"latitude"], NSNumber);
-    NSNumber* longitude = CAST(dict[@"latitude"], NSNumber);
+    NSNumber* longitude = CAST(dict[@"longitude"], NSNumber);
     if (latitude && longitude) {
         self.location = [[CLLocation alloc]
             initWithLatitude:[latitude doubleValue]
@@ -100,6 +106,66 @@
 - (NSString*)ratingText
 {
     return [NSString stringWithFormat:@"%0.1f", self.rating];
+}
+
+/** Returns a formatted string with the location information.
+ *
+ * Returns the empty string when there is no location.
+ */
+- (NSString*)locationText
+{
+    if (!self.location)
+        return @"";
+    else
+        return [NSString stringWithFormat:NSLocalizedString(@"Longitude: %0.4f "
+            @"Latitude: %0.4f", nil),
+            self.location.coordinate.longitude,
+            self.location.coordinate.latitude];
+}
+
+/** Returns and formats camera information.
+ *
+ * The different variables of the camera will be gathered as a single multiline
+ * text. If no camera parameters are present the empty string will be returned.
+ */
+- (NSString*)cameraText
+{
+    NSMutableArray *values = [NSMutableArray arrayWithCapacity:6];
+
+#define _ADD(VAR,STR) do { \
+    if (VAR.length) { \
+        [values addObject:[NSString \
+            stringWithFormat:NSLocalizedString(STR, nil), VAR]]; \
+    } \
+} while(0)
+
+    _ADD(self.cameraModel, @"Camera model: %@");
+    _ADD(self.cameraLens, @"Camera lens: %@");
+    _ADD(self.photoAperture, @"Photo aperture: %@");
+    _ADD(self.focalLength, @"Focal length: %@");
+    _ADD(self.iso, @"ISO: %@");
+    _ADD(self.shutterSpeed, @"Shutter speed: %@");
+
+    if (values.count)
+        return [values componentsJoinedByString:@"\n"];
+    else
+        return @"";
+}
+
+#pragma mark -
+#pragma mark MKAnnotation protocol
+
+/** Returns the coordinate of the object.
+ *
+ * However, this should not be used with an empty location.
+ */
+- (CLLocationCoordinate2D)coordinate
+{
+    LASSERT(self.location, @"Should have a location");
+    if (self.location)
+        return self.location.coordinate;
+    else
+        return CLLocationCoordinate2DMake(0, 0);
 }
 
 @end

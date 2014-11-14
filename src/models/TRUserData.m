@@ -5,6 +5,11 @@
 
 @interface TRUserData ()
 
+@property (nonatomic, strong) NSString* userName;
+@property (nonatomic, strong) NSString* fullName;
+@property (nonatomic, strong) NSString* city;
+@property (nonatomic, strong) NSString* country;
+
 @end
 
 
@@ -73,6 +78,42 @@
     return [NSString stringWithFormat:@"TRUserData{userName:%@, fullName:%@, "
         @"avatar:%@}",
         _userName, _fullName, _avatarUrl];
+}
+
+/** Returns the combined full name and nick.
+ *
+ * If any of the values doesn't exist, the empty string is returned.
+ */
+- (NSString*)combinedName
+{
+    if (self.userName.length && self.fullName.length) {
+        return [NSString stringWithFormat:@"%@ (%@)",
+            self.fullName, self.userName];
+    } else if (self.userName.length) {
+        return self.userName;
+    } else if (self.fullName.length) {
+        return self.fullName;
+    } else {
+        return @"";
+    }
+}
+
+/** Returns a description of the user's location.
+ *
+ * This returns at least an empty string.
+ */
+- (NSString*)descriptionText
+{
+    if (self.country.length && self.city.length) {
+        return [NSString stringWithFormat:@"%@ (%@)",
+            self.city, self.country];
+    } else if (self.country.length) {
+        return self.country;
+    } else if (self.city.length) {
+        return self.city;
+    } else {
+        return @"";
+    }
 }
 
 @end
