@@ -5,7 +5,7 @@
 #import "TRSecrets.h"
 
 
-#if 0
+#if 1
 #define kBaseHost @"https://api.500px.com"
 #else
 #define kBaseHost @"http://localhost:8080"
