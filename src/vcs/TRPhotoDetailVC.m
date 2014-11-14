@@ -5,6 +5,7 @@
 #import "TRUserData.h"
 
 #import <MapKit/MapKit.h>
+#import <QuartzCore/CALayer.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
 
@@ -49,6 +50,7 @@
     }
 
     if (self.photoData.user.avatarUrl) {
+        self.avatarImageView.layer.cornerRadius = 10;
         [self.avatarImageView sd_setImageWithURL:self.photoData.user.avatarUrl
             placeholderImage:[UIImage imageNamed:@"grayPlaceholder"]];
     }
