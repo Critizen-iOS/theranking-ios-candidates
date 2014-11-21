@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CZCamera" representedClassName="CZCamera" syncable="YES">
+        <attribute name="lens" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="model" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CZPhoto" inverseName="camera" inverseEntity="CZPhoto" syncable="YES"/>
+    </entity>
+    <entity name="CZPhoto" representedClassName="CZPhoto" syncable="YES">
+        <attribute name="descrip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CZUser" inverseName="photos" inverseEntity="CZUser" syncable="YES"/>
+        <relationship name="camera" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CZCamera" inverseName="photos" inverseEntity="CZCamera" syncable="YES"/>
+    </entity>
+    <entity name="CZUser" representedClassName="CZUser" syncable="YES">
+        <attribute name="avatarURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CZPhoto" inverseName="author" inverseEntity="CZPhoto" syncable="YES"/>
+    </entity>
+    <fetchRequest name="FetchRequest" entity="CZPhoto" predicateString="id == $ID"/>
+    <elements>
+        <element name="CZCamera" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="CZPhoto" positionX="-36" positionY="27" width="128" height="165"/>
+        <element name="CZUser" positionX="-54" positionY="9" width="128" height="90"/>
+    </elements>
+</model>
