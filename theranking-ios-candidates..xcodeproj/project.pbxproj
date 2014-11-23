@@ -12,6 +12,12 @@
 		397009C71A1F5B0600A9A8C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 397009C61A1F5B0600A9A8C1 /* Images.xcassets */; };
 		397009CA1A1F5B0600A9A8C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397009C81A1F5B0600A9A8C1 /* LaunchScreen.xib */; };
 		397009D61A1F5B0600A9A8C1 /* theranking_ios_candidates_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 397009D51A1F5B0600A9A8C1 /* theranking_ios_candidates_Tests.m */; };
+		39D478201A2257D200B3E344 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D4781F1A2257D200B3E344 /* CoreData.framework */; };
+		39D478241A22582400B3E344 /* TRDataNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478231A22582400B3E344 /* TRDataNetManager.m */; };
+		39D478271A2258FC00B3E344 /* TRDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39D478251A2258FC00B3E344 /* TRDataModel.xcdatamodeld */; };
+		39D4782E1A225ABD00B3E344 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4782D1A225ABD00B3E344 /* User.m */; };
+		39D478321A225B3900B3E344 /* TRCatchPhotosOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478311A225B3900B3E344 /* TRCatchPhotosOperation.m */; };
+		39D478351A2261E900B3E344 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478341A2261E900B3E344 /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,16 @@
 		397009CF1A1F5B0600A9A8C1 /* theranking-ios-candidates.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "theranking-ios-candidates.Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		397009D41A1F5B0600A9A8C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		397009D51A1F5B0600A9A8C1 /* theranking_ios_candidates_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = theranking_ios_candidates_Tests.m; sourceTree = "<group>"; };
+		39D4781F1A2257D200B3E344 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		39D478221A22582400B3E344 /* TRDataNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDataNetManager.h; sourceTree = "<group>"; };
+		39D478231A22582400B3E344 /* TRDataNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDataNetManager.m; sourceTree = "<group>"; };
+		39D478261A2258FC00B3E344 /* TRDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TRDataModel.xcdatamodel; sourceTree = "<group>"; };
+		39D4782C1A225ABD00B3E344 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		39D4782D1A225ABD00B3E344 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		39D478301A225B3900B3E344 /* TRCatchPhotosOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCatchPhotosOperation.h; sourceTree = "<group>"; };
+		39D478311A225B3900B3E344 /* TRCatchPhotosOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCatchPhotosOperation.m; sourceTree = "<group>"; };
+		39D478331A2261E900B3E344 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		39D478341A2261E900B3E344 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D478201A2257D200B3E344 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				397009B81A1F5B0600A9A8C1 /* theranking-ios-candidates. */,
+				39D478211A2257DD00B3E344 /* Frameworks */,
 				397009D21A1F5B0600A9A8C1 /* theranking-ios-candidates.Tests */,
 				397009B71A1F5B0600A9A8C1 /* Products */,
 			);
@@ -76,6 +94,7 @@
 		397009B81A1F5B0600A9A8C1 /* theranking-ios-candidates. */ = {
 			isa = PBXGroup;
 			children = (
+				39D4781E1A2257BA00B3E344 /* ModelObjects */,
 				397009BD1A1F5B0600A9A8C1 /* AppDelegate.h */,
 				397009BE1A1F5B0600A9A8C1 /* AppDelegate.m */,
 				397009C61A1F5B0600A9A8C1 /* Images.xcassets */,
@@ -109,6 +128,46 @@
 				397009D41A1F5B0600A9A8C1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39D4781E1A2257BA00B3E344 /* ModelObjects */ = {
+			isa = PBXGroup;
+			children = (
+				39D4782F1A225AD500B3E344 /* Operation Request */,
+				39D478281A225A9A00B3E344 /* ManagedObject */,
+				39D478221A22582400B3E344 /* TRDataNetManager.h */,
+				39D478231A22582400B3E344 /* TRDataNetManager.m */,
+				39D478251A2258FC00B3E344 /* TRDataModel.xcdatamodeld */,
+			);
+			name = ModelObjects;
+			sourceTree = "<group>";
+		};
+		39D478211A2257DD00B3E344 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39D4781F1A2257D200B3E344 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39D478281A225A9A00B3E344 /* ManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				39D4782C1A225ABD00B3E344 /* User.h */,
+				39D4782D1A225ABD00B3E344 /* User.m */,
+				39D478331A2261E900B3E344 /* Photo.h */,
+				39D478341A2261E900B3E344 /* Photo.m */,
+			);
+			name = ManagedObject;
+			sourceTree = "<group>";
+		};
+		39D4782F1A225AD500B3E344 /* Operation Request */ = {
+			isa = PBXGroup;
+			children = (
+				39D478301A225B3900B3E344 /* TRCatchPhotosOperation.h */,
+				39D478311A225B3900B3E344 /* TRCatchPhotosOperation.m */,
+			);
+			name = "Operation Request";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D478351A2261E900B3E344 /* Photo.m in Sources */,
 				397009BF1A1F5B0600A9A8C1 /* AppDelegate.m in Sources */,
+				39D478271A2258FC00B3E344 /* TRDataModel.xcdatamodeld in Sources */,
+				39D478321A225B3900B3E344 /* TRCatchPhotosOperation.m in Sources */,
+				39D4782E1A225ABD00B3E344 /* User.m in Sources */,
 				397009BC1A1F5B0600A9A8C1 /* main.m in Sources */,
+				39D478241A22582400B3E344 /* TRDataNetManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +472,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		39D478251A2258FC00B3E344 /* TRDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				39D478261A2258FC00B3E344 /* TRDataModel.xcdatamodel */,
+			);
+			currentVersion = 39D478261A2258FC00B3E344 /* TRDataModel.xcdatamodel */;
+			path = TRDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 397009AE1A1F5B0600A9A8C1 /* Project object */;
 }
