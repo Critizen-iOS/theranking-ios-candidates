@@ -7,6 +7,7 @@
 //
 
 #import "TRDataNetManager.h"
+#import "TRCatchPhotosOperation.h"
 
 @interface TRDataNetManager ()
 
@@ -35,6 +36,10 @@
 #pragma mark - Request Operation
 -(void)updatePhotosWithCompletionHandler:(void (^)(void))completionHandler
 {
+    TRCatchPhotosOperation *catchPhoto = [[TRCatchPhotosOperation alloc] init];
+    catchPhoto.fatherMOC = self.managedObjectContext;
+    catchPhoto.completionBlock = completionHandler;
+    [self.opertationQueue addOperation:catchPhoto];
     
 }
 

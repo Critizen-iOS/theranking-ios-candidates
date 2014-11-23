@@ -41,6 +41,7 @@
     self.childMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSConfinementConcurrencyType];
     [self.childMOC setParentContext:self.fatherMOC];
     
+    NSLog(@"SE Coje LA PAGINA %i",nextPage);
     NSString *urlString = [NSString stringWithFormat:@"https://api.500px.com/v1/photos?feature=popular&consumer_key=YsURq8PuL1uuYZWOB8bwKq5d2jr4IALtvZTNV7iH&page=%ld",(long)nextPage];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -54,13 +55,15 @@
         NSInteger totalPages = [[jsonDict valueForKey:@"total_pages"] integerValue];
         if ((nextPage + 1) < totalPages) {
             [[NSUserDefaults standardUserDefaults] setInteger:(nextPage + 1) forKey:@"nextPage"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
+       
         } else
         {
             [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"nextPage"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
+           
         }
         
+        [[NSUserDefaults standardUserDefaults] setDouble:now forKey:@"lastUpdate"];
+         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
     
@@ -85,15 +88,16 @@
         {
             // Lo creamos
             Photo *newPhoto = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:self.childMOC];
-            newPhoto.resourceId = [dictPhoto valueForKey:@"id"];
+            newPhoto.resourceId = [NSString stringWithFormat:@"%ld",[[dictPhoto valueForKey:@"id"] integerValue]];
             newPhoto.name = [dictPhoto valueForKey:@"name"];
-            newPhoto.itsDescription = [dictPhoto valueForKey:@"description"];
-            newPhoto.camera = [dictPhoto valueForKey:@"camera"];
-            newPhoto.shutter_speed = [dictPhoto valueForKey:@"shutter_speed"];
-            newPhoto.focal_length = [dictPhoto valueForKey:@"focal_length"];
+            newPhoto.itsDescription = [[dictPhoto valueForKey:@"description"] description];
+            newPhoto.camera = [[dictPhoto valueForKey:@"camera"] description];
+            newPhoto.image_url = [dictPhoto valueForKey:@"image_url"];
+            newPhoto.shutter_speed = [[dictPhoto valueForKey:@"shutter_speed"] description];
+            newPhoto.focal_length = [[dictPhoto valueForKey:@"focal_length"] description];
             newPhoto.rating = [NSNumber numberWithFloat:[[dictPhoto valueForKey:@"rating"] floatValue]];
-            newPhoto.latitude = [NSNumber numberWithDouble:[[dictPhoto valueForKey:@"latitude"] doubleValue]];
-            newPhoto.longitude = [NSNumber numberWithDouble:[[dictPhoto valueForKey:@"longitude"] doubleValue]];
+            if ([[dictPhoto valueForKey:@"latitude"] respondsToSelector:@selector(doubleValue)]) newPhoto.latitude = [NSNumber numberWithDouble:[[dictPhoto valueForKey:@"latitude"] doubleValue]];
+            if ([[dictPhoto valueForKey:@"longitude"] respondsToSelector:@selector(doubleValue)]) newPhoto.longitude = [NSNumber numberWithDouble:[[dictPhoto valueForKey:@"longitude"] doubleValue]];
             NSString *userId = [dictPhoto valueForKey:@"camera"];
             
             NSFetchRequest *userRequest = [[NSFetchRequest alloc] init];
@@ -118,8 +122,6 @@
         [self saveObjectInStore];
     }
 }
-
-
 
 
 -(void)saveObjectInStore

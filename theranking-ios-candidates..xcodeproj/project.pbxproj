@@ -18,6 +18,9 @@
 		39D4782E1A225ABD00B3E344 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4782D1A225ABD00B3E344 /* User.m */; };
 		39D478321A225B3900B3E344 /* TRCatchPhotosOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478311A225B3900B3E344 /* TRCatchPhotosOperation.m */; };
 		39D478351A2261E900B3E344 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478341A2261E900B3E344 /* Photo.m */; };
+		39D478391A2265C900B3E344 /* TRMasterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478381A2265C900B3E344 /* TRMasterCollectionViewController.m */; };
+		39D4783D1A22666700B3E344 /* TRPhotoCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4783C1A22666700B3E344 /* TRPhotoCVCell.m */; };
+		39D478401A2279EF00B3E344 /* TRDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4783F1A2279EF00B3E344 /* TRDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		39D478311A225B3900B3E344 /* TRCatchPhotosOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCatchPhotosOperation.m; sourceTree = "<group>"; };
 		39D478331A2261E900B3E344 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		39D478341A2261E900B3E344 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		39D478371A2265C900B3E344 /* TRMasterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMasterCollectionViewController.h; sourceTree = "<group>"; };
+		39D478381A2265C900B3E344 /* TRMasterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMasterCollectionViewController.m; sourceTree = "<group>"; };
+		39D4783B1A22666700B3E344 /* TRPhotoCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPhotoCVCell.h; sourceTree = "<group>"; };
+		39D4783C1A22666700B3E344 /* TRPhotoCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPhotoCVCell.m; sourceTree = "<group>"; };
+		39D4783E1A2279EF00B3E344 /* TRDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDetailTableViewController.h; sourceTree = "<group>"; };
+		39D4783F1A2279EF00B3E344 /* TRDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +103,7 @@
 		397009B81A1F5B0600A9A8C1 /* theranking-ios-candidates. */ = {
 			isa = PBXGroup;
 			children = (
+				39D478361A22652600B3E344 /* ViewControllers */,
 				39D4781E1A2257BA00B3E344 /* ModelObjects */,
 				397009BD1A1F5B0600A9A8C1 /* AppDelegate.h */,
 				397009BE1A1F5B0600A9A8C1 /* AppDelegate.m */,
@@ -168,6 +178,27 @@
 				39D478311A225B3900B3E344 /* TRCatchPhotosOperation.m */,
 			);
 			name = "Operation Request";
+			sourceTree = "<group>";
+		};
+		39D478361A22652600B3E344 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				39D4783A1A22664200B3E344 /* Cell */,
+				39D478371A2265C900B3E344 /* TRMasterCollectionViewController.h */,
+				39D4783E1A2279EF00B3E344 /* TRDetailTableViewController.h */,
+				39D4783F1A2279EF00B3E344 /* TRDetailTableViewController.m */,
+				39D478381A2265C900B3E344 /* TRMasterCollectionViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		39D4783A1A22664200B3E344 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				39D4783B1A22666700B3E344 /* TRPhotoCVCell.h */,
+				39D4783C1A22666700B3E344 /* TRPhotoCVCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +302,11 @@
 			files = (
 				39D478351A2261E900B3E344 /* Photo.m in Sources */,
 				397009BF1A1F5B0600A9A8C1 /* AppDelegate.m in Sources */,
+				39D478391A2265C900B3E344 /* TRMasterCollectionViewController.m in Sources */,
 				39D478271A2258FC00B3E344 /* TRDataModel.xcdatamodeld in Sources */,
 				39D478321A225B3900B3E344 /* TRCatchPhotosOperation.m in Sources */,
+				39D4783D1A22666700B3E344 /* TRPhotoCVCell.m in Sources */,
+				39D478401A2279EF00B3E344 /* TRDetailTableViewController.m in Sources */,
 				39D4782E1A225ABD00B3E344 /* User.m in Sources */,
 				397009BC1A1F5B0600A9A8C1 /* main.m in Sources */,
 				39D478241A22582400B3E344 /* TRDataNetManager.m in Sources */,

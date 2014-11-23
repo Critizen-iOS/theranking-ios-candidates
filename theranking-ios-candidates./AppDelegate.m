@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TRMasterCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,12 +21,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    TRMasterCollectionViewController *master = [[TRMasterCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:master];
     
+    [self.window setRootViewController:navController];
 
-    
-    
-    
-    
     [self.window makeKeyAndVisible];
     return YES;
 }
