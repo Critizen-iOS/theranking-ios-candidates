@@ -20,7 +20,8 @@
 		39D478351A2261E900B3E344 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478341A2261E900B3E344 /* Photo.m */; };
 		39D478391A2265C900B3E344 /* TRMasterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D478381A2265C900B3E344 /* TRMasterCollectionViewController.m */; };
 		39D4783D1A22666700B3E344 /* TRPhotoCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4783C1A22666700B3E344 /* TRPhotoCVCell.m */; };
-		39D478401A2279EF00B3E344 /* TRDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4783F1A2279EF00B3E344 /* TRDetailTableViewController.m */; };
+		39D478401A2279EF00B3E344 /* TRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4783F1A2279EF00B3E344 /* TRDetailViewController.m */; };
+		39D478421A227E2F00B3E344 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D478411A227E2F00B3E344 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +59,9 @@
 		39D478381A2265C900B3E344 /* TRMasterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMasterCollectionViewController.m; sourceTree = "<group>"; };
 		39D4783B1A22666700B3E344 /* TRPhotoCVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPhotoCVCell.h; sourceTree = "<group>"; };
 		39D4783C1A22666700B3E344 /* TRPhotoCVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPhotoCVCell.m; sourceTree = "<group>"; };
-		39D4783E1A2279EF00B3E344 /* TRDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDetailTableViewController.h; sourceTree = "<group>"; };
-		39D4783F1A2279EF00B3E344 /* TRDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDetailTableViewController.m; sourceTree = "<group>"; };
+		39D4783E1A2279EF00B3E344 /* TRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDetailViewController.h; sourceTree = "<group>"; };
+		39D4783F1A2279EF00B3E344 /* TRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDetailViewController.m; sourceTree = "<group>"; };
+		39D478411A227E2F00B3E344 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D478421A227E2F00B3E344 /* MapKit.framework in Frameworks */,
 				39D478201A2257D200B3E344 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +158,7 @@
 		39D478211A2257DD00B3E344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39D478411A227E2F00B3E344 /* MapKit.framework */,
 				39D4781F1A2257D200B3E344 /* CoreData.framework */,
 			);
 			name = Frameworks;
@@ -185,8 +189,8 @@
 			children = (
 				39D4783A1A22664200B3E344 /* Cell */,
 				39D478371A2265C900B3E344 /* TRMasterCollectionViewController.h */,
-				39D4783E1A2279EF00B3E344 /* TRDetailTableViewController.h */,
-				39D4783F1A2279EF00B3E344 /* TRDetailTableViewController.m */,
+				39D4783E1A2279EF00B3E344 /* TRDetailViewController.h */,
+				39D4783F1A2279EF00B3E344 /* TRDetailViewController.m */,
 				39D478381A2265C900B3E344 /* TRMasterCollectionViewController.m */,
 			);
 			name = ViewControllers;
@@ -306,7 +310,7 @@
 				39D478271A2258FC00B3E344 /* TRDataModel.xcdatamodeld in Sources */,
 				39D478321A225B3900B3E344 /* TRCatchPhotosOperation.m in Sources */,
 				39D4783D1A22666700B3E344 /* TRPhotoCVCell.m in Sources */,
-				39D478401A2279EF00B3E344 /* TRDetailTableViewController.m in Sources */,
+				39D478401A2279EF00B3E344 /* TRDetailViewController.m in Sources */,
 				39D4782E1A225ABD00B3E344 /* User.m in Sources */,
 				397009BC1A1F5B0600A9A8C1 /* main.m in Sources */,
 				39D478241A22582400B3E344 /* TRDataNetManager.m in Sources */,

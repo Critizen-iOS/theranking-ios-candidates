@@ -10,7 +10,7 @@
 
 @class Photo;
 
-@interface TRDetailTableViewController : UITableViewController
+@interface TRDetailViewController : UIViewController
 
 @property (nonatomic, strong) Photo *photo;
 

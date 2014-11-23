@@ -7,6 +7,7 @@
 //
 
 #import "TRMasterCollectionViewController.h"
+#import "TRDetailViewController.h"
 #import "TRPhotoCVCell.h"
 #import "TRDataNetManager.h"
 
@@ -60,14 +61,21 @@ static NSString * const reuseIdentifier = @"Cell";
     TRPhotoCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.photo = [self.fetchedResultController objectAtIndexPath:indexPath];
+    
     if (indexPath.row == ([[[self.fetchedResultController sections] objectAtIndex:0] numberOfObjects] -1))
     {
         [[TRDataNetManager sharedManager] updatePhotosWithCompletionHandler:nil];
         NSLog(@"llamado");
     }
     
+    cell.photo = [self.fetchedResultController objectAtIndexPath:indexPath];
     return cell;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TRDetailViewController *detail = [[TRDetailViewController alloc] init];
+    detail.photo = [self.fetchedResultController objectAtIndexPath:indexPath];
+    [self.navigationController pushViewController:detail animated:YES];
 }
 
 -(CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
