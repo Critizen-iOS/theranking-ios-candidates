@@ -65,7 +65,7 @@ static NSString * const reuseIdentifier = @"Cell";
     if (indexPath.row == ([[[self.fetchedResultController sections] objectAtIndex:0] numberOfObjects] -1))
     {
         [[TRDataNetManager sharedManager] updatePhotosWithCompletionHandler:nil];
-        NSLog(@"llamado");
+        
     }
     
     cell.photo = [self.fetchedResultController objectAtIndexPath:indexPath];
@@ -86,6 +86,22 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     return UIEdgeInsetsMake(15, 15, 15, 15);
 }
+
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    
+    if (type == NSFetchedResultsChangeInsert)
+    {
+        [self.collectionView insertItemsAtIndexPaths:@[newIndexPath]];
+    }
+    
+    
+    
+}
+
+
+
 
 #pragma mark - fetch
 -(void)fetchData

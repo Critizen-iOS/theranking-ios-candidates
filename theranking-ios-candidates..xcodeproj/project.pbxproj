@@ -22,6 +22,7 @@
 		39D4783D1A22666700B3E344 /* TRPhotoCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4783C1A22666700B3E344 /* TRPhotoCVCell.m */; };
 		39D478401A2279EF00B3E344 /* TRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D4783F1A2279EF00B3E344 /* TRDetailViewController.m */; };
 		39D478421A227E2F00B3E344 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D478411A227E2F00B3E344 /* MapKit.framework */; };
+		39D478441A22A9B100B3E344 /* bg-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D478431A22A9B100B3E344 /* bg-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		39D4783E1A2279EF00B3E344 /* TRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDetailViewController.h; sourceTree = "<group>"; };
 		39D4783F1A2279EF00B3E344 /* TRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDetailViewController.m; sourceTree = "<group>"; };
 		39D478411A227E2F00B3E344 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		39D478431A22A9B100B3E344 /* bg-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				397009BE1A1F5B0600A9A8C1 /* AppDelegate.m */,
 				397009C61A1F5B0600A9A8C1 /* Images.xcassets */,
 				397009C81A1F5B0600A9A8C1 /* LaunchScreen.xib */,
+				39D478431A22A9B100B3E344 /* bg-568h@2x.png */,
 				397009B91A1F5B0600A9A8C1 /* Supporting Files */,
 			);
 			path = "theranking-ios-candidates.";
@@ -287,6 +290,7 @@
 			files = (
 				397009CA1A1F5B0600A9A8C1 /* LaunchScreen.xib in Resources */,
 				397009C71A1F5B0600A9A8C1 /* Images.xcassets in Resources */,
+				39D478441A22A9B100B3E344 /* bg-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "theranking-ios-candidates./Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -438,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "theranking-ios-candidates./Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

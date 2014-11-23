@@ -41,7 +41,7 @@
     self.childMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSConfinementConcurrencyType];
     [self.childMOC setParentContext:self.fatherMOC];
     
-    NSLog(@"SE Coje LA PAGINA %i",nextPage);
+   
     NSString *urlString = [NSString stringWithFormat:@"https://api.500px.com/v1/photos?feature=popular&consumer_key=YsURq8PuL1uuYZWOB8bwKq5d2jr4IALtvZTNV7iH&page=%ld",(long)nextPage];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -88,7 +88,7 @@
         {
             // Lo creamos
             Photo *newPhoto = [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:self.childMOC];
-            newPhoto.resourceId = [NSString stringWithFormat:@"%ld",[[dictPhoto valueForKey:@"id"] integerValue]];
+            newPhoto.resourceId = [NSString stringWithFormat:@"%ld",(long)[[dictPhoto valueForKey:@"id"] integerValue]];
             newPhoto.name = [dictPhoto valueForKey:@"name"];
             newPhoto.itsDescription = [[dictPhoto valueForKey:@"description"] description];
             newPhoto.camera = [[dictPhoto valueForKey:@"camera"] description];
