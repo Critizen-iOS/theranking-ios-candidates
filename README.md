@@ -1,3 +1,7 @@
+##Screenshot
+
+![Screenshot0][img0] &nbsp;&nbsp; ![Screenshot1][img1] &nbsp;&nbsp;
+
 The Ranking iOS dev test
 =========================
 
@@ -49,4 +53,7 @@ We would like to have an small application that has two main views. The first on
 
 The ranking team wishes all candidates good luck and we are looking forward to see your code. Get dirty!
 If you need help do not hesitate to contact us.
+
+[img0]:https://raw.githubusercontent.com/ndleon09/theranking-ios-candidates/master/Screenshots/MainViewController.png
+[img1]:https://raw.githubusercontent.com/ndleon09/theranking-ios-candidates/master/Screenshots/DetailViewController.png
 
