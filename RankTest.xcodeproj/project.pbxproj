@@ -85,12 +85,11 @@
 			children = (
 				24A6E4161A2606D100CF2AE4 /* AppDelegate.h */,
 				24A6E4171A2606D100CF2AE4 /* AppDelegate.m */,
-				24A6E41C1A2606D100CF2AE4 /* ViewController.h */,
-				24A6E41D1A2606D100CF2AE4 /* ViewController.m */,
+				24A6E43D1A26073400CF2AE4 /* View controllers */,
+				24A6E43B1A2606EA00CF2AE4 /* Model Engine */,
 				24A6E41F1A2606D100CF2AE4 /* Main.storyboard */,
 				24A6E4221A2606D100CF2AE4 /* Images.xcassets */,
 				24A6E4241A2606D100CF2AE4 /* LaunchScreen.xib */,
-				24A6E4191A2606D100CF2AE4 /* RankTest.xcdatamodeld */,
 				24A6E4121A2606D100CF2AE4 /* Supporting Files */,
 			);
 			path = RankTest;
@@ -120,6 +119,31 @@
 				24A6E4301A2606D100CF2AE4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24A6E43B1A2606EA00CF2AE4 /* Model Engine */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E43C1A26072500CF2AE4 /* Model */,
+			);
+			name = "Model Engine";
+			sourceTree = "<group>";
+		};
+		24A6E43C1A26072500CF2AE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4191A2606D100CF2AE4 /* RankTest.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		24A6E43D1A26073400CF2AE4 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E41C1A2606D100CF2AE4 /* ViewController.h */,
+				24A6E41D1A2606D100CF2AE4 /* ViewController.m */,
+			);
+			name = "View controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
