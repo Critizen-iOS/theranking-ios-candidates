@@ -19,8 +19,10 @@
 		24A6E44A1A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4491A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m */; };
 		24A6E44E1A2652CA00CF2AE4 /* RNKPhotosAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E44D1A2652CA00CF2AE4 /* RNKPhotosAPI.m */; };
 		24A6E4501A26568B00CF2AE4 /* RNKPhotosAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E44F1A26568B00CF2AE4 /* RNKPhotosAPITest.m */; };
-		24A6E4541A26651200CF2AE4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4531A26651200CF2AE4 /* User.m */; };
-		24A6E4571A26651300CF2AE4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4561A26651300CF2AE4 /* Photo.m */; };
+		24A6E45A1A26681700CF2AE4 /* RNKPhotosEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */; };
+		24A6E45D1A266CAA00CF2AE4 /* RNKDataBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */; };
+		24A6E4601A266EC500CF2AE4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E45F1A266EC500CF2AE4 /* User.m */; };
+		24A6E4631A266EC500CF2AE4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4621A266EC500CF2AE4 /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +59,14 @@
 		24A6E44D1A2652CA00CF2AE4 /* RNKPhotosAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPhotosAPI.m; path = api/RNKPhotosAPI.m; sourceTree = "<group>"; };
 		24A6E44F1A26568B00CF2AE4 /* RNKPhotosAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNKPhotosAPITest.m; sourceTree = "<group>"; };
 		24A6E4511A26572B00CF2AE4 /* TGRAsyncTestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGRAsyncTestHelper.h; sourceTree = "<group>"; };
-		24A6E4521A26651200CF2AE4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = model/User.h; sourceTree = "<group>"; };
-		24A6E4531A26651200CF2AE4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = model/User.m; sourceTree = "<group>"; };
-		24A6E4551A26651300CF2AE4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = model/Photo.h; sourceTree = "<group>"; };
-		24A6E4561A26651300CF2AE4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = model/Photo.m; sourceTree = "<group>"; };
+		24A6E4581A26681700CF2AE4 /* RNKPhotosEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPhotosEngine.h; path = model/RNKPhotosEngine.h; sourceTree = "<group>"; };
+		24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPhotosEngine.m; path = model/RNKPhotosEngine.m; sourceTree = "<group>"; };
+		24A6E45B1A266CAA00CF2AE4 /* RNKDataBaseEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKDataBaseEngine.h; path = model/RNKDataBaseEngine.h; sourceTree = "<group>"; };
+		24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKDataBaseEngine.m; path = model/RNKDataBaseEngine.m; sourceTree = "<group>"; };
+		24A6E45E1A266EC500CF2AE4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = model/User.h; sourceTree = "<group>"; };
+		24A6E45F1A266EC500CF2AE4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = model/User.m; sourceTree = "<group>"; };
+		24A6E4611A266EC500CF2AE4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = model/Photo.h; sourceTree = "<group>"; };
+		24A6E4621A266EC500CF2AE4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = model/Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +151,12 @@
 		24A6E43B1A2606EA00CF2AE4 /* Model Engine */ = {
 			isa = PBXGroup;
 			children = (
+				24A6E4581A26681700CF2AE4 /* RNKPhotosEngine.h */,
+				24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */,
 				24A6E44B1A26517D00CF2AE4 /* API */,
 				24A6E43C1A26072500CF2AE4 /* Model */,
+				24A6E45B1A266CAA00CF2AE4 /* RNKDataBaseEngine.h */,
+				24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */,
 			);
 			name = "Model Engine";
 			sourceTree = "<group>";
@@ -154,11 +164,11 @@
 		24A6E43C1A26072500CF2AE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24A6E4611A266EC500CF2AE4 /* Photo.h */,
+				24A6E4621A266EC500CF2AE4 /* Photo.m */,
+				24A6E45E1A266EC500CF2AE4 /* User.h */,
+				24A6E45F1A266EC500CF2AE4 /* User.m */,
 				24A6E4191A2606D100CF2AE4 /* RankTest.xcdatamodeld */,
-				24A6E4551A26651300CF2AE4 /* Photo.h */,
-				24A6E4561A26651300CF2AE4 /* Photo.m */,
-				24A6E4521A26651200CF2AE4 /* User.h */,
-				24A6E4531A26651200CF2AE4 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,13 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A6E4541A26651200CF2AE4 /* User.m in Sources */,
+				24A6E4601A266EC500CF2AE4 /* User.m in Sources */,
 				24A6E4181A2606D100CF2AE4 /* AppDelegate.m in Sources */,
 				24A6E41B1A2606D100CF2AE4 /* RankTest.xcdatamodeld in Sources */,
-				24A6E4571A26651300CF2AE4 /* Photo.m in Sources */,
+				24A6E45A1A26681700CF2AE4 /* RNKPhotosEngine.m in Sources */,
 				24A6E44A1A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m in Sources */,
+				24A6E45D1A266CAA00CF2AE4 /* RNKDataBaseEngine.m in Sources */,
 				24A6E4411A2609F400CF2AE4 /* RNKRootVC.m in Sources */,
 				24A6E44E1A2652CA00CF2AE4 /* RNKPhotosAPI.m in Sources */,
+				24A6E4631A266EC500CF2AE4 /* Photo.m in Sources */,
 				24A6E4461A260B4600CF2AE4 /* RNKPicturesCollectionVC.m in Sources */,
 				24A6E4151A2606D100CF2AE4 /* main.m in Sources */,
 			);

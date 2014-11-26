@@ -16,9 +16,9 @@
 @property (nonatomic, retain) NSString * id;
 @property (nonatomic, retain) NSString * username;
 @property (nonatomic, retain) NSString * userpic_url;
-@property (nonatomic, retain) UNKNOWN_TYPE city;
-@property (nonatomic, retain) UNKNOWN_TYPE country;
-@property (nonatomic, retain) UNKNOWN_TYPE fullname;
+@property (nonatomic, retain) NSString * city;
+@property (nonatomic, retain) NSString * country;
+@property (nonatomic, retain) NSString * fullname;
 @property (nonatomic, retain) NSSet *photos;
 @end
 

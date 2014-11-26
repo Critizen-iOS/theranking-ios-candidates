@@ -17,13 +17,12 @@
 
 }
 
-@property (readonly, strong, nonatomic) UINavigationController *rootNavigationController;
+@property (strong, nonatomic) UINavigationController *rootNavigationController;
 
 @end
 
 @implementation RNKRootVC
 
-@synthesize rootNavigationController = _rootNavigationController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
