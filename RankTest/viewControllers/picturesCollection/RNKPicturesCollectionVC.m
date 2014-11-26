@@ -9,6 +9,7 @@
 #import "RNKPicturesCollectionVC.h"
 #import "RNKConstants.h"
 
+
 @interface RNKPicturesCollectionVC ()
 
 @end
@@ -29,6 +30,8 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+
+
 }
 
 - (void)didReceiveMemoryWarning {

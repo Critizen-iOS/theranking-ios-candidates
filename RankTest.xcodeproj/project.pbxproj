@@ -23,6 +23,7 @@
 		24A6E45D1A266CAA00CF2AE4 /* RNKDataBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */; };
 		24A6E4601A266EC500CF2AE4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E45F1A266EC500CF2AE4 /* User.m */; };
 		24A6E4631A266EC500CF2AE4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4621A266EC500CF2AE4 /* Photo.m */; };
+		24A6E4651A26787100CF2AE4 /* RNKPhotosEngineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		24A6E45F1A266EC500CF2AE4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = model/User.m; sourceTree = "<group>"; };
 		24A6E4611A266EC500CF2AE4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = model/Photo.h; sourceTree = "<group>"; };
 		24A6E4621A266EC500CF2AE4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = model/Photo.m; sourceTree = "<group>"; };
+		24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNKPhotosEngineTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				24A6E4311A2606D100CF2AE4 /* RankTestTests.m */,
 				24A6E44F1A26568B00CF2AE4 /* RNKPhotosAPITest.m */,
 				24A6E42F1A2606D100CF2AE4 /* Supporting Files */,
+				24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */,
 			);
 			path = RankTestTests;
 			sourceTree = "<group>";
@@ -151,12 +154,12 @@
 		24A6E43B1A2606EA00CF2AE4 /* Model Engine */ = {
 			isa = PBXGroup;
 			children = (
+				24A6E45B1A266CAA00CF2AE4 /* RNKDataBaseEngine.h */,
+				24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */,
 				24A6E4581A26681700CF2AE4 /* RNKPhotosEngine.h */,
 				24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */,
 				24A6E44B1A26517D00CF2AE4 /* API */,
 				24A6E43C1A26072500CF2AE4 /* Model */,
-				24A6E45B1A266CAA00CF2AE4 /* RNKDataBaseEngine.h */,
-				24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */,
 			);
 			name = "Model Engine";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A6E4321A2606D100CF2AE4 /* RankTestTests.m in Sources */,
+				24A6E4651A26787100CF2AE4 /* RNKPhotosEngineTest.m in Sources */,
 				24A6E4501A26568B00CF2AE4 /* RNKPhotosAPITest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +504,7 @@
 				24A6E4371A2606D100CF2AE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24A6E4381A2606D100CF2AE4 /* Build configuration list for PBXNativeTarget "RankTestTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +513,7 @@
 				24A6E43A1A2606D100CF2AE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

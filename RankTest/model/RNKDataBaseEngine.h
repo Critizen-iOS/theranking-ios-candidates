@@ -19,7 +19,7 @@
 
 
 /**
- Returns the NSManagedObjectContext for inserting and fetching objects into the store
+ Returns the Main NSManagedObjectContext for inserting and fetching objects into the store
  @return NSManagedObjectContext main context
  */
 - (NSManagedObjectContext*) getManagedObjectContext;
