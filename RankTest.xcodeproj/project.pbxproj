@@ -42,6 +42,7 @@
 		24A6E42B1A2606D100CF2AE4 /* RankTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RankTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A6E4301A2606D100CF2AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A6E4311A2606D100CF2AE4 /* RankTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankTestTests.m; sourceTree = "<group>"; };
+		24A6E43E1A2607CB00CF2AE4 /* RNKConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNKConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		24A6E4111A2606D100CF2AE4 /* RankTest */ = {
 			isa = PBXGroup;
 			children = (
+				24A6E43E1A2607CB00CF2AE4 /* RNKConstants.h */,
 				24A6E4161A2606D100CF2AE4 /* AppDelegate.h */,
 				24A6E4171A2606D100CF2AE4 /* AppDelegate.m */,
 				24A6E43D1A26073400CF2AE4 /* View controllers */,
