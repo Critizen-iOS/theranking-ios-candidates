@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "RNKRootVC.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    RNKRootVC *rootVC = [[RNKRootVC alloc] init];
+
+    [self.window setRootViewController: rootVC];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    [self.window makeKeyAndVisible];
+
+
     return YES;
 }
 
