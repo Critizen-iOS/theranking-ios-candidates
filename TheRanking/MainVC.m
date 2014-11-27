@@ -228,6 +228,7 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
     Picture *object = (Picture *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.titleLabel.text = object.pictureTitle;
     cell.ratingLabel.text = [formatter stringFromNumber:object.pictureRating];
+    cell.imageURL = object.pictureURL;
     
     return cell;
 }
