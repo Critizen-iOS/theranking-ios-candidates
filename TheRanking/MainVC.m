@@ -30,7 +30,7 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.title = NSLocalizedString(@"Best 500px", @"Main View title");
+    self.title = NSLocalizedString(@"The Ranking", @"Main View title");
     
     UIBarButtonItem *button = [[UIBarButtonItem alloc]
                                initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
