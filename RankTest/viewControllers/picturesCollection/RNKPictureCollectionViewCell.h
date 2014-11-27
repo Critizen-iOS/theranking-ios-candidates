@@ -10,6 +10,9 @@
 
 @interface RNKPictureCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *ranking;
+@property (weak, nonatomic) IBOutlet UIImageView *picture;
+
 
 @end

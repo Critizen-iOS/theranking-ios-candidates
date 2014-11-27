@@ -116,9 +116,11 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
-    cell.label.text = photo.photoDescription;
+    cell.title.text = photo.name;
 
-    DLog(@"Cell description %@",cell.label.text );
+    cell.ranking.text = [photo.rating stringValue];
+
+    
 
     return cell;
 
