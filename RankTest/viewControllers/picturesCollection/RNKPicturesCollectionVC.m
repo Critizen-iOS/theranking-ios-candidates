@@ -15,6 +15,7 @@
 
 //TODO
 #import "Photo.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 @interface RNKPicturesCollectionVC ()
@@ -116,11 +117,12 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
+    //Config cell
     cell.title.text = photo.name;
 
     cell.ranking.text = [photo.rating stringValue];
 
-    
+    [cell.picture sd_setImageWithURL:[NSURL URLWithString: photo.image_url]];
 
     return cell;
 

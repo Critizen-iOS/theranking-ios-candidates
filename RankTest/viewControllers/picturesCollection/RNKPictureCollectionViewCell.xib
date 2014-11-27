@@ -12,9 +12,12 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rw5-w5-8x8">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="xmu-dU-370">
                         <rect key="frame" x="0.0" y="125" width="150" height="25"/>
-                        <color key="backgroundColor" red="0.6637387776" green="0.6637387776" blue="0.6637387776" alpha="0.32000000000000001" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.6637387776" green="0.6637387776" blue="0.6637387776" alpha="0.5" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="FHu-va-63x"/>
                             <constraint firstAttribute="width" constant="84" id="eJV-P7-lxi"/>
@@ -28,23 +31,20 @@
                             </mask>
                         </variation>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vL-OM-r5c">
-                        <rect key="frame" x="100" y="8" width="42" height="25"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vL-OM-r5c">
+                        <rect key="frame" x="100" y="8" width="42" height="14"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="JRs-7T-ayE"/>
-                            <constraint firstAttribute="height" constant="25" id="QyM-D2-Ar5"/>
+                            <constraint firstAttribute="height" constant="14" id="QyM-D2-Ar5"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rw5-w5-8x8">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="rw5-w5-8x8" secondAttribute="centerX" id="9L7-qe-s5W"/>
                 <constraint firstItem="xmu-dU-370" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9nk-cE-X6A"/>
