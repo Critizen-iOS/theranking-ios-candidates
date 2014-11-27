@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 @import CoreData;
 
+/**
+ *  Object that encapsulate all CoreData functions
+ *  Works as a singleton
+ */
+
 @interface RNKDataBaseEngine : NSObject
 
 /**

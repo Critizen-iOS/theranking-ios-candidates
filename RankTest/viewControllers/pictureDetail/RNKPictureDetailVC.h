@@ -9,6 +9,10 @@
 @import UIKit;
 #import "Photo.h"
 
+/**
+ *  ViewController with all the details of a picture.
+ */
+
 @interface RNKPictureDetailVC : UIViewController
 
 @property (nonatomic, strong) Photo *photo;

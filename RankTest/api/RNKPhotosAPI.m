@@ -101,13 +101,10 @@ static NSString *PopularPicturesURL = @"photos?feature=popular&sort=rating&image
                     dispatch_async(dispatch_get_main_queue(), ^{
 
                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-
-                        //TODO: find a better way to handle error
-                        // NSString* errorString = [NSString stringWithFormat:@"Connection failed:%@",[error localizedDescription]];
-                        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                        //[alert show];
-                        
+                       
                     });
+
+                    //TODO: find a better way to handle error
                     ELog(@"Connection failed:%@",[error localizedDescription]);
                     
                     completionBlock(nil, error);

@@ -12,7 +12,9 @@
 
 /**
  *  Extension for RNKPictureCollectionViewCell in order to fill all fields
+ *  Not the best solution, bus is fast and the view doen't receive the model directly.
  */
+
 @interface RNKPictureCollectionViewCell (drawer)
 
 /**

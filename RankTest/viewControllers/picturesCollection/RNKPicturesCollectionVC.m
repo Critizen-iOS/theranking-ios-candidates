@@ -192,10 +192,9 @@ static NSString * const reuseIdentifier = @"PictureCell";
     RNKPictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
     /*
-     //TODO load  more results
     if (indexPath.row == ([[[self.fetchedResultsController sections] objectAtIndex:0] numberOfObjects] -1)) {
         [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
-            //TODO: manage error
+            //TODO: load  more results
         }];
     }
     */

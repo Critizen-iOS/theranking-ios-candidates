@@ -8,6 +8,10 @@
 
 @import UIKit;
 
+/**
+ *  Provides transitions to main navigation controller
+ */
+
 @interface RNKNavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
 
 @end

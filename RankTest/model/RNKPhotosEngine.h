@@ -8,6 +8,10 @@
 
 @import UIKit;
 
+/**
+ *  Controller that updates the DB
+ */
+
 @interface RNKPhotosEngine : NSObject
 
 /**

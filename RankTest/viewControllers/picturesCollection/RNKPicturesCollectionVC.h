@@ -9,6 +9,11 @@
 @import UIKit;
 #import "CoreDataCollectionVC.h"
 
+/**
+ *  VC with a collection of pictures
+ *  Inherits from CoreDataCollectionVC that acts as a CD datasource 
+ */
+
 @interface RNKPicturesCollectionVC : CoreDataCollectionVC
 
 /**

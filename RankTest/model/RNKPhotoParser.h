@@ -8,8 +8,17 @@
 
 @import CoreData;
 
+/**
+ *  Parser for Photos and Users JSON objects.
+ */
+
 @interface RNKPhotoParser : NSObject
 
+/**
+ *  Insert or updates a picture and their user in a given context. Does NOT save the context
+ *  @param pictureJSON NSDic with Picture
+ *  @param context 
+ */
 - (void) addOrModifyPictureWithJSON: (NSDictionary*) pictureJSON inContext: (NSManagedObjectContext*) context;
 
 @end

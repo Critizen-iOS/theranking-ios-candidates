@@ -9,6 +9,10 @@
 @import UIKit;
 @import CoreData;
 
+/**
+ *  Works as a datasource for a CollectionView with a set of data fetches from CD
+ */
+
 @interface CoreDataCollectionVC : UICollectionViewController <NSFetchedResultsControllerDelegate>
 
 // The controller (this class fetches nothing if this is not set).

@@ -8,6 +8,10 @@
 
 @import Foundation;
 
+/**
+ *  Object in manage of all API calls for Pictures
+ */
+
 @interface RNKPhotosAPI : NSObject
 
 /**

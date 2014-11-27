@@ -8,6 +8,12 @@
 
 @import UIKit;
 
+/**
+ *  Main VC
+ *  Creates a navigationcontroller for the flow of all views
+ *  Also creates a navigation delegate for delivering transitions
+ */
+
 @interface RNKRootVC : UIViewController
 
 @end
