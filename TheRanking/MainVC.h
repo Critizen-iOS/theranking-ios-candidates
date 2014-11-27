@@ -10,6 +10,7 @@
 
 @interface MainVC : UIViewController
 
+@property (nonatomic, weak) IBOutlet UICollectionViewCell *collectionViewCell;
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end

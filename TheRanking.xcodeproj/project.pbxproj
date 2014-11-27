@@ -20,6 +20,11 @@
 		D23FB1641A26292800CE6CC9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23FB1631A26292800CE6CC9 /* MainWindow.xib */; };
 		D23FB1671A262C4000CE6CC9 /* RankingStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D23FB1661A262C4000CE6CC9 /* RankingStore.m */; };
 		D23FB16A1A262C6400CE6CC9 /* RankingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D23FB1691A262C6400CE6CC9 /* RankingAPI.m */; };
+		D23FB1721A263C3900CE6CC9 /* 500pxConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = D23FB1711A263C3900CE6CC9 /* 500pxConfig.plist */; };
+		D23FB1781A26BA3700CE6CC9 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = D23FB1771A26BA3700CE6CC9 /* Picture.m */; };
+		D23FB17C1A2733D300CE6CC9 /* Ranking500pxAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D23FB17B1A2733D300CE6CC9 /* Ranking500pxAPI.m */; };
+		D23FB1801A273B9600CE6CC9 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D23FB17E1A273B9600CE6CC9 /* MainCell.m */; };
+		D23FB1811A273B9600CE6CC9 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23FB17F1A273B9600CE6CC9 /* MainCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,14 @@
 		D23FB1661A262C4000CE6CC9 /* RankingStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingStore.m; sourceTree = "<group>"; };
 		D23FB1681A262C6400CE6CC9 /* RankingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingAPI.h; sourceTree = "<group>"; };
 		D23FB1691A262C6400CE6CC9 /* RankingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingAPI.m; sourceTree = "<group>"; };
+		D23FB1711A263C3900CE6CC9 /* 500pxConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 500pxConfig.plist; sourceTree = "<group>"; };
+		D23FB1761A26BA3700CE6CC9 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		D23FB1771A26BA3700CE6CC9 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		D23FB17A1A2733D300CE6CC9 /* Ranking500pxAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ranking500pxAPI.h; sourceTree = "<group>"; };
+		D23FB17B1A2733D300CE6CC9 /* Ranking500pxAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ranking500pxAPI.m; sourceTree = "<group>"; };
+		D23FB17D1A273B9600CE6CC9 /* MainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCell.h; sourceTree = "<group>"; };
+		D23FB17E1A273B9600CE6CC9 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
+		D23FB17F1A273B9600CE6CC9 /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +112,11 @@
 				D23FB12C1A2625DA00CE6CC9 /* AppDelegate.h */,
 				D23FB12D1A2625DA00CE6CC9 /* AppDelegate.m */,
 				D23FB16C1A2638C200CE6CC9 /* API */,
+				D23FB1821A273C0D00CE6CC9 /* Views */,
 				D23FB16D1A2638D600CE6CC9 /* VCs */,
 				D23FB1561A26273100CE6CC9 /* UI */,
 				D23FB13B1A2625DA00CE6CC9 /* Images.xcassets */,
-				D23FB12F1A2625DA00CE6CC9 /* TheRanking.xcdatamodeld */,
+				D23FB1791A26BA4600CE6CC9 /* Model */,
 				D23FB1281A2625DA00CE6CC9 /* Supporting Files */,
 			);
 			path = TheRanking;
@@ -141,6 +155,7 @@
 				D23FB15B1A2627BE00CE6CC9 /* MainVC.xib */,
 				D23FB1601A2627E700CE6CC9 /* DetailVC.xib */,
 				D23FB1631A26292800CE6CC9 /* MainWindow.xib */,
+				D23FB17F1A273B9600CE6CC9 /* MainCell.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -148,10 +163,13 @@
 		D23FB16C1A2638C200CE6CC9 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D23FB1681A262C6400CE6CC9 /* RankingAPI.h */,
-				D23FB1691A262C6400CE6CC9 /* RankingAPI.m */,
+				D23FB1711A263C3900CE6CC9 /* 500pxConfig.plist */,
 				D23FB1651A262C4000CE6CC9 /* RankingStore.h */,
 				D23FB1661A262C4000CE6CC9 /* RankingStore.m */,
+				D23FB1681A262C6400CE6CC9 /* RankingAPI.h */,
+				D23FB1691A262C6400CE6CC9 /* RankingAPI.m */,
+				D23FB17A1A2733D300CE6CC9 /* Ranking500pxAPI.h */,
+				D23FB17B1A2733D300CE6CC9 /* Ranking500pxAPI.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -165,6 +183,25 @@
 				D23FB15F1A2627E700CE6CC9 /* DetailVC.m */,
 			);
 			name = VCs;
+			sourceTree = "<group>";
+		};
+		D23FB1791A26BA4600CE6CC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D23FB1761A26BA3700CE6CC9 /* Picture.h */,
+				D23FB1771A26BA3700CE6CC9 /* Picture.m */,
+				D23FB12F1A2625DA00CE6CC9 /* TheRanking.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D23FB1821A273C0D00CE6CC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D23FB17D1A273B9600CE6CC9 /* MainCell.h */,
+				D23FB17E1A273B9600CE6CC9 /* MainCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +253,7 @@
 				TargetAttributes = {
 					D23FB1241A2625DA00CE6CC9 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = J25S878UGL;
 					};
 					D23FB1431A2625DA00CE6CC9 = {
 						CreatedOnToolsVersion = 6.0;
@@ -251,6 +289,8 @@
 				D23FB1641A26292800CE6CC9 /* MainWindow.xib in Resources */,
 				D23FB13F1A2625DA00CE6CC9 /* LaunchScreen.xib in Resources */,
 				D23FB13C1A2625DA00CE6CC9 /* Images.xcassets in Resources */,
+				D23FB1721A263C3900CE6CC9 /* 500pxConfig.plist in Resources */,
+				D23FB1811A273B9600CE6CC9 /* MainCell.xib in Resources */,
 				D23FB1621A2627E700CE6CC9 /* DetailVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23FB1801A273B9600CE6CC9 /* MainCell.m in Sources */,
+				D23FB1781A26BA3700CE6CC9 /* Picture.m in Sources */,
 				D23FB1671A262C4000CE6CC9 /* RankingStore.m in Sources */,
 				D23FB16A1A262C6400CE6CC9 /* RankingAPI.m in Sources */,
 				D23FB12E1A2625DA00CE6CC9 /* AppDelegate.m in Sources */,
+				D23FB17C1A2733D300CE6CC9 /* Ranking500pxAPI.m in Sources */,
 				D23FB1611A2627E700CE6CC9 /* DetailVC.m in Sources */,
 				D23FB15C1A2627BE00CE6CC9 /* MainVC.m in Sources */,
 				D23FB12B1A2625DA00CE6CC9 /* main.m in Sources */,

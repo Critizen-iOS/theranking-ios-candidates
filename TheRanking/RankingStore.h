@@ -8,14 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Picture.h"
 
 @interface RankingStore : NSObject
 
-@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
-@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+- (NSManagedObjectContext *) newBackgroundObjectContext;
+- (NSManagedObjectContext *) mainObjectContext;
 
 - (void)saveContext;
-- (NSURL *)applicationDocumentsDirectory;
 
 @end
