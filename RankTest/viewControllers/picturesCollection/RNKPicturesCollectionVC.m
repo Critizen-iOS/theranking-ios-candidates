@@ -11,6 +11,7 @@
 #import "RNKDataBaseEngine.h"
 #import "RNKPictureCollectionViewCell.h"
 #import "RNKPhotosEngine.h"
+#import "RNKPictureDetailVC.h"
 
 
 //TODO
@@ -107,6 +108,7 @@ static NSString * const reuseIdentifier = @"PictureCell";
     // Configure the cell //TODO:
 
     /*
+     //TODO load  more results
     if (indexPath.row == ([[[self.fetchedResultsController sections] objectAtIndex:0] numberOfObjects] -1)) {
         [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
             //TODO: manage error
@@ -125,6 +127,20 @@ static NSString * const reuseIdentifier = @"PictureCell";
     [cell.picture sd_setImageWithURL:[NSURL URLWithString: photo.image_url]];
 
     return cell;
+
+}
+
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    RNKPictureDetailVC *pictureDetailVC = [[RNKPictureDetailVC alloc] initWithNibName:@"RNKPictureDetailVC" bundle:nil];
+
+    pictureDetailVC.photo = photo;
+
+    [self.navigationController pushViewController: pictureDetailVC animated: YES];
 
 }
 
