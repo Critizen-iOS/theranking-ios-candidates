@@ -8,15 +8,21 @@
 
 #import "RNKPicturesCollectionVC.h"
 #import "RNKConstants.h"
+#import "RNKDataBaseEngine.h"
+#import "RNKPictureCollectionViewCell.h"
+#import "RNKPhotosEngine.h"
 
 
 @interface RNKPicturesCollectionVC ()
+
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) RNKPhotosEngine *photosEngine;
 
 @end
 
 @implementation RNKPicturesCollectionVC
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"PictureCell";
 
 - (void)viewDidLoad {
     DLog();
@@ -27,11 +33,29 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[RNKPictureCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 
+    [self setManagedObjectContext: [[RNKDataBaseEngine sharedInstance] getManagedObjectContext]];
 
+    //TODO: show loading
+
+    //Load values
+    /* [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
+        //TODO: manage error and hide loading
+
+    }];
+     */
+
+}
+
+- (RNKPhotosEngine*) photosEngine {
+    DLog();
+    if (!_photosEngine) {
+        _photosEngine = [[RNKPhotosEngine alloc] init];
+    }
+    return _photosEngine;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,66 +63,53 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+- (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+    DLog();
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+    _managedObjectContext = managedObjectContext;
 
-#pragma mark <UICollectionViewDataSource>
+    //DLog(@"  %@", _managedObjectContext);
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
-}
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
+
+    NSString *predicateString = nil; //All pictures
+
+    fetchRequest.predicate = [NSPredicate predicateWithFormat: predicateString];
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"rating"
+                                                                   ascending: NO ]];
+
+    [fetchRequest setFetchBatchSize:20];
+
+    self.debug = YES;
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest: fetchRequest
+                                                                        managedObjectContext: managedObjectContext
+                                                                          sectionNameKeyPath: nil
+                                                                                   cacheName: nil];
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+    if (self.fetchedResultsController.fetchedObjects.count == 0 ) {
+        DLog(@"No pictures fetched");
+    } else {
+        DLog(@"%lu pictures found", (unsigned long)self.fetchedResultsController.fetchedObjects.count);
+    }
+
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
+
+    // Configure the cell //TODO:
+
+    if (indexPath.row == ([[[self.fetchedResultsController sections] objectAtIndex:0] numberOfObjects] -1))
+    {
+        // [[TRDataNetManager sharedManager] updatePhotosWithCompletionHandler:nil];
+
+    }
+
+    //cell.photo = [self.fetchedResultController objectAtIndexPath:indexPath];
     return cell;
-}
 
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
 }
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

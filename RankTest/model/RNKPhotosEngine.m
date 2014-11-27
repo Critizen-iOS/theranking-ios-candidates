@@ -43,7 +43,7 @@
 }
 
 - (void) getPopularPicturesOnCompletion: (void(^)(BOOL result, NSError *error)) completionBlock {
-
+    DLog();
     __weak __typeof(self)weakSelf = self;
     [self.photosAPI getPopularPicturesJSON:^(NSArray *picturesJSON, NSError *error) {
 
@@ -63,8 +63,9 @@
 #pragma mark - private
 
 - (void) parseAndSavePicturesBackgroud: (NSArray*) arrayWithPictures completion:(void(^)(void))completion{
+    DLog();
 
-    NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    __block NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
     temporaryContext.parentContext = [[RNKDataBaseEngine sharedInstance] getManagedObjectContext];
 
     [temporaryContext performBlock:^{
@@ -139,6 +140,7 @@
                 
             }
 
+            /*
             if(counter % 5 == 0){
                 // Save the context.
                 NSError *error = nil;
@@ -150,28 +152,34 @@
                     abort();
                 }
             }
+             */
             counter++;
-        }
+        } //End for
 
         // Save the context.
-        NSError *error = nil;
         DLog(@"Saving to PSC");
+
+        [[RNKDataBaseEngine sharedInstance] saveContext: temporaryContext];
+
+        /*
         if (![temporaryContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             ELog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+         */
 
         // save parent to disk asynchronously
+        [[RNKDataBaseEngine sharedInstance] saveContext: [[RNKDataBaseEngine sharedInstance] getManagedObjectContext]];
+
+        /*
         [[[RNKDataBaseEngine sharedInstance] getManagedObjectContext] performBlock:^{
-            NSError *error;
-            if (![[[RNKDataBaseEngine sharedInstance] getManagedObjectContext] save:&error])
-            {
-                ELog(@"Unresolved error %@, %@", error, [error userInfo]);
-                abort();
-            }
+
+            [[RNKDataBaseEngine sharedInstance] saveContext: [[RNKDataBaseEngine sharedInstance] getManagedObjectContext]];
+
         }];
+         */
     }];
 
 

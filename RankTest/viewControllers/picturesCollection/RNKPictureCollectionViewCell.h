@@ -1,5 +1,5 @@
 //
-//  RNKPicturesCollectionVC.h
+//  RNKPictureCollectionViewCell.h
 //  RankTest
 //
 //  Created by Rafael Bartolome on 26/11/14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CoreDataCollectionVC.h"
 
-@interface RNKPicturesCollectionVC : CoreDataCollectionVC
+@interface RNKPictureCollectionViewCell : UICollectionViewCell
 
 @end

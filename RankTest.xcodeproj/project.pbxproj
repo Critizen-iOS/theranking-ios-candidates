@@ -24,6 +24,9 @@
 		24A6E4601A266EC500CF2AE4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E45F1A266EC500CF2AE4 /* User.m */; };
 		24A6E4631A266EC500CF2AE4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4621A266EC500CF2AE4 /* Photo.m */; };
 		24A6E4651A26787100CF2AE4 /* RNKPhotosEngineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */; };
+		24A6E4691A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4671A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m */; };
+		24A6E46A1A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */; };
+		24A6E46D1A26819400CF2AE4 /* CoreDataCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,11 @@
 		24A6E4611A266EC500CF2AE4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = model/Photo.h; sourceTree = "<group>"; };
 		24A6E4621A266EC500CF2AE4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = model/Photo.m; sourceTree = "<group>"; };
 		24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNKPhotosEngineTest.m; sourceTree = "<group>"; };
+		24A6E4661A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPictureCollectionViewCell.h; path = viewControllers/picturesCollection/RNKPictureCollectionViewCell.h; sourceTree = "<group>"; };
+		24A6E4671A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPictureCollectionViewCell.m; path = viewControllers/picturesCollection/RNKPictureCollectionViewCell.m; sourceTree = "<group>"; };
+		24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNKPictureCollectionViewCell.xib; path = viewControllers/picturesCollection/RNKPictureCollectionViewCell.xib; sourceTree = "<group>"; };
+		24A6E46B1A26814300CF2AE4 /* CoreDataCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataCollectionVC.h; path = viewControllers/picturesCollection/CoreDataCollectionVC.h; sourceTree = "<group>"; };
+		24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataCollectionVC.m; path = viewControllers/picturesCollection/CoreDataCollectionVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +202,11 @@
 				24A6E4431A260B4600CF2AE4 /* RNKPicturesCollectionVC.h */,
 				24A6E4441A260B4600CF2AE4 /* RNKPicturesCollectionVC.m */,
 				24A6E4451A260B4600CF2AE4 /* RNKPicturesCollectionVC.xib */,
+				24A6E46B1A26814300CF2AE4 /* CoreDataCollectionVC.h */,
+				24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */,
+				24A6E4661A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.h */,
+				24A6E4671A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m */,
+				24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */,
 			);
 			name = "Pictures Collection";
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 			files = (
 				24A6E4261A2606D100CF2AE4 /* LaunchScreen.xib in Resources */,
 				24A6E4471A260B4600CF2AE4 /* RNKPicturesCollectionVC.xib in Resources */,
+				24A6E46A1A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib in Resources */,
 				24A6E4231A2606D100CF2AE4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +324,7 @@
 				24A6E4601A266EC500CF2AE4 /* User.m in Sources */,
 				24A6E4181A2606D100CF2AE4 /* AppDelegate.m in Sources */,
 				24A6E41B1A2606D100CF2AE4 /* RankTest.xcdatamodeld in Sources */,
+				24A6E4691A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m in Sources */,
 				24A6E45A1A26681700CF2AE4 /* RNKPhotosEngine.m in Sources */,
 				24A6E44A1A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m in Sources */,
 				24A6E45D1A266CAA00CF2AE4 /* RNKDataBaseEngine.m in Sources */,
@@ -317,6 +332,7 @@
 				24A6E44E1A2652CA00CF2AE4 /* RNKPhotosAPI.m in Sources */,
 				24A6E4631A266EC500CF2AE4 /* Photo.m in Sources */,
 				24A6E4461A260B4600CF2AE4 /* RNKPicturesCollectionVC.m in Sources */,
+				24A6E46D1A26819400CF2AE4 /* CoreDataCollectionVC.m in Sources */,
 				24A6E4151A2606D100CF2AE4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

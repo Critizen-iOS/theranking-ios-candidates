@@ -48,7 +48,9 @@
     }
 
     if ([context isEqual: _managedObjectContext]) {
-        //DLog(@"Saving main context.");
+        DLog(@"Saving main context.");
+    } else {
+        DLog(@"Saving child context.");
     }
 
     if (context != nil) {
@@ -59,10 +61,10 @@
                 ELog(@"Unresolved error %@, %@", error, [error userInfo]);
                 abort();
             }
-            [context processPendingChanges];
-            //DLog(@" Context saved! %@", context);
+            //[context processPendingChanges];
+            DLog(@" Context saved! %@", context);
         } else {
-            //DLog(@" No changes in context to save");
+            DLog(@" No changes in context to save");
         }
     } else {
         //DLog(@" No context to save");
@@ -72,23 +74,22 @@
 
 // Returns the managed object context for the application.
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
-- (NSManagedObjectContext *) getManagedObjectContext
-{
+- (NSManagedObjectContext *) getManagedObjectContext {
+
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
 
-
     NSPersistentStoreCoordinator *coordinator = self.sharedPSC;
     if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
 
     //Observer for changes in other contexts
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(mergeChanges:)
-                                                 name:NSManagedObjectContextDidSaveNotification
+                                                 name: NSManagedObjectContextDidSaveNotification
                                                object:nil];
 
     //DLog(@"%@", _managedObjectContext);
@@ -124,8 +125,10 @@
 
     NSManagedObjectModel *managedObjectModel = [self createManagedObjectModel];
 
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Pushed.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"RankTest.sqlite"];
 
+    DLog(@"Database: %@", [storeURL absoluteString]);
+    
     NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
@@ -157,15 +160,15 @@
 
 // this is called via observing "NSManagedObjectContextDidSaveNotification" 
 - (void)mergeChanges:(NSNotification *)notification {
-    //DLog(@"received NSManagedObjectContextDidSaveNotification");
-    if (notification.object != _managedObjectContext) {
-        [self performSelectorOnMainThread:@selector(updateMainContext:) withObject:notification waitUntilDone:NO];
-    }
+    DLog(@"received NSManagedObjectContextDidSaveNotification");
+    // if (notification.object != _managedObjectContext) {
+    //    [self performSelectorOnMainThread:@selector(updateMainContext:) withObject:notification waitUntilDone:NO];
+    //}
 }
 
 // merge changes to main context,fetchedRequestController will automatically monitor the changes and update tableview.
 - (void)updateMainContext:(NSNotification *)notification {
-    //DLog();
+    DLog();
     assert([NSThread isMainThread]);
     [_managedObjectContext mergeChangesFromContextDidSaveNotification:notification];
 }
