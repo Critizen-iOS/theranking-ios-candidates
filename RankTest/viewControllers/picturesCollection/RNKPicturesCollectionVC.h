@@ -11,4 +11,9 @@
 
 @interface RNKPicturesCollectionVC : CoreDataCollectionVC
 
+/**
+ *  Index path of the selected document
+ */
+@property (nonatomic, readonly) NSIndexPath *selectedIndexPath;
+
 @end

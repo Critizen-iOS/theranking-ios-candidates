@@ -32,6 +32,7 @@
 		24A6E4761A27454700CF2AE4 /* RNKPictureDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4741A27454700CF2AE4 /* RNKPictureDetailVC.xib */; };
 		24A6E4781A277B9D00CF2AE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A6E4771A277B9D00CF2AE4 /* MapKit.framework */; };
 		24C6AC6D1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C6AC6C1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m */; };
+		24C6AC701A27A7C500EC34E7 /* RNKPicturePushAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C6AC6F1A27A7C500EC34E7 /* RNKPicturePushAnimationController.m */; };
 		68B273563666AE4038469B4B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C743BCA6C68B086119E1A55E /* libPods.a */; };
 		8B4A681340A6C7510AD2D450 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C743BCA6C68B086119E1A55E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,8 @@
 		24A6E4771A277B9D00CF2AE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		24C6AC6B1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RNKPictureCollectionViewCell+drawer.h"; path = "viewControllers/picturesCollection/RNKPictureCollectionViewCell+drawer.h"; sourceTree = "<group>"; };
 		24C6AC6C1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RNKPictureCollectionViewCell+drawer.m"; path = "viewControllers/picturesCollection/RNKPictureCollectionViewCell+drawer.m"; sourceTree = "<group>"; };
+		24C6AC6E1A27A7C500EC34E7 /* RNKPicturePushAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPicturePushAnimationController.h; path = viewControllers/picturesCollection/RNKPicturePushAnimationController.h; sourceTree = "<group>"; };
+		24C6AC6F1A27A7C500EC34E7 /* RNKPicturePushAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPicturePushAnimationController.m; path = viewControllers/picturesCollection/RNKPicturePushAnimationController.m; sourceTree = "<group>"; };
 		710A5B326687B3F2B995A265 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C743BCA6C68B086119E1A55E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82967A4761557C418525DD6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 				24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */,
 				24C6AC6B1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.h */,
 				24C6AC6C1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m */,
+				24C6AC6E1A27A7C500EC34E7 /* RNKPicturePushAnimationController.h */,
+				24C6AC6F1A27A7C500EC34E7 /* RNKPicturePushAnimationController.m */,
 			);
 			name = "Pictures Collection";
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A6E4601A266EC500CF2AE4 /* User.m in Sources */,
+				24C6AC701A27A7C500EC34E7 /* RNKPicturePushAnimationController.m in Sources */,
 				24A6E4181A2606D100CF2AE4 /* AppDelegate.m in Sources */,
 				24A6E41B1A2606D100CF2AE4 /* RankTest.xcdatamodeld in Sources */,
 				24A6E4691A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m in Sources */,

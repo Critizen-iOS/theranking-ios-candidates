@@ -8,6 +8,7 @@
 
 #import "RNKNavigationControllerDelegate.h"
 #import "RNKConstants.h"
+#import "RNKPicturePushAnimationController.h"
 
 @implementation RNKNavigationControllerDelegate
 
@@ -25,6 +26,7 @@
     if (operation == UINavigationControllerOperationPush) {
         DLog(@"Push");
 
+        return [[RNKPicturePushAnimationController alloc] init];
     }
 
     if (operation == UINavigationControllerOperationPop) {

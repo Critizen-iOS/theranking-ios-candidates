@@ -172,6 +172,8 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
+    _selectedIndexPath = indexPath;
+    
     RNKPictureDetailVC *pictureDetailVC = [[RNKPictureDetailVC alloc] initWithNibName:@"RNKPictureDetailVC" bundle:nil];
 
     pictureDetailVC.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];;
