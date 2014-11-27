@@ -26,6 +26,8 @@
 
 static NSString * const reuseIdentifier = @"PictureCell";
 
+
+
 - (void)viewDidLoad {
     DLog();
 
@@ -35,14 +37,7 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     [self setManagedObjectContext: [[RNKDataBaseEngine sharedInstance] getManagedObjectContext]];
 
-    //TODO: show loading
-
-    //Load values
-    [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
-        //TODO: manage error and hide loading
-
-    }];
-    
+    [self updatePictures];
 
 }
 
@@ -64,8 +59,6 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     _managedObjectContext = managedObjectContext;
 
-    //DLog(@"  %@", _managedObjectContext);
-
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
 
     NSString *predicateString = nil; //All pictures
@@ -81,8 +74,48 @@ static NSString * const reuseIdentifier = @"PictureCell";
                                                                         managedObjectContext: managedObjectContext
                                                                           sectionNameKeyPath: nil
                                                                                    cacheName: nil];
-
 }
+
+- (void)updatePictures {
+
+    UIActivityIndicatorView *actInd;
+
+    if (self.fetchedResultsController.fetchedObjects.count == 0 ) {
+        actInd = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleWhiteLarge];
+        actInd.center = self.view.center;
+        [actInd startAnimating];
+        [self.view addSubview: actInd];
+    }
+
+    [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
+
+        if (actInd) {
+            [actInd stopAnimating];
+            actInd.hidden = TRUE;
+            [actInd removeFromSuperview];
+        }
+
+        if (error) {
+            UIAlertController *alertController = [UIAlertController
+                                                  alertControllerWithTitle: @"Problems getting Pictures"
+                                                  message: error.localizedDescription
+                                                  preferredStyle:UIAlertControllerStyleAlert];
+
+            UIAlertAction *okAction = [UIAlertAction
+                                       actionWithTitle: @"OK"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction *action)
+                                       {
+                                           DLog(@"OK action");
+                                       }];
+            [alertController addAction:okAction];
+
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+    }];
+}
+
+#pragma mark - UICollectionViewDataSource
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 

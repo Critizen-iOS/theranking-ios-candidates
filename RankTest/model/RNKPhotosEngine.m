@@ -51,8 +51,8 @@
 
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         if (picturesJSON && !error) {
-            [strongSelf parseAndSavePicturesBackgroud: picturesJSON completion:^{
-                completionBlock (true, nil);
+            [strongSelf parseAndSavePicturesBackgroud: picturesJSON completion:^(BOOL result) {
+                completionBlock (result, nil);
             }];
         } else {
             completionBlock (false, error);
@@ -64,7 +64,7 @@
 
 #pragma mark - private
 
-- (void) parseAndSavePicturesBackgroud: (NSArray*) arrayWithPictures completion:(void(^)(void))completion{
+- (void) parseAndSavePicturesBackgroud: (NSArray*) arrayWithPictures completion:(void(^)(BOOL result))completion{
     DLog();
 
     __block NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
@@ -97,8 +97,8 @@
 
         }];
 
+        completion(true);
     }];
-
 }
 
 
