@@ -18,6 +18,7 @@
 
 @property (nonatomic, strong) Ranking500pxAPI *api;
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) DetailVC *detailVC;
 
 @end
 
@@ -96,6 +97,8 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    self.detailVC = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -116,6 +119,13 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+- (DetailVC *)detailVC {
+    if(_detailVC == nil) {
+        self.detailVC = [[DetailVC alloc] initWithNibName: nil bundle: nil];
+    }
+    return _detailVC;
+}
 
 #pragma mark - NSFetchResultsController Delegate
 
@@ -229,7 +239,7 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
     
     Picture *object = (Picture *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    DetailVC *detailController = [[DetailVC alloc] initWithNibName: nil bundle: nil];
+    DetailVC *detailController = [self detailVC];
     detailController.selectedPicture = object;
     [self.navigationController pushViewController:detailController animated:YES];
 
