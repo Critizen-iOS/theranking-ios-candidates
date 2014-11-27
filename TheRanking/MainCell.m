@@ -7,12 +7,14 @@
 //
 
 #import "MainCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainCell() {
     CGFloat originalTopSpaceRatingConstant;
     CGFloat originalBottomSpaceTitleConstant;
 }
 
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topSpaceRatingConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpaceTitleConstraint;
 
@@ -25,6 +27,12 @@
     originalTopSpaceRatingConstant = self.topSpaceRatingConstraint.constant;
     originalBottomSpaceTitleConstant = self.bottomSpaceTitleConstraint.constant;
     
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    [self.imageView sd_cancelCurrentImageLoad];
+    self.imageView.image = nil;
 }
 
 -(void)setHighlighted:(BOOL)highlighted
@@ -47,6 +55,12 @@
         [self.ratingLabel.superview layoutIfNeeded];
         [self.titleLabel.superview layoutIfNeeded];
     }];
+}
+
+- (void)setImageURL:(NSString *)imageURL {
+    _imageURL = [imageURL copy];
+    NSLog(@"%@", imageURL);
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@"placeholder"]];
 }
 
 @end

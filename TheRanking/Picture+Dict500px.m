@@ -32,6 +32,7 @@
     self.pictureLong = objectFromDictionaryValue(pictureDictionary[@"longitude"]);
     
     self.pictureRating = objectFromDictionaryValue(pictureDictionary[@"rating"]);
+    self.pictureURL = objectFromDictionaryValue(pictureDictionary[@"image_url"]);
 }
 
 static inline id objectFromDictionaryValue(id value) {
