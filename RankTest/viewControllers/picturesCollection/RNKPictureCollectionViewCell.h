@@ -10,4 +10,6 @@
 
 @interface RNKPictureCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end

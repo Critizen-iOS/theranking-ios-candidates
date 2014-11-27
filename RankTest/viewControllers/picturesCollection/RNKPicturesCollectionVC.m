@@ -13,6 +13,10 @@
 #import "RNKPhotosEngine.h"
 
 
+//TODO
+#import "Photo.h"
+
+
 @interface RNKPicturesCollectionVC ()
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
@@ -33,7 +37,7 @@ static NSString * const reuseIdentifier = @"PictureCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[RNKPictureCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"RNKPictureCollectionViewCell" bundle:nil] forCellWithReuseIdentifier: reuseIdentifier];
     
     // Do any additional setup after loading the view.
 
@@ -42,11 +46,11 @@ static NSString * const reuseIdentifier = @"PictureCell";
     //TODO: show loading
 
     //Load values
-    /* [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
+    [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
         //TODO: manage error and hide loading
 
     }];
-     */
+    
 
 }
 
@@ -97,7 +101,7 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    RNKPictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
     // Configure the cell //TODO:
 
@@ -108,6 +112,13 @@ static NSString * const reuseIdentifier = @"PictureCell";
     }
 
     //cell.photo = [self.fetchedResultController objectAtIndexPath:indexPath];
+
+    Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+
+    cell.label.text = photo.photoDescription;
+
+    DLog(@"Cell description %@",cell.label.text );
+
     return cell;
 
 }
