@@ -23,7 +23,10 @@
     // Override point for customization after application launch.
     
     self.navigationController = [[UINavigationController alloc] init];
-    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{
+                                                                    NSForegroundColorAttributeName : [UIColor whiteColor],
+                                                                    };
 
     self.window.rootViewController = self.navigationController;
     
