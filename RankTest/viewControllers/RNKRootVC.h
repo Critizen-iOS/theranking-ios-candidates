@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 www.rafaelbartolome.es. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface RNKRootVC : UIViewController
 

@@ -6,9 +6,8 @@
 //  Copyright (c) 2014 www.rafaelbartolome.es. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "Photo.h"
-#import <MapKit/MapKit.h>
 
 @interface RNKPictureDetailVC : UIViewController
 

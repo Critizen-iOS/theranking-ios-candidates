@@ -26,12 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-
-    self.view.backgroundColor = [UIColor redColor];
 
     [self loadPictureCollection];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +47,7 @@
         if (!navigationControllerDelegate) {
             navigationControllerDelegate = [[RNKNavigationControllerDelegate alloc] init];
         }
-        _rootNavigationController.delegate = self;
+        _rootNavigationController.delegate = navigationControllerDelegate;
 
         [self.view addSubview: _rootNavigationController.view];
     }
@@ -62,39 +59,7 @@
 
     RNKPicturesCollectionVC *picturesCollectionVC = [[RNKPicturesCollectionVC alloc] initWithNibName:@"RNKPicturesCollectionVC" bundle:nil];
 
-    //TODO: Init collection
-
     [self.rootNavigationController pushViewController: picturesCollectionVC animated: NO];
-
-
-}
-
-
-
-
-
-#pragma mark UINavigationControllerDelegate methods
-
-- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
-                                  animationControllerForOperation:(UINavigationControllerOperation)operation
-                                               fromViewController:(UIViewController *)fromVC
-                                                 toViewController:(UIViewController *)toVC {
-
-
-    //TODO:
-
-    if (operation == UINavigationControllerOperationPush) {
-        DLog(@"Push");
-
-    }
-
-    if (operation == UINavigationControllerOperationPop) {
-        DLog(@"Pop");
-
-    }
-    
-    
-    return nil;
 }
 
 

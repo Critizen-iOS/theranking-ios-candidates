@@ -28,7 +28,7 @@
     }
 
     if (operation == UINavigationControllerOperationPop) {
-        DLog(@"Push");
+        DLog(@"Pop");
 
     }
 

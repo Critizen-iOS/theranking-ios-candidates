@@ -7,6 +7,7 @@
 //
 
 #import "RNKPictureDetailVC.h"
+@import MapKit;
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "User.h"
 

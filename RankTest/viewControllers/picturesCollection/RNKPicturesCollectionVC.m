@@ -9,14 +9,10 @@
 #import "RNKPicturesCollectionVC.h"
 #import "RNKConstants.h"
 #import "RNKDataBaseEngine.h"
-#import "RNKPictureCollectionViewCell.h"
+#import "RNKPictureCollectionViewCell+drawer.h"
 #import "RNKPhotosEngine.h"
 #import "RNKPictureDetailVC.h"
-
-
-//TODO
 #import "Photo.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 
 
 @interface RNKPicturesCollectionVC ()
@@ -35,13 +31,7 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
     [self.collectionView registerNib:[UINib nibWithNibName:@"RNKPictureCollectionViewCell" bundle:nil] forCellWithReuseIdentifier: reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 
     [self setManagedObjectContext: [[RNKDataBaseEngine sharedInstance] getManagedObjectContext]];
 
@@ -86,28 +76,17 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     [fetchRequest setFetchBatchSize:20];
 
-    self.debug = YES;
+    self.debug = NO;
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest: fetchRequest
                                                                         managedObjectContext: managedObjectContext
                                                                           sectionNameKeyPath: nil
                                                                                    cacheName: nil];
-
-
-    /*
-    if (self.fetchedResultsController.fetchedObjects.count == 0 ) {
-        DLog(@"No pictures fetched");
-    } else {
-        DLog(@"%lu pictures found", (unsigned long)self.fetchedResultsController.fetchedObjects.count);
-    }
-    */
 
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     RNKPictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-
-    // Configure the cell //TODO:
 
     /*
      //TODO load  more results
@@ -118,29 +97,20 @@ static NSString * const reuseIdentifier = @"PictureCell";
     }
     */
 
-
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
 
-    //Config cell
-    cell.title.text = photo.name;
-
-    cell.ranking.text = [photo.rating stringValue];
-
-    [cell.picture sd_setImageWithURL:[NSURL URLWithString: photo.image_url]];
+    [cell drawCellWithPicture: photo];
 
     return cell;
-
 }
 
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
     RNKPictureDetailVC *pictureDetailVC = [[RNKPictureDetailVC alloc] initWithNibName:@"RNKPictureDetailVC" bundle:nil];
 
-    pictureDetailVC.photo = photo;
+    pictureDetailVC.photo = [self.fetchedResultsController objectAtIndexPath:indexPath];;
 
     [self.navigationController pushViewController: pictureDetailVC animated: YES];
 
