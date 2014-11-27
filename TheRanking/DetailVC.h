@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Picture.h"
 
 @interface DetailVC : UIViewController
+
+@property (nonatomic, strong) Picture *selectedPicture;
 
 @end

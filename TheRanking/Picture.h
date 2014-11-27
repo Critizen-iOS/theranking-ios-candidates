@@ -25,4 +25,5 @@
 @property (nonatomic, retain) NSNumber * pictureLong;
 @property (nonatomic, retain) NSNumber * pictureRating;
 
+@property (nonatomic, readonly) NSString * cameraDescription;
 @end

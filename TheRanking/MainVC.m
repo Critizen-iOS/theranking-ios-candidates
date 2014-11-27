@@ -9,6 +9,7 @@
 #import "MainVC.h"
 #import "Ranking500pxAPI.h"
 #import "MainCell.h"
+#import "DetailVC.h"
 
 @interface MainVC () <UICollectionViewDelegate, UICollectionViewDataSource, NSFetchedResultsControllerDelegate> {
     NSMutableArray *_fetchedResultsObjectChanges;
@@ -186,13 +187,6 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
     }
 }
 
-- (void)viewWillLayoutSubviews;
-{
-    [super viewWillLayoutSubviews];
-    UICollectionViewFlowLayout *flowLayout = (id)self.collectionView.collectionViewLayout;
-    [flowLayout invalidateLayout]; //force the elements to get laid out again with the new size
-}
-
 #pragma mark - CollectionView Datasource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)sectionIndex {
@@ -232,6 +226,13 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
 #pragma mark - CollectionView Delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Picture *object = (Picture *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    DetailVC *detailController = [[DetailVC alloc] initWithNibName: nil bundle: nil];
+    detailController.selectedPicture = object;
+    [self.navigationController pushViewController:detailController animated:YES];
+
     
 }
 

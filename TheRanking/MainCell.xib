@@ -57,9 +57,11 @@
                 <constraint firstItem="IAM-i8-rrm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="seO-Pc-1Fy"/>
             </constraints>
             <connections>
+                <outlet property="bottomSpaceTitleConstraint" destination="2kH-Y3-Ep9" id="Z7n-KG-mIY"/>
                 <outlet property="imageView" destination="IAM-i8-rrm" id="Pjh-Fb-DsG"/>
                 <outlet property="ratingLabel" destination="g5z-RL-e2S" id="zUA-YL-bo7"/>
                 <outlet property="titleLabel" destination="fJR-Xs-qya" id="nAN-ht-PRi"/>
+                <outlet property="topSpaceRatingConstraint" destination="CGe-gv-HFq" id="t5a-5D-nNJ"/>
             </connections>
         </collectionViewCell>
     </objects>

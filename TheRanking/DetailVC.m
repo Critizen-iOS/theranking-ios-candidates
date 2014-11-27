@@ -7,16 +7,87 @@
 //
 
 #import "DetailVC.h"
+#import <MapKit/MapKit.h>
 
 @interface DetailVC ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+@property (weak, nonatomic) IBOutlet UITextView *cameraInfoTextView;
+@property (weak, nonatomic) IBOutlet MKMapView *map;
+
+@property (weak, nonatomic) MKPointAnnotation *annotation;
+
 
 @end
+
+static CGFloat const kAuthorPreffixFontPointsReduction = 6.f;
+static double const kMapLocationMetersAround = 5000;
 
 @implementation DetailVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.title = NSLocalizedString(@"Photo Details", @"Photo Detailed Information view title");
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    [self updateInformation];
+}
+
+- (void) updateInformation {
+    self.titleLabel.text = self.selectedPicture.pictureTitle;
+    self.descriptionTextView.text = self.selectedPicture.pictureDescription;
+    
+    
+    NSString *authorPreffix = NSLocalizedString(@"by:", @"Author preffix in photo details.");
+    NSString *authorText = [NSString stringWithFormat:@"%@ %@", authorPreffix, self.selectedPicture.userFullname];
+    
+    NSDictionary *attribs = @{
+                              NSForegroundColorAttributeName: self.authorLabel.textColor,
+                              NSFontAttributeName: self.authorLabel.font
+                              };
+    NSMutableAttributedString *attributedText =
+    [[NSMutableAttributedString alloc] initWithString:authorText
+                                           attributes:attribs];
+    
+    UIFont *italicFont = [UIFont italicSystemFontOfSize:self.authorLabel.font.pointSize-kAuthorPreffixFontPointsReduction];
+    
+    NSRange preffixRange;
+    preffixRange.location = 0;
+    preffixRange.length = [authorPreffix length];
+    [attributedText setAttributes:@{NSFontAttributeName:italicFont}
+                            range:preffixRange];
+    
+    self.authorLabel.attributedText = attributedText;
+
+    self.cameraInfoTextView.text = self.selectedPicture.cameraDescription;
+    
+    if(self.selectedPicture.pictureLong != nil && self.selectedPicture.pictureLat != nil) {
+        self.map.hidden = NO;
+        
+        CLLocationCoordinate2D location = CLLocationCoordinate2DMake([self.selectedPicture.pictureLat doubleValue], [self.selectedPicture.pictureLong doubleValue]);
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(location, kMapLocationMetersAround, kMapLocationMetersAround);
+        MKCoordinateRegion adjustedRegion = [self.map regionThatFits:viewRegion];
+        [self.map setRegion:adjustedRegion animated:YES];
+        
+        // Add marker
+        [self.map removeAnnotation: self.annotation];
+        MKPointAnnotation * annotation = [[MKPointAnnotation alloc] init];
+        annotation.coordinate = location;
+        [self.map addAnnotation:annotation];
+        self.annotation = annotation;
+        
+    } else {
+        self.map.hidden = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
