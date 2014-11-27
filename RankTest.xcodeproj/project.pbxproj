@@ -27,6 +27,7 @@
 		24A6E4691A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4671A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m */; };
 		24A6E46A1A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */; };
 		24A6E46D1A26819400CF2AE4 /* CoreDataCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */; };
+		24A6E4701A27316D00CF2AE4 /* RNKPhotoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E46F1A27316D00CF2AE4 /* RNKPhotoParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNKPictureCollectionViewCell.xib; path = viewControllers/picturesCollection/RNKPictureCollectionViewCell.xib; sourceTree = "<group>"; };
 		24A6E46B1A26814300CF2AE4 /* CoreDataCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataCollectionVC.h; path = viewControllers/picturesCollection/CoreDataCollectionVC.h; sourceTree = "<group>"; };
 		24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataCollectionVC.m; path = viewControllers/picturesCollection/CoreDataCollectionVC.m; sourceTree = "<group>"; };
+		24A6E46E1A27316D00CF2AE4 /* RNKPhotoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPhotoParser.h; path = model/RNKPhotoParser.h; sourceTree = "<group>"; };
+		24A6E46F1A27316D00CF2AE4 /* RNKPhotoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPhotoParser.m; path = model/RNKPhotoParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */,
 				24A6E4581A26681700CF2AE4 /* RNKPhotosEngine.h */,
 				24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */,
+				24A6E46E1A27316D00CF2AE4 /* RNKPhotoParser.h */,
+				24A6E46F1A27316D00CF2AE4 /* RNKPhotoParser.m */,
 				24A6E44B1A26517D00CF2AE4 /* API */,
 				24A6E43C1A26072500CF2AE4 /* Model */,
 			);
@@ -334,6 +339,7 @@
 				24A6E4461A260B4600CF2AE4 /* RNKPicturesCollectionVC.m in Sources */,
 				24A6E46D1A26819400CF2AE4 /* CoreDataCollectionVC.m in Sources */,
 				24A6E4151A2606D100CF2AE4 /* main.m in Sources */,
+				24A6E4701A27316D00CF2AE4 /* RNKPhotoParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

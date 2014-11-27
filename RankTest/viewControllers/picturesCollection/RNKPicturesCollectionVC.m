@@ -105,13 +105,14 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     // Configure the cell //TODO:
 
-    if (indexPath.row == ([[[self.fetchedResultsController sections] objectAtIndex:0] numberOfObjects] -1))
-    {
-        // [[TRDataNetManager sharedManager] updatePhotosWithCompletionHandler:nil];
-
+    /*
+    if (indexPath.row == ([[[self.fetchedResultsController sections] objectAtIndex:0] numberOfObjects] -1)) {
+        [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
+            //TODO: manage error
+        }];
     }
+    */
 
-    //cell.photo = [self.fetchedResultController objectAtIndexPath:indexPath];
 
     Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
 

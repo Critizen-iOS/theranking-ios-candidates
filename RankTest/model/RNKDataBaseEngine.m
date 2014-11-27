@@ -61,7 +61,6 @@
                 ELog(@"Unresolved error %@, %@", error, [error userInfo]);
                 abort();
             }
-            //[context processPendingChanges];
             DLog(@" Context saved! %@", context);
         } else {
             DLog(@" No changes in context to save");
@@ -85,12 +84,6 @@
         _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
-
-    //Observer for changes in other contexts
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(mergeChanges:)
-                                                 name: NSManagedObjectContextDidSaveNotification
-                                               object:nil];
 
     //DLog(@"%@", _managedObjectContext);
     return _managedObjectContext;
@@ -154,24 +147,6 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-
-
-#pragma mark SaveNotifications
-
-// this is called via observing "NSManagedObjectContextDidSaveNotification" 
-- (void)mergeChanges:(NSNotification *)notification {
-    DLog(@"received NSManagedObjectContextDidSaveNotification");
-    // if (notification.object != _managedObjectContext) {
-    //    [self performSelectorOnMainThread:@selector(updateMainContext:) withObject:notification waitUntilDone:NO];
-    //}
-}
-
-// merge changes to main context,fetchedRequestController will automatically monitor the changes and update tableview.
-- (void)updateMainContext:(NSNotification *)notification {
-    DLog();
-    assert([NSThread isMainThread]);
-    [_managedObjectContext mergeChangesFromContextDidSaveNotification:notification];
-}
 
 
 - (void)dealloc {
