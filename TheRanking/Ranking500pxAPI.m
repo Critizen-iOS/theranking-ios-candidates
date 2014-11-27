@@ -11,6 +11,7 @@
 #define ASSERT_CONFIGURATION(x)     NSAssert([x.consumerKey length] > 0 && [x.apiEndpoint length] > 0, @"ConsumerKey and ApiEndpoint values needed")
 
 static NSInteger const kNumberOfPhotosPerRequest = 50;
+static NSInteger const kPhotoQualityValue = 4;
 
 @interface Ranking500pxAPI()
 
@@ -36,7 +37,7 @@ static NSInteger const kNumberOfPhotosPerRequest = 50;
 }
 
 - (NSURL *) popularPicturesURL {
-    return  [NSURL URLWithString:[NSString stringWithFormat:@"%@photos?feature=popular&rpp=%ld&consumer_key=%@", self.apiEndpoint, (long)kNumberOfPhotosPerRequest, self.consumerKey]];
+    return  [NSURL URLWithString:[NSString stringWithFormat:@"%@photos?feature=popular&rpp=%ld?image_size=%ld&consumer_key=%@", self.apiEndpoint, (long)kNumberOfPhotosPerRequest, (long)kPhotoQualityValue, self.consumerKey]];
 }
 
 - (void) processPopularPicturesResponse: (NSData *)response onError:(void(^)(RankingAPIErrorCode errorCode, NSError *error))errorBlock {
