@@ -10,7 +10,9 @@
 #import <MapKit/MapKit.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface DetailVC ()
+@interface DetailVC () {
+    CGFloat _italicFontSize;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -35,6 +37,8 @@ static double const kMapLocationMetersAround = 5000;
     // Do any additional setup after loading the view from its nib.
     
     self.title = NSLocalizedString(@"Photo Details", @"Photo Detailed Information view title");
+    
+    _italicFontSize = self.authorLabel.font.pointSize-kAuthorPreffixFontPointsReduction;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,7 +63,7 @@ static double const kMapLocationMetersAround = 5000;
     [[NSMutableAttributedString alloc] initWithString:authorText
                                            attributes:attribs];
     
-    UIFont *italicFont = [UIFont italicSystemFontOfSize:self.authorLabel.font.pointSize-kAuthorPreffixFontPointsReduction];
+    UIFont *italicFont = [UIFont italicSystemFontOfSize:_italicFontSize];
     
     NSRange preffixRange;
     preffixRange.location = 0;
