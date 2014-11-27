@@ -15,7 +15,9 @@
 #import "Photo.h"
 
 
-@interface RNKPicturesCollectionVC ()
+@interface RNKPicturesCollectionVC () {
+    UIRefreshControl *_refreshControl;
+}
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) RNKPhotosEngine *photosEngine;
@@ -39,6 +41,22 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     [self updatePictures];
 
+    [self createRefreshControl];
+
+}
+
+- (void) createRefreshControl {
+
+    self.collectionView.alwaysBounceVertical = YES;
+
+    _refreshControl = [[UIRefreshControl alloc] init];
+    _refreshControl.tintColor = [UIColor whiteColor];
+
+    [_refreshControl addTarget:self action:@selector(startRefresh:)
+             forControlEvents:UIControlEventValueChanged];
+
+    [self.collectionView addSubview:_refreshControl];
+
 }
 
 - (RNKPhotosEngine*) photosEngine {
@@ -51,7 +69,6 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
@@ -77,6 +94,7 @@ static NSString * const reuseIdentifier = @"PictureCell";
 }
 
 - (void)updatePictures {
+    DLog();
 
     UIActivityIndicatorView *actInd;
 
@@ -87,6 +105,7 @@ static NSString * const reuseIdentifier = @"PictureCell";
         [self.view addSubview: actInd];
     }
 
+    __weak __typeof(self)weakSelf = self;
     [self.photosEngine getPopularPicturesOnCompletion:^(BOOL result, NSError *error) {
 
         if (actInd) {
@@ -94,6 +113,8 @@ static NSString * const reuseIdentifier = @"PictureCell";
             actInd.hidden = TRUE;
             [actInd removeFromSuperview];
         }
+
+        [weakSelf endRefreshControl];
 
         if (error) {
             UIAlertController *alertController = [UIAlertController
@@ -113,6 +134,16 @@ static NSString * const reuseIdentifier = @"PictureCell";
             [self presentViewController:alertController animated:YES completion:nil];
         }
     }];
+}
+
+#pragma - refresh control
+
+- (void) startRefresh:(id)sender {
+    [self updatePictures];
+}
+
+- (void) endRefreshControl {
+    [_refreshControl endRefreshing];
 }
 
 #pragma mark - UICollectionViewDataSource
