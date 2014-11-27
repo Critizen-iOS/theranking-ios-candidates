@@ -7,6 +7,7 @@
 //
 
 #import "Ranking500pxAPI.h"
+#import "Picture+Dict500px.h"
 #define ASSERT_CONFIGURATION(x)     NSAssert([x.consumerKey length] > 0 && [x.apiEndpoint length] > 0, @"ConsumerKey and ApiEndpoint values needed")
 
 static NSInteger const kNumberOfPhotosPerRequest = 50;
@@ -48,7 +49,9 @@ static NSInteger const kNumberOfPhotosPerRequest = 50;
     if (!jsonError) {
         NSArray *pictures = responseDictionary[@"photos"];
         [self importDictArray:pictures usingConversionBlock:^(Picture *picture, NSDictionary *pictureDict) {
-            configurePictureObject(picture, pictureDict);
+            
+            [picture importFrom500pxDictionary:pictureDict];
+            
         }];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -56,38 +59,6 @@ static NSInteger const kNumberOfPhotosPerRequest = 50;
         });
     }
 
-}
-
-static inline void configurePictureObject(Picture *picture, NSDictionary *pictureDictionary) {
-    
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
-
-    NSDictionary *userDictionary = pictureDictionary[@"user"];
-    if(userDictionary) {
-        picture.userFullname = objectFromDictionaryValue(userDictionary[@"fullname"]);
-        picture.userAvatarURL = objectFromDictionaryValue(userDictionary[@"userpic_url"]);
-    }
-    
-    picture.pictureTitle = objectFromDictionaryValue(pictureDictionary[@"name"]);
-    picture.pictureDescription = objectFromDictionaryValue(pictureDictionary[@"description"]);
-    picture.cameraName = objectFromDictionaryValue(pictureDictionary[@"camera"]);
-    picture.cameraLens = objectFromDictionaryValue(pictureDictionary[@"lens"]);
-    picture.cameraISO = [formatter numberFromString: objectFromDictionaryValue(pictureDictionary[@"iso"])];
-    picture.cameraShutterSpeed = objectFromDictionaryValue(pictureDictionary[@"shutter_speed"]);
-    picture.cameraFocalLength = [formatter numberFromString:objectFromDictionaryValue(pictureDictionary[@"focal_length"])];
-    
-    picture.pictureLat = objectFromDictionaryValue(pictureDictionary[@"latitude"]);
-    picture.pictureLong = objectFromDictionaryValue(pictureDictionary[@"longitude"]);
-    
-    picture.pictureRating = objectFromDictionaryValue(pictureDictionary[@"rating"]);
-}
-
-static inline id objectFromDictionaryValue(id value) {
-    if(value == nil || [value isEqual:[NSNull null]]){
-        return nil;
-    }
-    return value;
 }
 
 @end

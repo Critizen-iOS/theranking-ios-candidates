@@ -26,6 +26,7 @@
 		D23FB1801A273B9600CE6CC9 /* MainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D23FB17E1A273B9600CE6CC9 /* MainCell.m */; };
 		D23FB1811A273B9600CE6CC9 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D23FB17F1A273B9600CE6CC9 /* MainCell.xib */; };
 		D2EFF9701A27A7B60092B06C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2EFF96F1A27A7B60092B06C /* MapKit.framework */; };
+		D2EFF9771A27D2BB0092B06C /* Picture+Dict500px.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EFF9761A27D2BB0092B06C /* Picture+Dict500px.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		D23FB17E1A273B9600CE6CC9 /* MainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCell.m; sourceTree = "<group>"; };
 		D23FB17F1A273B9600CE6CC9 /* MainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 		D2EFF96F1A27A7B60092B06C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D2EFF9751A27D2BB0092B06C /* Picture+Dict500px.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Picture+Dict500px.h"; sourceTree = "<group>"; };
+		D2EFF9761A27D2BB0092B06C /* Picture+Dict500px.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Picture+Dict500px.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				D23FB1691A262C6400CE6CC9 /* RankingAPI.m */,
 				D23FB17A1A2733D300CE6CC9 /* Ranking500pxAPI.h */,
 				D23FB17B1A2733D300CE6CC9 /* Ranking500pxAPI.m */,
+				D2EFF9751A27D2BB0092B06C /* Picture+Dict500px.h */,
+				D2EFF9761A27D2BB0092B06C /* Picture+Dict500px.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				D23FB15C1A2627BE00CE6CC9 /* MainVC.m in Sources */,
 				D23FB12B1A2625DA00CE6CC9 /* main.m in Sources */,
 				D23FB1311A2625DA00CE6CC9 /* TheRanking.xcdatamodeld in Sources */,
+				D2EFF9771A27D2BB0092B06C /* Picture+Dict500px.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
