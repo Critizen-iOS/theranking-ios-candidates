@@ -9,6 +9,7 @@
 #import "RNKNavigationControllerDelegate.h"
 #import "RNKConstants.h"
 #import "RNKPicturePushAnimationController.h"
+#import "RNKPicturePopAnimationController.h"
 
 @implementation RNKNavigationControllerDelegate
 
@@ -20,20 +21,15 @@
                                                fromViewController:(UIViewController *)fromVC
                                                  toViewController:(UIViewController *)toVC {
 
-
-    //TODO:
-
     if (operation == UINavigationControllerOperationPush) {
         DLog(@"Push");
-
         return [[RNKPicturePushAnimationController alloc] init];
     }
 
     if (operation == UINavigationControllerOperationPop) {
         DLog(@"Pop");
-
+        return [[RNKPicturePopAnimationController alloc] init];
     }
-
 
     return nil;
 }
