@@ -1,0 +1,17 @@
+Creo que la aplicación cumple todos los requisitos. He optado por no usar ninguna librería de terceros.
+
+Sólo he implementado la parte de la API que corresponde a la petición de fotos necesaria.
+
+Para la caché he usado NSURLCache.
+
+Las conexiones se hacen con NSURLConnection con ayuda de una clase (HTTP) que encapsula las peticiones.
+
+La carga de imágenes en segundo plano se hace a través de una categoría (UIImageView+AsyncLoad).
+
+También hay una clase (PhotoCache) que se encarga de encapsular las peticiones al servidor.
+Esta clase se encarga de que siempre haya cargadas varias páginas de fotos en memoria, enviando una notificación cuando el número de imágenes aumente para actualizar la lista.
+
+La vista detallada muestra la imagen en alta resolución. Incluye un botón en la parte inferior, junto al nombre) para mostrar/ocultar la información. Se cierra pulsando la X de la parte superior derecha.
+
+
+No dispongo de ningún terminal, así que sólo está probado en el emulador, usando la última versión de Xcode (6.0).
