@@ -47,6 +47,12 @@ static double const kMapLocationMetersAround = 5000;
     [self updateInformation];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [self.scrollView scrollRectToVisible:CGRectMake(0.f, 0.f, 10.f, 10.f) animated:NO];
+}
+
 - (void) updateInformation {
     self.titleLabel.text = self.selectedPicture.pictureTitle;
     self.descriptionTextView.text = self.selectedPicture.pictureDescription;
