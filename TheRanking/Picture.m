@@ -23,6 +23,7 @@
 @dynamic pictureLat;
 @dynamic pictureLong;
 @dynamic pictureRating;
+@dynamic pictureURL;
 
 
 - (NSString *)cameraDescription {

@@ -24,6 +24,7 @@
 @property (nonatomic, retain) NSNumber * pictureLat;
 @property (nonatomic, retain) NSNumber * pictureLong;
 @property (nonatomic, retain) NSNumber * pictureRating;
+@property (nonatomic, retain) NSString * pictureURL;
 
 @property (nonatomic, readonly) NSString * cameraDescription;
 @end
