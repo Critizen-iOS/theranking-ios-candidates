@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sRB-Df-BuF" customClass="GridCellView">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1kO-bB-zW2">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99.9" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnA-CC-X1D" userLabel="Rating Label">
+                        <rect key="frame" x="43" y="2" width="55" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="glG-GB-M6W"/>
+                            <constraint firstAttribute="width" constant="55" id="vx4-K5-vBG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4St-Ry-X2i" userLabel="Name Label">
+                        <rect key="frame" x="2" y="86" width="96" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="iYC-hu-kKH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        </variation>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1kO-bB-zW2" secondAttribute="trailing" id="5PR-HB-rtN"/>
+                <constraint firstAttribute="bottom" secondItem="1kO-bB-zW2" secondAttribute="bottom" id="HkX-MX-BFn"/>
+                <constraint firstItem="4St-Ry-X2i" firstAttribute="leading" secondItem="sRB-Df-BuF" secondAttribute="leading" constant="2" id="Jwh-GM-sTj"/>
+                <constraint firstItem="1kO-bB-zW2" firstAttribute="leading" secondItem="sRB-Df-BuF" secondAttribute="leading" id="RWk-va-goz"/>
+                <constraint firstItem="1kO-bB-zW2" firstAttribute="top" secondItem="sRB-Df-BuF" secondAttribute="top" id="SPM-Jk-gfu"/>
+                <constraint firstAttribute="trailing" secondItem="4St-Ry-X2i" secondAttribute="trailing" constant="2" id="UEP-4e-UHk"/>
+                <constraint firstAttribute="bottom" secondItem="4St-Ry-X2i" secondAttribute="bottom" constant="2" id="aZa-24-ouF"/>
+                <constraint firstAttribute="trailing" secondItem="jnA-CC-X1D" secondAttribute="trailing" constant="2" id="hlw-nu-ORu"/>
+                <constraint firstItem="jnA-CC-X1D" firstAttribute="top" secondItem="sRB-Df-BuF" secondAttribute="top" constant="2" id="xRF-r0-w9L"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="1kO-bB-zW2" id="Hbu-wh-F1k"/>
+                <outlet property="nameLabel" destination="4St-Ry-X2i" id="YIT-tR-OPr"/>
+                <outlet property="ratingLabel" destination="jnA-CC-X1D" id="H6o-iE-q2k"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
