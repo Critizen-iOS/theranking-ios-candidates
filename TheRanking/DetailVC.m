@@ -8,6 +8,7 @@
 
 #import "DetailVC.h"
 #import <MapKit/MapKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DetailVC ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -67,6 +68,8 @@ static double const kMapLocationMetersAround = 5000;
                             range:preffixRange];
     
     self.authorLabel.attributedText = attributedText;
+    [self.avatarImageView sd_cancelCurrentImageLoad];
+    [self.avatarImageView sd_setImageWithURL:[NSURL URLWithString:self.selectedPicture.userAvatarURL] placeholderImage:[UIImage imageNamed:@"avatar"]];
 
     self.cameraInfoTextView.text = self.selectedPicture.cameraDescription;
     
