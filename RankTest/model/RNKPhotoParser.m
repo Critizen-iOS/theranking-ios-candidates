@@ -69,11 +69,11 @@
                                                           inManagedObjectContext: context];
 
             newUser.id = userId;
-            newUser.username = [[pictureJSON valueForKey:@"user"] valueForKey:@"username"];
+            newUser.username = [[[pictureJSON valueForKey:@"user"] valueForKey:@"username"] description];
             newUser.userpic_url = [[pictureJSON valueForKey:@"user"] valueForKey:@"userpic_url"];
-            newUser.city = [[pictureJSON valueForKey:@"user"] valueForKey:@"city"];
-            newUser.country = [[pictureJSON valueForKey:@"user"] valueForKey:@"country"];
-            newUser.fullname = [[pictureJSON valueForKey:@"user"] valueForKey:@"fullname"];
+            newUser.city = [[[pictureJSON valueForKey:@"user"] valueForKey:@"city"] description];
+            newUser.country = [[[pictureJSON valueForKey:@"user"] valueForKey:@"country"] description];
+            newUser.fullname = [[[pictureJSON valueForKey:@"user"] valueForKey:@"fullname"] description];
 
             newPhoto.user = newUser;
         }

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Photo.h"
+#import <MapKit/MapKit.h>
 
 @interface RNKPictureDetailVC : UIViewController
 
