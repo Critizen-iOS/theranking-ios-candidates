@@ -43,7 +43,10 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
     [self createRefreshControl];
 
+    [self updateFlowLayoutInsets];
+
 }
+
 
 - (void) createRefreshControl {
 
@@ -69,6 +72,42 @@ static NSString * const reuseIdentifier = @"PictureCell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+
+- (void) updateFlowLayoutInsets {
+
+    float sectionInsets = 6;
+
+    UIScreen *mainScreen = [UIScreen mainScreen];
+    CGFloat scale = ([mainScreen respondsToSelector:@selector(scale)] ? mainScreen.scale : 1.0f);
+    CGFloat pixelHeight = (CGRectGetHeight(mainScreen.bounds) * scale);
+
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+        if (scale == 2.0f) {
+            if (pixelHeight == 960.0f)
+                //resolution = UIDevice_iPhone35R;
+                sectionInsets = 5;
+            else if (pixelHeight == 1136.0f)
+                //resolution = UIDevice_iPhone4R;
+                sectionInsets = 5;
+            else if (pixelHeight == 1334.0f)
+                //resolution = UIDevice_iPhone47R;
+                sectionInsets = 22;
+
+        } else if (scale == 1.0f && pixelHeight == 480.0f)
+            //resolution = UIDevice_iPhone35;
+            sectionInsets = 5;
+        else if (scale == 3.0f && pixelHeight == 2208.0f)
+            //resolution = UIDevice_iPhone55R;
+            sectionInsets = 35;
+
+    }
+
+    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
+
+    flowLayout.sectionInset = UIEdgeInsetsMake(0, sectionInsets, 0, sectionInsets);
+    
 }
 
 - (void)setManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
