@@ -32,22 +32,60 @@
 
 
         newPhoto.id = [NSString stringWithFormat:@"%ld",(long)[[pictureJSON valueForKey:@"id"] integerValue]];
-        newPhoto.camera = [[pictureJSON valueForKey:@"camera"] description];
-        newPhoto.focal_length = [[pictureJSON valueForKey:@"focal_length"] description];
-        newPhoto.image_url = [pictureJSON valueForKey:@"image_url"];
-        newPhoto.photoDescription = [[pictureJSON valueForKey:@"description"] description];
-        //newPhoto.latitude = [NSNumber numberWithDouble:[[pictureJSON valueForKey:@"latitude"] doubleValue]];
-        //newPhoto.longitude = [NSNumber numberWithDouble:[[pictureJSON valueForKey:@"longitude"] doubleValue]];
+
+        NSString *auxField;
+
+        auxField = [pictureJSON valueForKey:@"camera"];
+        if ( (NSNull*)auxField == [NSNull null]) {
+            auxField = nil;
+        }
+        newPhoto.camera = auxField;
+
+        auxField = [pictureJSON valueForKey:@"focal_length"];
+        if ( (NSNull*)auxField == [NSNull null]) {
+            auxField = nil;
+        }
+        newPhoto.focal_length = auxField;
+
+        auxField = [pictureJSON valueForKey:@"image_url"];
+        if ( (NSNull*)auxField == [NSNull null]) {
+            auxField = nil;
+        }
+        newPhoto.image_url = auxField;
+
+        auxField = [pictureJSON valueForKey:@"description"];
+        if ( (NSNull*)auxField == [NSNull null]) {
+            auxField = nil;
+        }
+        newPhoto.photoDescription = auxField;
+
         if ([[pictureJSON valueForKey:@"latitude"] respondsToSelector:@selector(doubleValue)]) {
             newPhoto.latitude = [NSNumber numberWithDouble:[[pictureJSON valueForKey:@"latitude"] doubleValue]];
         }
         if ([[pictureJSON valueForKey:@"longitude"] respondsToSelector:@selector(doubleValue)]) {
             newPhoto.longitude = [NSNumber numberWithDouble:[[pictureJSON valueForKey:@"longitude"] doubleValue]];
         }
-        newPhoto.name = [pictureJSON valueForKey:@"name"];
+
+        auxField = [pictureJSON valueForKey:@"name"];
+        if ( (NSNull*)auxField == [NSNull null]) {
+            auxField = nil;
+        }
+        newPhoto.name = auxField;
+
         newPhoto.rating = [NSNumber numberWithFloat:[[pictureJSON valueForKey:@"rating"] floatValue]];
-        newPhoto.shutter_speed = [[pictureJSON valueForKey:@"shutter_speed"] description];
-        newPhoto.aperture = [[pictureJSON valueForKey:@"aperture"] description];
+
+        auxField = [pictureJSON valueForKey:@"shutter_speed"];
+        if ( (NSNull*)auxField == [NSNull null]) {
+            auxField = nil;
+        }
+        newPhoto.shutter_speed = auxField;
+
+        auxField = [pictureJSON valueForKey:@"aperture"];
+        if ( (NSNull*)auxField == [NSNull null]) {
+            auxField = nil;
+        }
+        newPhoto.aperture = auxField;
+
 
         //Check user
         NSString *userId = [NSString stringWithFormat:@"%ld",(long)[[[pictureJSON valueForKey:@"user"] valueForKey:@"id"] integerValue]];
@@ -69,11 +107,36 @@
                                                           inManagedObjectContext: context];
 
             newUser.id = userId;
-            newUser.username = [[[pictureJSON valueForKey:@"user"] valueForKey:@"username"] description];
-            newUser.userpic_url = [[pictureJSON valueForKey:@"user"] valueForKey:@"userpic_url"];
-            newUser.city = [[[pictureJSON valueForKey:@"user"] valueForKey:@"city"] description];
-            newUser.country = [[[pictureJSON valueForKey:@"user"] valueForKey:@"country"] description];
-            newUser.fullname = [[[pictureJSON valueForKey:@"user"] valueForKey:@"fullname"] description];
+
+            auxField = [[pictureJSON valueForKey:@"user"] valueForKey:@"username"];
+            if ( (NSNull*)auxField == [NSNull null]) {
+                auxField = nil;
+            }
+            newUser.username = auxField;
+
+            auxField = [[pictureJSON valueForKey:@"user"] valueForKey:@"userpic_url"];
+            if ( (NSNull*)auxField == [NSNull null]) {
+                auxField = nil;
+            }
+            newUser.userpic_url = auxField;
+
+            auxField = [[pictureJSON valueForKey:@"user"] valueForKey:@"city"];
+            if ( (NSNull*)auxField == [NSNull null]) {
+                auxField = nil;
+            }
+            newUser.city = auxField;
+
+            auxField = [[pictureJSON valueForKey:@"user"] valueForKey:@"country"];
+            if ( (NSNull*)auxField == [NSNull null]) {
+                auxField = nil;
+            }
+            newUser.country = auxField;
+
+            auxField = [[pictureJSON valueForKey:@"user"] valueForKey:@"fullname"];
+            if ( (NSNull*)auxField == [NSNull null]) {
+                auxField = nil;
+            }
+            newUser.fullname = auxField;
 
             newPhoto.user = newUser;
         }
