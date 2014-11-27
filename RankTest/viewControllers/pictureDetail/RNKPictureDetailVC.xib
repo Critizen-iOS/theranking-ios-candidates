@@ -105,8 +105,8 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNB-kn-rse" userLabel="ViewAuthor">
                                     <rect key="frame" x="0.0" y="500" width="600" height="80"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-vG-dr6">
-                                            <rect key="frame" x="40" y="18" width="520" height="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-vG-dr6">
+                                            <rect key="frame" x="40" y="18" width="470" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="pE4-W5-tcp"/>
                                             </constraints>
@@ -115,7 +115,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CompleteName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="EJR-dA-fKF">
-                                            <rect key="frame" x="40" y="45" width="520" height="25"/>
+                                            <rect key="frame" x="40" y="45" width="470" height="25"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -133,7 +133,7 @@
                                         <constraint firstItem="EJR-dA-fKF" firstAttribute="centerX" secondItem="rxz-vG-dr6" secondAttribute="centerX" id="47I-Jt-WfT"/>
                                         <constraint firstItem="EJR-dA-fKF" firstAttribute="width" secondItem="rxz-vG-dr6" secondAttribute="width" id="G7A-QN-N9F"/>
                                         <constraint firstAttribute="centerY" secondItem="LLG-ev-BeK" secondAttribute="centerY" id="JGc-u4-6pL"/>
-                                        <constraint firstAttribute="trailing" secondItem="rxz-vG-dr6" secondAttribute="trailing" constant="40" id="LW5-BR-LQa"/>
+                                        <constraint firstAttribute="trailing" secondItem="rxz-vG-dr6" secondAttribute="trailing" constant="90" id="LW5-BR-LQa"/>
                                         <constraint firstAttribute="height" constant="80" id="T84-mB-1eK"/>
                                         <constraint firstAttribute="trailing" secondItem="LLG-ev-BeK" secondAttribute="trailing" constant="20" id="WgQ-mV-vDP"/>
                                         <constraint firstItem="EJR-dA-fKF" firstAttribute="height" secondItem="rxz-vG-dr6" secondAttribute="height" id="YOE-Tg-kd0"/>

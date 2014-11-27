@@ -40,12 +40,12 @@ static NSString *PopularPicturesURL = @"photos?feature=popular&sort=rating&image
 
 - (void) getPopularPicturesJSON: (void(^)(NSArray *picturesJSON, NSError *error)) completionBlock {
 
-     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 
     NSString *urlString = [PopularPicturesURL stringByAppendingString: [self getConsumerKeyParameter]];
     urlString = [APIENGINE_BASEURL stringByAppendingString: urlString];
 
-    DLog(@"URL String: %@", urlString);
+    //DLog(@"URL String: %@", urlString);
 
     [[session dataTaskWithURL:[NSURL URLWithString: urlString]
             completionHandler:^(NSData *data,

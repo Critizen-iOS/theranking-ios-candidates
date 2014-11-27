@@ -120,7 +120,7 @@
 
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"RankTest.sqlite"];
 
-    DLog(@"Database: %@", [storeURL absoluteString]);
+    //DLog(@"Database: %@", [storeURL absoluteString]);
     
     NSError *error = nil;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];

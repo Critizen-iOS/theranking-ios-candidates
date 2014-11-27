@@ -93,11 +93,13 @@ static NSString * const reuseIdentifier = @"PictureCell";
                                                                                    cacheName: nil];
 
 
+    /*
     if (self.fetchedResultsController.fetchedObjects.count == 0 ) {
         DLog(@"No pictures fetched");
     } else {
         DLog(@"%lu pictures found", (unsigned long)self.fetchedResultsController.fetchedObjects.count);
     }
+    */
 
 }
 
