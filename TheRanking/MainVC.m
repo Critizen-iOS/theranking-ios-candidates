@@ -247,4 +247,8 @@ static NSString * const kCellIdentifier = @"MyCollViewCell";
     
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    [(MainCell *)cell bounceRating];
+}
+
 @end

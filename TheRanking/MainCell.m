@@ -35,7 +35,15 @@
     self.imageView.image = nil;
 }
 
--(void)setHighlighted:(BOOL)highlighted
+- (void) bounceRating {
+    self.ratingLabel.transform = CGAffineTransformMakeScale(2.f, 2.f);
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        self.ratingLabel.transform = CGAffineTransformIdentity;
+    }];
+}
+
+- (void)setHighlighted:(BOOL)highlighted
 {
     [super setHighlighted:highlighted];
     

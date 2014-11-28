@@ -14,4 +14,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, copy) NSString *imageURL;
 
+- (void) bounceRating;
+
 @end
