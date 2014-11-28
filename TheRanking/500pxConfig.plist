@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>apiEndpoint</key>
+	<string>https://api.500px.com/v1/</string>
+	<key>consumerKey</key>
+	<string>iDYXvW22X46Qo5J8rJjIbu5H17atRDvNzUieqqV3</string>
+</dict>
+</plist>
