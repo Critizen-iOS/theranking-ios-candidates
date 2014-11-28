@@ -81,7 +81,7 @@ static NSInteger const kHTTPStatusCodeOK = 200;
 
 
 - (void) importDictArray:(NSArray *)dictArray usingConversionBlock:(void(^)(Picture *picture, NSDictionary *pictureDict))conversionBlock {
-    NSManagedObjectContext *bgContext = [self.store newBackgroundObjectContext];
+    NSManagedObjectContext *bgContext = [self.store backgroundObjectContext];
     
     [bgContext performBlock:^{
         

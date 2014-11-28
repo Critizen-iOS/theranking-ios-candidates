@@ -29,12 +29,8 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
-- (NSManagedObjectContext *) newBackgroundObjectContext {
-    // create background context
-    NSManagedObjectContext *bgContext = [[NSManagedObjectContext alloc]initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    bgContext.parentContext = self.managedObjectContext;
-    
-    return bgContext;
+- (NSManagedObjectContext *) backgroundObjectContext {
+    return self.managedObjectContext;
 }
 
 - (NSManagedObjectContext *) mainObjectContext {

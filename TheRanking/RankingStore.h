@@ -12,7 +12,7 @@
 
 @interface RankingStore : NSObject
 
-- (NSManagedObjectContext *) newBackgroundObjectContext;
+- (NSManagedObjectContext *) backgroundObjectContext;
 - (NSManagedObjectContext *) mainObjectContext;
 
 - (void)saveContext;
