@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24A6E4151A2606D100CF2AE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4141A2606D100CF2AE4 /* main.m */; };
+		24A6E4181A2606D100CF2AE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4171A2606D100CF2AE4 /* AppDelegate.m */; };
+		24A6E41B1A2606D100CF2AE4 /* RankTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4191A2606D100CF2AE4 /* RankTest.xcdatamodeld */; };
+		24A6E4231A2606D100CF2AE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4221A2606D100CF2AE4 /* Images.xcassets */; };
+		24A6E4261A2606D100CF2AE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4241A2606D100CF2AE4 /* LaunchScreen.xib */; };
+		24A6E4321A2606D100CF2AE4 /* RankTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4311A2606D100CF2AE4 /* RankTestTests.m */; };
+		24A6E4411A2609F400CF2AE4 /* RNKRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4401A2609F400CF2AE4 /* RNKRootVC.m */; };
+		24A6E4461A260B4600CF2AE4 /* RNKPicturesCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4441A260B4600CF2AE4 /* RNKPicturesCollectionVC.m */; };
+		24A6E4471A260B4600CF2AE4 /* RNKPicturesCollectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4451A260B4600CF2AE4 /* RNKPicturesCollectionVC.xib */; };
+		24A6E44A1A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4491A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m */; };
+		24A6E44E1A2652CA00CF2AE4 /* RNKPhotosAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E44D1A2652CA00CF2AE4 /* RNKPhotosAPI.m */; };
+		24A6E4501A26568B00CF2AE4 /* RNKPhotosAPITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E44F1A26568B00CF2AE4 /* RNKPhotosAPITest.m */; };
+		24A6E45A1A26681700CF2AE4 /* RNKPhotosEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */; };
+		24A6E45D1A266CAA00CF2AE4 /* RNKDataBaseEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */; };
+		24A6E4601A266EC500CF2AE4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E45F1A266EC500CF2AE4 /* User.m */; };
+		24A6E4631A266EC500CF2AE4 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4621A266EC500CF2AE4 /* Photo.m */; };
+		24A6E4651A26787100CF2AE4 /* RNKPhotosEngineTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */; };
+		24A6E4691A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4671A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m */; };
+		24A6E46A1A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */; };
+		24A6E46D1A26819400CF2AE4 /* CoreDataCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */; };
+		24A6E4701A27316D00CF2AE4 /* RNKPhotoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E46F1A27316D00CF2AE4 /* RNKPhotoParser.m */; };
+		24A6E4751A27454700CF2AE4 /* RNKPictureDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A6E4731A27454700CF2AE4 /* RNKPictureDetailVC.m */; };
+		24A6E4761A27454700CF2AE4 /* RNKPictureDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A6E4741A27454700CF2AE4 /* RNKPictureDetailVC.xib */; };
+		24A6E4781A277B9D00CF2AE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A6E4771A277B9D00CF2AE4 /* MapKit.framework */; };
+		24C6AC6D1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C6AC6C1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m */; };
+		24C6AC701A27A7C500EC34E7 /* RNKPicturePushAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C6AC6F1A27A7C500EC34E7 /* RNKPicturePushAnimationController.m */; };
+		24C6AC731A27AEB800EC34E7 /* RNKPicturePopAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C6AC721A27AEB800EC34E7 /* RNKPicturePopAnimationController.m */; };
+		68B273563666AE4038469B4B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C743BCA6C68B086119E1A55E /* libPods.a */; };
+		8B4A681340A6C7510AD2D450 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C743BCA6C68B086119E1A55E /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24A6E42C1A2606D100CF2AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A6E4071A2606D100CF2AE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A6E40E1A2606D100CF2AE4;
+			remoteInfo = RankTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24A6E40F1A2606D100CF2AE4 /* RankTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RankTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A6E4131A2606D100CF2AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A6E4141A2606D100CF2AE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24A6E4161A2606D100CF2AE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		24A6E4171A2606D100CF2AE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		24A6E41A1A2606D100CF2AE4 /* RankTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RankTest.xcdatamodel; sourceTree = "<group>"; };
+		24A6E4221A2606D100CF2AE4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		24A6E4251A2606D100CF2AE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		24A6E42B1A2606D100CF2AE4 /* RankTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RankTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A6E4301A2606D100CF2AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A6E4311A2606D100CF2AE4 /* RankTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankTestTests.m; sourceTree = "<group>"; };
+		24A6E43E1A2607CB00CF2AE4 /* RNKConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNKConstants.h; sourceTree = "<group>"; };
+		24A6E43F1A2609F400CF2AE4 /* RNKRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKRootVC.h; path = viewControllers/RNKRootVC.h; sourceTree = "<group>"; };
+		24A6E4401A2609F400CF2AE4 /* RNKRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKRootVC.m; path = viewControllers/RNKRootVC.m; sourceTree = "<group>"; };
+		24A6E4431A260B4600CF2AE4 /* RNKPicturesCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPicturesCollectionVC.h; path = viewControllers/picturesCollection/RNKPicturesCollectionVC.h; sourceTree = "<group>"; };
+		24A6E4441A260B4600CF2AE4 /* RNKPicturesCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPicturesCollectionVC.m; path = viewControllers/picturesCollection/RNKPicturesCollectionVC.m; sourceTree = "<group>"; };
+		24A6E4451A260B4600CF2AE4 /* RNKPicturesCollectionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNKPicturesCollectionVC.xib; path = viewControllers/picturesCollection/RNKPicturesCollectionVC.xib; sourceTree = "<group>"; };
+		24A6E4481A260DE800CF2AE4 /* RNKNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKNavigationControllerDelegate.h; path = viewControllers/RNKNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		24A6E4491A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKNavigationControllerDelegate.m; path = viewControllers/RNKNavigationControllerDelegate.m; sourceTree = "<group>"; };
+		24A6E44C1A2652CA00CF2AE4 /* RNKPhotosAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPhotosAPI.h; path = api/RNKPhotosAPI.h; sourceTree = "<group>"; };
+		24A6E44D1A2652CA00CF2AE4 /* RNKPhotosAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPhotosAPI.m; path = api/RNKPhotosAPI.m; sourceTree = "<group>"; };
+		24A6E44F1A26568B00CF2AE4 /* RNKPhotosAPITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNKPhotosAPITest.m; sourceTree = "<group>"; };
+		24A6E4511A26572B00CF2AE4 /* TGRAsyncTestHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGRAsyncTestHelper.h; sourceTree = "<group>"; };
+		24A6E4581A26681700CF2AE4 /* RNKPhotosEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPhotosEngine.h; path = model/RNKPhotosEngine.h; sourceTree = "<group>"; };
+		24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPhotosEngine.m; path = model/RNKPhotosEngine.m; sourceTree = "<group>"; };
+		24A6E45B1A266CAA00CF2AE4 /* RNKDataBaseEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKDataBaseEngine.h; path = model/RNKDataBaseEngine.h; sourceTree = "<group>"; };
+		24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKDataBaseEngine.m; path = model/RNKDataBaseEngine.m; sourceTree = "<group>"; };
+		24A6E45E1A266EC500CF2AE4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = model/User.h; sourceTree = "<group>"; };
+		24A6E45F1A266EC500CF2AE4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = model/User.m; sourceTree = "<group>"; };
+		24A6E4611A266EC500CF2AE4 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = model/Photo.h; sourceTree = "<group>"; };
+		24A6E4621A266EC500CF2AE4 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = model/Photo.m; sourceTree = "<group>"; };
+		24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNKPhotosEngineTest.m; sourceTree = "<group>"; };
+		24A6E4661A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPictureCollectionViewCell.h; path = viewControllers/picturesCollection/RNKPictureCollectionViewCell.h; sourceTree = "<group>"; };
+		24A6E4671A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPictureCollectionViewCell.m; path = viewControllers/picturesCollection/RNKPictureCollectionViewCell.m; sourceTree = "<group>"; };
+		24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNKPictureCollectionViewCell.xib; path = viewControllers/picturesCollection/RNKPictureCollectionViewCell.xib; sourceTree = "<group>"; };
+		24A6E46B1A26814300CF2AE4 /* CoreDataCollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataCollectionVC.h; path = viewControllers/picturesCollection/CoreDataCollectionVC.h; sourceTree = "<group>"; };
+		24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataCollectionVC.m; path = viewControllers/picturesCollection/CoreDataCollectionVC.m; sourceTree = "<group>"; };
+		24A6E46E1A27316D00CF2AE4 /* RNKPhotoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPhotoParser.h; path = model/RNKPhotoParser.h; sourceTree = "<group>"; };
+		24A6E46F1A27316D00CF2AE4 /* RNKPhotoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPhotoParser.m; path = model/RNKPhotoParser.m; sourceTree = "<group>"; };
+		24A6E4721A27454700CF2AE4 /* RNKPictureDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPictureDetailVC.h; path = viewControllers/pictureDetail/RNKPictureDetailVC.h; sourceTree = "<group>"; };
+		24A6E4731A27454700CF2AE4 /* RNKPictureDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPictureDetailVC.m; path = viewControllers/pictureDetail/RNKPictureDetailVC.m; sourceTree = "<group>"; };
+		24A6E4741A27454700CF2AE4 /* RNKPictureDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RNKPictureDetailVC.xib; path = viewControllers/pictureDetail/RNKPictureDetailVC.xib; sourceTree = "<group>"; };
+		24A6E4771A277B9D00CF2AE4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		24C6AC6B1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RNKPictureCollectionViewCell+drawer.h"; path = "viewControllers/picturesCollection/RNKPictureCollectionViewCell+drawer.h"; sourceTree = "<group>"; };
+		24C6AC6C1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RNKPictureCollectionViewCell+drawer.m"; path = "viewControllers/picturesCollection/RNKPictureCollectionViewCell+drawer.m"; sourceTree = "<group>"; };
+		24C6AC6E1A27A7C500EC34E7 /* RNKPicturePushAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPicturePushAnimationController.h; path = viewControllers/picturesCollection/RNKPicturePushAnimationController.h; sourceTree = "<group>"; };
+		24C6AC6F1A27A7C500EC34E7 /* RNKPicturePushAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPicturePushAnimationController.m; path = viewControllers/picturesCollection/RNKPicturePushAnimationController.m; sourceTree = "<group>"; };
+		24C6AC711A27AEB800EC34E7 /* RNKPicturePopAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNKPicturePopAnimationController.h; path = viewControllers/picturesCollection/RNKPicturePopAnimationController.h; sourceTree = "<group>"; };
+		24C6AC721A27AEB800EC34E7 /* RNKPicturePopAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNKPicturePopAnimationController.m; path = viewControllers/picturesCollection/RNKPicturePopAnimationController.m; sourceTree = "<group>"; };
+		710A5B326687B3F2B995A265 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C743BCA6C68B086119E1A55E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C82967A4761557C418525DD6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24A6E40C1A2606D100CF2AE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A6E4781A277B9D00CF2AE4 /* MapKit.framework in Frameworks */,
+				68B273563666AE4038469B4B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A6E4281A2606D100CF2AE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B4A681340A6C7510AD2D450 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24A6E4061A2606D100CF2AE4 = {
+			isa = PBXGroup;
+			children = (
+				24A6E4111A2606D100CF2AE4 /* RankTest */,
+				24A6E42E1A2606D100CF2AE4 /* RankTestTests */,
+				24A6E4101A2606D100CF2AE4 /* Products */,
+				EA3EB1310D5C1B23E8BAD5E3 /* Pods */,
+				3A5AA2A74E0EF51A5D83118A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		24A6E4101A2606D100CF2AE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E40F1A2606D100CF2AE4 /* RankTest.app */,
+				24A6E42B1A2606D100CF2AE4 /* RankTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24A6E4111A2606D100CF2AE4 /* RankTest */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E43E1A2607CB00CF2AE4 /* RNKConstants.h */,
+				24A6E4161A2606D100CF2AE4 /* AppDelegate.h */,
+				24A6E4171A2606D100CF2AE4 /* AppDelegate.m */,
+				24A6E43D1A26073400CF2AE4 /* View controllers */,
+				24A6E43B1A2606EA00CF2AE4 /* Model Engine */,
+				24A6E4221A2606D100CF2AE4 /* Images.xcassets */,
+				24A6E4241A2606D100CF2AE4 /* LaunchScreen.xib */,
+				24A6E4121A2606D100CF2AE4 /* Supporting Files */,
+			);
+			path = RankTest;
+			sourceTree = "<group>";
+		};
+		24A6E4121A2606D100CF2AE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4131A2606D100CF2AE4 /* Info.plist */,
+				24A6E4141A2606D100CF2AE4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24A6E42E1A2606D100CF2AE4 /* RankTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4511A26572B00CF2AE4 /* TGRAsyncTestHelper.h */,
+				24A6E4311A2606D100CF2AE4 /* RankTestTests.m */,
+				24A6E44F1A26568B00CF2AE4 /* RNKPhotosAPITest.m */,
+				24A6E42F1A2606D100CF2AE4 /* Supporting Files */,
+				24A6E4641A26787100CF2AE4 /* RNKPhotosEngineTest.m */,
+			);
+			path = RankTestTests;
+			sourceTree = "<group>";
+		};
+		24A6E42F1A2606D100CF2AE4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4301A2606D100CF2AE4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24A6E43B1A2606EA00CF2AE4 /* Model Engine */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E45B1A266CAA00CF2AE4 /* RNKDataBaseEngine.h */,
+				24A6E45C1A266CAA00CF2AE4 /* RNKDataBaseEngine.m */,
+				24A6E4581A26681700CF2AE4 /* RNKPhotosEngine.h */,
+				24A6E4591A26681700CF2AE4 /* RNKPhotosEngine.m */,
+				24A6E46E1A27316D00CF2AE4 /* RNKPhotoParser.h */,
+				24A6E46F1A27316D00CF2AE4 /* RNKPhotoParser.m */,
+				24A6E44B1A26517D00CF2AE4 /* API */,
+				24A6E43C1A26072500CF2AE4 /* Model */,
+			);
+			name = "Model Engine";
+			sourceTree = "<group>";
+		};
+		24A6E43C1A26072500CF2AE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4611A266EC500CF2AE4 /* Photo.h */,
+				24A6E4621A266EC500CF2AE4 /* Photo.m */,
+				24A6E45E1A266EC500CF2AE4 /* User.h */,
+				24A6E45F1A266EC500CF2AE4 /* User.m */,
+				24A6E4191A2606D100CF2AE4 /* RankTest.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		24A6E43D1A26073400CF2AE4 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E43F1A2609F400CF2AE4 /* RNKRootVC.h */,
+				24A6E4401A2609F400CF2AE4 /* RNKRootVC.m */,
+				24A6E4481A260DE800CF2AE4 /* RNKNavigationControllerDelegate.h */,
+				24A6E4491A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m */,
+				24A6E4421A260AEC00CF2AE4 /* Pictures Collection */,
+				24A6E4711A2744D300CF2AE4 /* Picture detail */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		24A6E4421A260AEC00CF2AE4 /* Pictures Collection */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4431A260B4600CF2AE4 /* RNKPicturesCollectionVC.h */,
+				24A6E4441A260B4600CF2AE4 /* RNKPicturesCollectionVC.m */,
+				24A6E4451A260B4600CF2AE4 /* RNKPicturesCollectionVC.xib */,
+				24A6E46B1A26814300CF2AE4 /* CoreDataCollectionVC.h */,
+				24A6E46C1A26819400CF2AE4 /* CoreDataCollectionVC.m */,
+				24A6E4661A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.h */,
+				24A6E4671A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m */,
+				24A6E4681A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib */,
+				24C6AC6B1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.h */,
+				24C6AC6C1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m */,
+				24C6AC6E1A27A7C500EC34E7 /* RNKPicturePushAnimationController.h */,
+				24C6AC6F1A27A7C500EC34E7 /* RNKPicturePushAnimationController.m */,
+				24C6AC711A27AEB800EC34E7 /* RNKPicturePopAnimationController.h */,
+				24C6AC721A27AEB800EC34E7 /* RNKPicturePopAnimationController.m */,
+			);
+			name = "Pictures Collection";
+			sourceTree = "<group>";
+		};
+		24A6E44B1A26517D00CF2AE4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E44C1A2652CA00CF2AE4 /* RNKPhotosAPI.h */,
+				24A6E44D1A2652CA00CF2AE4 /* RNKPhotosAPI.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		24A6E4711A2744D300CF2AE4 /* Picture detail */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4721A27454700CF2AE4 /* RNKPictureDetailVC.h */,
+				24A6E4731A27454700CF2AE4 /* RNKPictureDetailVC.m */,
+				24A6E4741A27454700CF2AE4 /* RNKPictureDetailVC.xib */,
+			);
+			name = "Picture detail";
+			sourceTree = "<group>";
+		};
+		3A5AA2A74E0EF51A5D83118A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24A6E4771A277B9D00CF2AE4 /* MapKit.framework */,
+				C743BCA6C68B086119E1A55E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA3EB1310D5C1B23E8BAD5E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C82967A4761557C418525DD6 /* Pods.debug.xcconfig */,
+				710A5B326687B3F2B995A265 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24A6E40E1A2606D100CF2AE4 /* RankTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A6E4351A2606D100CF2AE4 /* Build configuration list for PBXNativeTarget "RankTest" */;
+			buildPhases = (
+				D6E29541574B639469B14B5A /* Check Pods Manifest.lock */,
+				24A6E40B1A2606D100CF2AE4 /* Sources */,
+				24A6E40C1A2606D100CF2AE4 /* Frameworks */,
+				24A6E40D1A2606D100CF2AE4 /* Resources */,
+				F7AEE5F0839BBC3516A9A475 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RankTest;
+			productName = RankTest;
+			productReference = 24A6E40F1A2606D100CF2AE4 /* RankTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24A6E42A1A2606D100CF2AE4 /* RankTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A6E4381A2606D100CF2AE4 /* Build configuration list for PBXNativeTarget "RankTestTests" */;
+			buildPhases = (
+				E19A9A099BF410618567C877 /* Check Pods Manifest.lock */,
+				24A6E4271A2606D100CF2AE4 /* Sources */,
+				24A6E4281A2606D100CF2AE4 /* Frameworks */,
+				24A6E4291A2606D100CF2AE4 /* Resources */,
+				55365945D57FB68E4E3789D5 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24A6E42D1A2606D100CF2AE4 /* PBXTargetDependency */,
+			);
+			name = RankTestTests;
+			productName = RankTestTests;
+			productReference = 24A6E42B1A2606D100CF2AE4 /* RankTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24A6E4071A2606D100CF2AE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = www.rafaelbartolome.es;
+				TargetAttributes = {
+					24A6E40E1A2606D100CF2AE4 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					24A6E42A1A2606D100CF2AE4 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 24A6E40E1A2606D100CF2AE4;
+					};
+				};
+			};
+			buildConfigurationList = 24A6E40A1A2606D100CF2AE4 /* Build configuration list for PBXProject "RankTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24A6E4061A2606D100CF2AE4;
+			productRefGroup = 24A6E4101A2606D100CF2AE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24A6E40E1A2606D100CF2AE4 /* RankTest */,
+				24A6E42A1A2606D100CF2AE4 /* RankTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24A6E40D1A2606D100CF2AE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A6E4261A2606D100CF2AE4 /* LaunchScreen.xib in Resources */,
+				24A6E4761A27454700CF2AE4 /* RNKPictureDetailVC.xib in Resources */,
+				24A6E4471A260B4600CF2AE4 /* RNKPicturesCollectionVC.xib in Resources */,
+				24A6E46A1A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.xib in Resources */,
+				24A6E4231A2606D100CF2AE4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A6E4291A2606D100CF2AE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55365945D57FB68E4E3789D5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E29541574B639469B14B5A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E19A9A099BF410618567C877 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7AEE5F0839BBC3516A9A475 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24A6E40B1A2606D100CF2AE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A6E4601A266EC500CF2AE4 /* User.m in Sources */,
+				24C6AC731A27AEB800EC34E7 /* RNKPicturePopAnimationController.m in Sources */,
+				24C6AC701A27A7C500EC34E7 /* RNKPicturePushAnimationController.m in Sources */,
+				24A6E4181A2606D100CF2AE4 /* AppDelegate.m in Sources */,
+				24A6E41B1A2606D100CF2AE4 /* RankTest.xcdatamodeld in Sources */,
+				24A6E4691A267F2A00CF2AE4 /* RNKPictureCollectionViewCell.m in Sources */,
+				24A6E45A1A26681700CF2AE4 /* RNKPhotosEngine.m in Sources */,
+				24A6E44A1A260DE800CF2AE4 /* RNKNavigationControllerDelegate.m in Sources */,
+				24A6E45D1A266CAA00CF2AE4 /* RNKDataBaseEngine.m in Sources */,
+				24A6E4411A2609F400CF2AE4 /* RNKRootVC.m in Sources */,
+				24A6E44E1A2652CA00CF2AE4 /* RNKPhotosAPI.m in Sources */,
+				24A6E4751A27454700CF2AE4 /* RNKPictureDetailVC.m in Sources */,
+				24A6E4631A266EC500CF2AE4 /* Photo.m in Sources */,
+				24A6E4461A260B4600CF2AE4 /* RNKPicturesCollectionVC.m in Sources */,
+				24A6E46D1A26819400CF2AE4 /* CoreDataCollectionVC.m in Sources */,
+				24A6E4151A2606D100CF2AE4 /* main.m in Sources */,
+				24C6AC6D1A2798AD00EC34E7 /* RNKPictureCollectionViewCell+drawer.m in Sources */,
+				24A6E4701A27316D00CF2AE4 /* RNKPhotoParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A6E4271A2606D100CF2AE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A6E4321A2606D100CF2AE4 /* RankTestTests.m in Sources */,
+				24A6E4651A26787100CF2AE4 /* RNKPhotosEngineTest.m in Sources */,
+				24A6E4501A26568B00CF2AE4 /* RNKPhotosAPITest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24A6E42D1A2606D100CF2AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24A6E40E1A2606D100CF2AE4 /* RankTest */;
+			targetProxy = 24A6E42C1A2606D100CF2AE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24A6E4241A2606D100CF2AE4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24A6E4251A2606D100CF2AE4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24A6E4331A2606D100CF2AE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		24A6E4341A2606D100CF2AE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24A6E4361A2606D100CF2AE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C82967A4761557C418525DD6 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RankTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		24A6E4371A2606D100CF2AE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 710A5B326687B3F2B995A265 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RankTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		24A6E4391A2606D100CF2AE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C82967A4761557C418525DD6 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RankTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RankTest.app/RankTest";
+			};
+			name = Debug;
+		};
+		24A6E43A1A2606D100CF2AE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 710A5B326687B3F2B995A265 /* Pods.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RankTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RankTest.app/RankTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24A6E40A1A2606D100CF2AE4 /* Build configuration list for PBXProject "RankTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A6E4331A2606D100CF2AE4 /* Debug */,
+				24A6E4341A2606D100CF2AE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24A6E4351A2606D100CF2AE4 /* Build configuration list for PBXNativeTarget "RankTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A6E4361A2606D100CF2AE4 /* Debug */,
+				24A6E4371A2606D100CF2AE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24A6E4381A2606D100CF2AE4 /* Build configuration list for PBXNativeTarget "RankTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A6E4391A2606D100CF2AE4 /* Debug */,
+				24A6E43A1A2606D100CF2AE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		24A6E4191A2606D100CF2AE4 /* RankTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24A6E41A1A2606D100CF2AE4 /* RankTest.xcdatamodel */,
+			);
+			currentVersion = 24A6E41A1A2606D100CF2AE4 /* RankTest.xcdatamodel */;
+			path = RankTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 24A6E4071A2606D100CF2AE4 /* Project object */;
+}
