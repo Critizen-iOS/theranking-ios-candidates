@@ -11,13 +11,10 @@
 #import "RNKNavigationControllerDelegate.h"
 #import "RNKConstants.h"
 
-@interface RNKRootVC () <UINavigationControllerDelegate> {
-
-    RNKNavigationControllerDelegate *navigationControllerDelegate;
-
-}
+@interface RNKRootVC () <UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UINavigationController *rootNavigationController;
+@property (strong, nonatomic) RNKNavigationControllerDelegate *navigationControllerDelegate;
 
 @end
 
@@ -38,6 +35,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(RNKNavigationControllerDelegate *)navigationControllerDelegate {
+
+    if (!_navigationControllerDelegate) {
+        _navigationControllerDelegate = [[RNKNavigationControllerDelegate alloc] init];
+    }
+
+    return _navigationControllerDelegate;
+}
 - (UINavigationController*) rootNavigationController {
 
     if (!_rootNavigationController) {
@@ -46,10 +51,7 @@
         _rootNavigationController = [[UINavigationController alloc] initWithRootViewController: rootNavigationViewController];
         _rootNavigationController.navigationBar.hidden = YES;
 
-        if (!navigationControllerDelegate) {
-            navigationControllerDelegate = [[RNKNavigationControllerDelegate alloc] init];
-        }
-        _rootNavigationController.delegate = navigationControllerDelegate;
+        _rootNavigationController.delegate = self.navigationControllerDelegate;
 
         [self.view addSubview: _rootNavigationController.view];
     }
