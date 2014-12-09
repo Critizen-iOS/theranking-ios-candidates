@@ -67,8 +67,10 @@
 - (void) parseAndSavePicturesBackgroud: (NSArray*) arrayWithPictures completion:(void(^)(BOOL result))completion{
     DLog();
 
-    __block NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
-    temporaryContext.parentContext = [[RNKDataBaseEngine sharedInstance] getManagedObjectContext];
+    __block NSManagedObjectContext *temporaryContext = [[RNKDataBaseEngine sharedInstance] getChildManagedObjectContext];
+
+    //__block NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
+    //temporaryContext.parentContext = [[RNKDataBaseEngine sharedInstance] getManagedObjectContext];
 
     [temporaryContext performBlock:^{
 

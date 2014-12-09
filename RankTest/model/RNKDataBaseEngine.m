@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 www.rafaelbartolome.es. All rights reserved.
 //
 
-
 #import "RNKDataBaseEngine.h"
 #import "RNKConstants.h"
 @import UIKit;
+
+static const NSString *dataFile = @"RankTest.sqlite";
 
 @interface RNKDataBaseEngine (){
 
@@ -89,7 +90,13 @@
     return _managedObjectContext;
 }
 
+- (NSManagedObjectContext*) getChildManagedObjectContext {
 
+    NSManagedObjectContext *childContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
+    childContext.parentContext = [self getManagedObjectContext];
+
+    return childContext;
+}
 
 // Returns the managed object model for the application.
 // If the model doesn't already exist, it is created from the application's model.
@@ -118,7 +125,7 @@
 
     NSManagedObjectModel *managedObjectModel = [self createManagedObjectModel];
 
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"RankTest.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:dataFile];
 
     //DLog(@"Database: %@", [storeURL absoluteString]);
     

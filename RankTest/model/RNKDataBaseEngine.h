@@ -30,6 +30,12 @@
 - (NSManagedObjectContext*) getManagedObjectContext;
 
 /**
+ *  Returns a new Child context with ConcurrencyType: NSPrivateQueueConcurrencyType
+ *  @return NSManagedObjectContext main context
+ */
+- (NSManagedObjectContext*) getChildManagedObjectContext;
+
+/**
  Returns the NSPersistentStoreCoordinator for creating new contexts
  @return NSPersistentStoreCoordinator
  */
