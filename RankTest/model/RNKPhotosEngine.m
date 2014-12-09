@@ -69,9 +69,6 @@
 
     __block NSManagedObjectContext *temporaryContext = [[RNKDataBaseEngine sharedInstance] getChildManagedObjectContext];
 
-    //__block NSManagedObjectContext *temporaryContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
-    //temporaryContext.parentContext = [[RNKDataBaseEngine sharedInstance] getManagedObjectContext];
-
     [temporaryContext performBlock:^{
 
         RNKPhotoParser *photoParser = [[RNKPhotoParser alloc] init];
