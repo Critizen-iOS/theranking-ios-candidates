@@ -10,4 +10,6 @@
 
 @interface PXDescriptionTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+
 @end

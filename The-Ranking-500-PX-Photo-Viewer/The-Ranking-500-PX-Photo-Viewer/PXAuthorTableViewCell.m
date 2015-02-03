@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.pictureImageView.layer.cornerRadius = self.pictureImageView.frame.size.width / 2;
+    self.pictureImageView.clipsToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

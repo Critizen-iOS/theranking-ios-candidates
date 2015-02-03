@@ -116,11 +116,6 @@
     });
 }
 
-- (void)loadPhoto:(PXPhoto *)photo withCompletionBlock:(PXPhotoCompletionBlock)completionBlock
-{
-#warning Falta por implementar
-}
-
 #pragma mark - Helpers methods
 
 - (NSString *)valueIsNotNil:(id)value

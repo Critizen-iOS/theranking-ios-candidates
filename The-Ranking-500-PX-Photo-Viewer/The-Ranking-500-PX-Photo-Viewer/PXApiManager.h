@@ -12,11 +12,9 @@
 @class PXPhoto;
 
 typedef void (^PXSearchPhotosCompletionBlock)(NSString *searchString, NSArray *results, NSError *error);
-typedef void (^PXPhotoCompletionBlock)(UIImage *image, NSError *error);
 
 @interface PXApiManager : NSObject
 
 - (void)searchPhotos:(NSString *)searchString inPage:(NSNumber *)page withCompletionBlock:(PXSearchPhotosCompletionBlock)completionBlock;
-- (void)loadPhoto:(PXPhoto *)photo withCompletionBlock:(PXPhotoCompletionBlock)completionBlock;
 
 @end

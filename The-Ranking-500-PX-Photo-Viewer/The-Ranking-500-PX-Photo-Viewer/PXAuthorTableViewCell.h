@@ -10,4 +10,7 @@
 
 @interface PXAuthorTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
+@property (weak, nonatomic) IBOutlet UILabel *fullnameLabel;
+
 @end
