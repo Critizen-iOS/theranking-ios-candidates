@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7DCC7AD91A7FD0B500066AEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7AD81A7FD0B500066AEE /* main.m */; };
+		7DCC7ADC1A7FD0B500066AEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7ADB1A7FD0B500066AEE /* AppDelegate.m */; };
+		7DCC7ADF1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7ADD1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodeld */; };
+		7DCC7AE71A7FD0B500066AEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC7AE61A7FD0B500066AEE /* Images.xcassets */; };
+		7DCC7AF61A7FD0B500066AEE /* The_Ranking_500_PX_Photo_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7AF51A7FD0B500066AEE /* The_Ranking_500_PX_Photo_ViewerTests.m */; };
+		7DCC7B081A7FD1FF00066AEE /* PXPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7B061A7FD1FF00066AEE /* PXPhotoViewController.m */; };
+		7DCC7B091A7FD1FF00066AEE /* PXPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DCC7B071A7FD1FF00066AEE /* PXPhotoViewController.xib */; };
+		7DCC7B0C1A7FE53300066AEE /* PXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7B0B1A7FE53300066AEE /* PXApiManager.m */; };
+		7DCC7B0F1A7FE6BB00066AEE /* PXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7B0E1A7FE6BB00066AEE /* PXPhoto.m */; };
+		7DCC7B121A7FE87400066AEE /* PXImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7B111A7FE87400066AEE /* PXImage.m */; };
+		7DCC7B151A7FE8EA00066AEE /* PXAuthor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC7B141A7FE8EA00066AEE /* PXAuthor.m */; };
+		7DEF8A441A805E810003238A /* PXPhotoDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF8A421A805E810003238A /* PXPhotoDetailTableViewController.m */; };
+		7DEF8A451A805E810003238A /* PXPhotoDetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF8A431A805E810003238A /* PXPhotoDetailTableViewController.xib */; };
+		7DEF8A4E1A80701E0003238A /* PXNameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF8A4C1A80701E0003238A /* PXNameTableViewCell.m */; };
+		7DEF8A4F1A80701E0003238A /* PXNameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF8A4D1A80701E0003238A /* PXNameTableViewCell.xib */; };
+		7DEF8A531A8070410003238A /* PXDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF8A511A8070410003238A /* PXDescriptionTableViewCell.m */; };
+		7DEF8A541A8070410003238A /* PXDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF8A521A8070410003238A /* PXDescriptionTableViewCell.xib */; };
+		7DEF8A581A8070E80003238A /* PXAuthorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF8A561A8070E80003238A /* PXAuthorTableViewCell.m */; };
+		7DEF8A591A8070E80003238A /* PXAuthorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF8A571A8070E80003238A /* PXAuthorTableViewCell.xib */; };
+		7DEF8A5D1A80742E0003238A /* PXCameraTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF8A5B1A80742E0003238A /* PXCameraTableViewCell.m */; };
+		7DEF8A5E1A80742E0003238A /* PXCameraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF8A5C1A80742E0003238A /* PXCameraTableViewCell.xib */; };
+		7DEF8A621A8074870003238A /* PXMapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF8A601A8074870003238A /* PXMapTableViewCell.m */; };
+		7DEF8A631A8074870003238A /* PXMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DEF8A611A8074870003238A /* PXMapTableViewCell.xib */; };
+		7DFF78CD1A802A9200571BB5 /* PXDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF78CC1A802A9200571BB5 /* PXDataModel.m */; };
+		7DFF78D61A80384400571BB5 /* PXCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF78D41A80384400571BB5 /* PXCollectionViewCell.m */; };
+		7DFF78D71A80384400571BB5 /* PXCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF78D51A80384400571BB5 /* PXCollectionViewCell.xib */; };
+		EB14C8715FE0B2E03B28F507 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9B9BEA10DA937C3CAABDB4 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DCC7AF01A7FD0B500066AEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DCC7ACB1A7FD0B500066AEE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DCC7AD21A7FD0B500066AEE;
+			remoteInfo = "The-Ranking-500-PX-Photo-Viewer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7DCC7AD31A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The-Ranking-500-PX-Photo-Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCC7AD71A7FD0B500066AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DCC7AD81A7FD0B500066AEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7DCC7ADA1A7FD0B500066AEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7DCC7ADB1A7FD0B500066AEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7DCC7ADE1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = The_Ranking_500_PX_Photo_Viewer.xcdatamodel; sourceTree = "<group>"; };
+		7DCC7AE61A7FD0B500066AEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7DCC7AEF1A7FD0B500066AEE /* The-Ranking-500-PX-Photo-ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The-Ranking-500-PX-Photo-ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCC7AF41A7FD0B500066AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DCC7AF51A7FD0B500066AEE /* The_Ranking_500_PX_Photo_ViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = The_Ranking_500_PX_Photo_ViewerTests.m; sourceTree = "<group>"; };
+		7DCC7B051A7FD1FF00066AEE /* PXPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXPhotoViewController.h; sourceTree = "<group>"; };
+		7DCC7B061A7FD1FF00066AEE /* PXPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPhotoViewController.m; sourceTree = "<group>"; };
+		7DCC7B071A7FD1FF00066AEE /* PXPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXPhotoViewController.xib; sourceTree = "<group>"; };
+		7DCC7B0A1A7FE53300066AEE /* PXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXApiManager.h; sourceTree = "<group>"; };
+		7DCC7B0B1A7FE53300066AEE /* PXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXApiManager.m; sourceTree = "<group>"; };
+		7DCC7B0D1A7FE6BB00066AEE /* PXPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXPhoto.h; sourceTree = "<group>"; };
+		7DCC7B0E1A7FE6BB00066AEE /* PXPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPhoto.m; sourceTree = "<group>"; };
+		7DCC7B101A7FE87400066AEE /* PXImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXImage.h; sourceTree = "<group>"; };
+		7DCC7B111A7FE87400066AEE /* PXImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXImage.m; sourceTree = "<group>"; };
+		7DCC7B131A7FE8EA00066AEE /* PXAuthor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAuthor.h; sourceTree = "<group>"; };
+		7DCC7B141A7FE8EA00066AEE /* PXAuthor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAuthor.m; sourceTree = "<group>"; };
+		7DEF8A411A805E810003238A /* PXPhotoDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXPhotoDetailTableViewController.h; sourceTree = "<group>"; };
+		7DEF8A421A805E810003238A /* PXPhotoDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXPhotoDetailTableViewController.m; sourceTree = "<group>"; };
+		7DEF8A431A805E810003238A /* PXPhotoDetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXPhotoDetailTableViewController.xib; sourceTree = "<group>"; };
+		7DEF8A4B1A80701E0003238A /* PXNameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXNameTableViewCell.h; sourceTree = "<group>"; };
+		7DEF8A4C1A80701E0003238A /* PXNameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXNameTableViewCell.m; sourceTree = "<group>"; };
+		7DEF8A4D1A80701E0003238A /* PXNameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXNameTableViewCell.xib; sourceTree = "<group>"; };
+		7DEF8A501A8070410003238A /* PXDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDescriptionTableViewCell.h; sourceTree = "<group>"; };
+		7DEF8A511A8070410003238A /* PXDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		7DEF8A521A8070410003238A /* PXDescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		7DEF8A551A8070E80003238A /* PXAuthorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXAuthorTableViewCell.h; sourceTree = "<group>"; };
+		7DEF8A561A8070E80003238A /* PXAuthorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXAuthorTableViewCell.m; sourceTree = "<group>"; };
+		7DEF8A571A8070E80003238A /* PXAuthorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXAuthorTableViewCell.xib; sourceTree = "<group>"; };
+		7DEF8A5A1A80742E0003238A /* PXCameraTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXCameraTableViewCell.h; sourceTree = "<group>"; };
+		7DEF8A5B1A80742E0003238A /* PXCameraTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXCameraTableViewCell.m; sourceTree = "<group>"; };
+		7DEF8A5C1A80742E0003238A /* PXCameraTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCameraTableViewCell.xib; sourceTree = "<group>"; };
+		7DEF8A5F1A8074870003238A /* PXMapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXMapTableViewCell.h; sourceTree = "<group>"; };
+		7DEF8A601A8074870003238A /* PXMapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXMapTableViewCell.m; sourceTree = "<group>"; };
+		7DEF8A611A8074870003238A /* PXMapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXMapTableViewCell.xib; sourceTree = "<group>"; };
+		7DFF78CB1A802A9200571BB5 /* PXDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXDataModel.h; sourceTree = "<group>"; };
+		7DFF78CC1A802A9200571BB5 /* PXDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXDataModel.m; sourceTree = "<group>"; };
+		7DFF78D31A80384400571BB5 /* PXCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXCollectionViewCell.h; sourceTree = "<group>"; };
+		7DFF78D41A80384400571BB5 /* PXCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXCollectionViewCell.m; sourceTree = "<group>"; };
+		7DFF78D51A80384400571BB5 /* PXCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCollectionViewCell.xib; sourceTree = "<group>"; };
+		B162EF9085EE83F57FE1285C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BBC90748BF14E950C65E32AF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EB9B9BEA10DA937C3CAABDB4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DCC7AD01A7FD0B500066AEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB14C8715FE0B2E03B28F507 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCC7AEC1A7FD0B500066AEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DCC7ACA1A7FD0B500066AEE = {
+			isa = PBXGroup;
+			children = (
+				7DCC7AD51A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer */,
+				7DCC7AF21A7FD0B500066AEE /* The-Ranking-500-PX-Photo-ViewerTests */,
+				7DCC7AD41A7FD0B500066AEE /* Products */,
+				FBF0592AB4C5CE83F2DA1BC9 /* Pods */,
+				BB012C717D90A418D3BF84E9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7DCC7AD41A7FD0B500066AEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC7AD31A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer.app */,
+				7DCC7AEF1A7FD0B500066AEE /* The-Ranking-500-PX-Photo-ViewerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DCC7AD51A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC7ADA1A7FD0B500066AEE /* AppDelegate.h */,
+				7DCC7ADB1A7FD0B500066AEE /* AppDelegate.m */,
+				7DCC7B0A1A7FE53300066AEE /* PXApiManager.h */,
+				7DCC7B0B1A7FE53300066AEE /* PXApiManager.m */,
+				7DEF8A661A808E110003238A /* Model */,
+				7DEF8A671A808E2A0003238A /* Views */,
+				7DEF8A651A808DED0003238A /* Controllers */,
+				7DEF8A641A808D8E0003238A /* Nibs */,
+				7DCC7AE61A7FD0B500066AEE /* Images.xcassets */,
+				7DCC7ADD1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodeld */,
+				7DCC7AD61A7FD0B500066AEE /* Supporting Files */,
+			);
+			path = "The-Ranking-500-PX-Photo-Viewer";
+			sourceTree = "<group>";
+		};
+		7DCC7AD61A7FD0B500066AEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC7AD71A7FD0B500066AEE /* Info.plist */,
+				7DCC7AD81A7FD0B500066AEE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DCC7AF21A7FD0B500066AEE /* The-Ranking-500-PX-Photo-ViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC7AF51A7FD0B500066AEE /* The_Ranking_500_PX_Photo_ViewerTests.m */,
+				7DCC7AF31A7FD0B500066AEE /* Supporting Files */,
+			);
+			path = "The-Ranking-500-PX-Photo-ViewerTests";
+			sourceTree = "<group>";
+		};
+		7DCC7AF31A7FD0B500066AEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC7AF41A7FD0B500066AEE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7DEF8A641A808D8E0003238A /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF78D51A80384400571BB5 /* PXCollectionViewCell.xib */,
+				7DCC7B071A7FD1FF00066AEE /* PXPhotoViewController.xib */,
+				7DEF8A431A805E810003238A /* PXPhotoDetailTableViewController.xib */,
+				7DEF8A4D1A80701E0003238A /* PXNameTableViewCell.xib */,
+				7DEF8A521A8070410003238A /* PXDescriptionTableViewCell.xib */,
+				7DEF8A571A8070E80003238A /* PXAuthorTableViewCell.xib */,
+				7DEF8A5C1A80742E0003238A /* PXCameraTableViewCell.xib */,
+				7DEF8A611A8074870003238A /* PXMapTableViewCell.xib */,
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		7DEF8A651A808DED0003238A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7DCC7B051A7FD1FF00066AEE /* PXPhotoViewController.h */,
+				7DCC7B061A7FD1FF00066AEE /* PXPhotoViewController.m */,
+				7DEF8A411A805E810003238A /* PXPhotoDetailTableViewController.h */,
+				7DEF8A421A805E810003238A /* PXPhotoDetailTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7DEF8A661A808E110003238A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF78CB1A802A9200571BB5 /* PXDataModel.h */,
+				7DFF78CC1A802A9200571BB5 /* PXDataModel.m */,
+				7DCC7B0D1A7FE6BB00066AEE /* PXPhoto.h */,
+				7DCC7B0E1A7FE6BB00066AEE /* PXPhoto.m */,
+				7DCC7B101A7FE87400066AEE /* PXImage.h */,
+				7DCC7B111A7FE87400066AEE /* PXImage.m */,
+				7DCC7B131A7FE8EA00066AEE /* PXAuthor.h */,
+				7DCC7B141A7FE8EA00066AEE /* PXAuthor.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7DEF8A671A808E2A0003238A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF78D31A80384400571BB5 /* PXCollectionViewCell.h */,
+				7DFF78D41A80384400571BB5 /* PXCollectionViewCell.m */,
+				7DEF8A4B1A80701E0003238A /* PXNameTableViewCell.h */,
+				7DEF8A4C1A80701E0003238A /* PXNameTableViewCell.m */,
+				7DEF8A501A8070410003238A /* PXDescriptionTableViewCell.h */,
+				7DEF8A511A8070410003238A /* PXDescriptionTableViewCell.m */,
+				7DEF8A551A8070E80003238A /* PXAuthorTableViewCell.h */,
+				7DEF8A561A8070E80003238A /* PXAuthorTableViewCell.m */,
+				7DEF8A5A1A80742E0003238A /* PXCameraTableViewCell.h */,
+				7DEF8A5B1A80742E0003238A /* PXCameraTableViewCell.m */,
+				7DEF8A5F1A8074870003238A /* PXMapTableViewCell.h */,
+				7DEF8A601A8074870003238A /* PXMapTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BB012C717D90A418D3BF84E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB9B9BEA10DA937C3CAABDB4 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBF0592AB4C5CE83F2DA1BC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B162EF9085EE83F57FE1285C /* Pods.debug.xcconfig */,
+				BBC90748BF14E950C65E32AF /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DCC7AD21A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCC7AF91A7FD0B500066AEE /* Build configuration list for PBXNativeTarget "The-Ranking-500-PX-Photo-Viewer" */;
+			buildPhases = (
+				1554DB383D4AC4DC44733541 /* Check Pods Manifest.lock */,
+				7DCC7ACF1A7FD0B500066AEE /* Sources */,
+				7DCC7AD01A7FD0B500066AEE /* Frameworks */,
+				7DCC7AD11A7FD0B500066AEE /* Resources */,
+				C870911E1C9BC8CC97AD26D3 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The-Ranking-500-PX-Photo-Viewer";
+			productName = "The-Ranking-500-PX-Photo-Viewer";
+			productReference = 7DCC7AD31A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DCC7AEE1A7FD0B500066AEE /* The-Ranking-500-PX-Photo-ViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCC7AFC1A7FD0B500066AEE /* Build configuration list for PBXNativeTarget "The-Ranking-500-PX-Photo-ViewerTests" */;
+			buildPhases = (
+				7DCC7AEB1A7FD0B500066AEE /* Sources */,
+				7DCC7AEC1A7FD0B500066AEE /* Frameworks */,
+				7DCC7AED1A7FD0B500066AEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DCC7AF11A7FD0B500066AEE /* PBXTargetDependency */,
+			);
+			name = "The-Ranking-500-PX-Photo-ViewerTests";
+			productName = "The-Ranking-500-PX-Photo-ViewerTests";
+			productReference = 7DCC7AEF1A7FD0B500066AEE /* The-Ranking-500-PX-Photo-ViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DCC7ACB1A7FD0B500066AEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ernesto Pino";
+				TargetAttributes = {
+					7DCC7AD21A7FD0B500066AEE = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					7DCC7AEE1A7FD0B500066AEE = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 7DCC7AD21A7FD0B500066AEE;
+					};
+				};
+			};
+			buildConfigurationList = 7DCC7ACE1A7FD0B500066AEE /* Build configuration list for PBXProject "The-Ranking-500-PX-Photo-Viewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7DCC7ACA1A7FD0B500066AEE;
+			productRefGroup = 7DCC7AD41A7FD0B500066AEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DCC7AD21A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer */,
+				7DCC7AEE1A7FD0B500066AEE /* The-Ranking-500-PX-Photo-ViewerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DCC7AD11A7FD0B500066AEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DEF8A591A8070E80003238A /* PXAuthorTableViewCell.xib in Resources */,
+				7DEF8A541A8070410003238A /* PXDescriptionTableViewCell.xib in Resources */,
+				7DEF8A4F1A80701E0003238A /* PXNameTableViewCell.xib in Resources */,
+				7DFF78D71A80384400571BB5 /* PXCollectionViewCell.xib in Resources */,
+				7DEF8A631A8074870003238A /* PXMapTableViewCell.xib in Resources */,
+				7DEF8A5E1A80742E0003238A /* PXCameraTableViewCell.xib in Resources */,
+				7DCC7AE71A7FD0B500066AEE /* Images.xcassets in Resources */,
+				7DCC7B091A7FD1FF00066AEE /* PXPhotoViewController.xib in Resources */,
+				7DEF8A451A805E810003238A /* PXPhotoDetailTableViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCC7AED1A7FD0B500066AEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1554DB383D4AC4DC44733541 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C870911E1C9BC8CC97AD26D3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DCC7ACF1A7FD0B500066AEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCC7B151A7FE8EA00066AEE /* PXAuthor.m in Sources */,
+				7DCC7B0F1A7FE6BB00066AEE /* PXPhoto.m in Sources */,
+				7DEF8A5D1A80742E0003238A /* PXCameraTableViewCell.m in Sources */,
+				7DFF78D61A80384400571BB5 /* PXCollectionViewCell.m in Sources */,
+				7DCC7B0C1A7FE53300066AEE /* PXApiManager.m in Sources */,
+				7DEF8A4E1A80701E0003238A /* PXNameTableViewCell.m in Sources */,
+				7DCC7ADC1A7FD0B500066AEE /* AppDelegate.m in Sources */,
+				7DCC7AD91A7FD0B500066AEE /* main.m in Sources */,
+				7DEF8A621A8074870003238A /* PXMapTableViewCell.m in Sources */,
+				7DCC7B121A7FE87400066AEE /* PXImage.m in Sources */,
+				7DFF78CD1A802A9200571BB5 /* PXDataModel.m in Sources */,
+				7DEF8A441A805E810003238A /* PXPhotoDetailTableViewController.m in Sources */,
+				7DEF8A581A8070E80003238A /* PXAuthorTableViewCell.m in Sources */,
+				7DCC7ADF1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodeld in Sources */,
+				7DEF8A531A8070410003238A /* PXDescriptionTableViewCell.m in Sources */,
+				7DCC7B081A7FD1FF00066AEE /* PXPhotoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCC7AEB1A7FD0B500066AEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCC7AF61A7FD0B500066AEE /* The_Ranking_500_PX_Photo_ViewerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DCC7AF11A7FD0B500066AEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DCC7AD21A7FD0B500066AEE /* The-Ranking-500-PX-Photo-Viewer */;
+			targetProxy = 7DCC7AF01A7FD0B500066AEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7DCC7AF71A7FD0B500066AEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7DCC7AF81A7FD0B500066AEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7DCC7AFA1A7FD0B500066AEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B162EF9085EE83F57FE1285C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "The-Ranking-500-PX-Photo-Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7DCC7AFB1A7FD0B500066AEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBC90748BF14E950C65E32AF /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "The-Ranking-500-PX-Photo-Viewer/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7DCC7AFD1A7FD0B500066AEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "The-Ranking-500-PX-Photo-ViewerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The-Ranking-500-PX-Photo-Viewer.app/The-Ranking-500-PX-Photo-Viewer";
+			};
+			name = Debug;
+		};
+		7DCC7AFE1A7FD0B500066AEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "The-Ranking-500-PX-Photo-ViewerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/The-Ranking-500-PX-Photo-Viewer.app/The-Ranking-500-PX-Photo-Viewer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DCC7ACE1A7FD0B500066AEE /* Build configuration list for PBXProject "The-Ranking-500-PX-Photo-Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCC7AF71A7FD0B500066AEE /* Debug */,
+				7DCC7AF81A7FD0B500066AEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCC7AF91A7FD0B500066AEE /* Build configuration list for PBXNativeTarget "The-Ranking-500-PX-Photo-Viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCC7AFA1A7FD0B500066AEE /* Debug */,
+				7DCC7AFB1A7FD0B500066AEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCC7AFC1A7FD0B500066AEE /* Build configuration list for PBXNativeTarget "The-Ranking-500-PX-Photo-ViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCC7AFD1A7FD0B500066AEE /* Debug */,
+				7DCC7AFE1A7FD0B500066AEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7DCC7ADD1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7DCC7ADE1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodel */,
+			);
+			currentVersion = 7DCC7ADE1A7FD0B500066AEE /* The_Ranking_500_PX_Photo_Viewer.xcdatamodel */;
+			path = The_Ranking_500_PX_Photo_Viewer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7DCC7ACB1A7FD0B500066AEE /* Project object */;
+}
