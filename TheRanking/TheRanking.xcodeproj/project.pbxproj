@@ -23,6 +23,9 @@
 		77F2556B1A8628DF00FF153C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2556A1A8628DF00FF153C /* User.m */; };
 		77F2556E1A8628E000FF153C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2556D1A8628E000FF153C /* Photo.m */; };
 		77F255711A8629D900FF153C /* TRParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255701A8629D900FF153C /* TRParseJSON.m */; };
+		77F2557C1A86400C00FF153C /* TRPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2557A1A86400C00FF153C /* TRPhotoCollectionViewCell.m */; };
+		77F2557D1A86400C00FF153C /* TRPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F2557B1A86400C00FF153C /* TRPhotoCollectionViewCell.xib */; };
+		77F255801A86401400FF153C /* TRAPIDownloadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2557F1A86401400FF153C /* TRAPIDownloadImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,11 @@
 		77F2556D1A8628E000FF153C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		77F2556F1A8629D900FF153C /* TRParseJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRParseJSON.h; sourceTree = "<group>"; };
 		77F255701A8629D900FF153C /* TRParseJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRParseJSON.m; sourceTree = "<group>"; };
+		77F255791A86400C00FF153C /* TRPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		77F2557A1A86400C00FF153C /* TRPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		77F2557B1A86400C00FF153C /* TRPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		77F2557E1A86401400FF153C /* TRAPIDownloadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAPIDownloadImage.h; sourceTree = "<group>"; };
+		77F2557F1A86401400FF153C /* TRAPIDownloadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAPIDownloadImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 		77F255221A861FF700FF153C /* TheRanking */ = {
 			isa = PBXGroup;
 			children = (
+				77F255731A863FBF00FF153C /* View */,
 				77F255571A86228E00FF153C /* Helper */,
 				77F2554E1A86205300FF153C /* Controller */,
 				77F2554D1A86204200FF153C /* Application */,
@@ -178,6 +187,8 @@
 		77F255571A86228E00FF153C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				77F2557E1A86401400FF153C /* TRAPIDownloadImage.h */,
+				77F2557F1A86401400FF153C /* TRAPIDownloadImage.m */,
 				77F2555B1A8623A400FF153C /* NSString+URLEncoding */,
 				77F2555E1A8623A400FF153C /* OAuth */,
 				77F255581A86229F00FF153C /* TR500PX.h */,
@@ -208,6 +219,16 @@
 				77F255641A8623A400FF153C /* OAuth.m */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		77F255731A863FBF00FF153C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77F255791A86400C00FF153C /* TRPhotoCollectionViewCell.h */,
+				77F2557A1A86400C00FF153C /* TRPhotoCollectionViewCell.m */,
+				77F2557B1A86400C00FF153C /* TRPhotoCollectionViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77F255371A861FF700FF153C /* LaunchScreen.xib in Resources */,
+				77F2557D1A86400C00FF153C /* TRPhotoCollectionViewCell.xib in Resources */,
 				77F255341A861FF700FF153C /* Images.xcassets in Resources */,
 				77F255561A86213700FF153C /* TRMasterViewController.xib in Resources */,
 			);
@@ -318,10 +340,12 @@
 				77F255661A8623A400FF153C /* NSData+Base64.m in Sources */,
 				77F255291A861FF700FF153C /* AppDelegate.m in Sources */,
 				77F255261A861FF700FF153C /* main.m in Sources */,
+				77F255801A86401400FF153C /* TRAPIDownloadImage.m in Sources */,
 				77F255681A8623A400FF153C /* OAuth.m in Sources */,
 				77F2556E1A8628E000FF153C /* Photo.m in Sources */,
 				77F2552C1A861FF700FF153C /* TheRanking.xcdatamodeld in Sources */,
 				77F255671A8623A400FF153C /* OAuth+Additions.m in Sources */,
+				77F2557C1A86400C00FF153C /* TRPhotoCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
