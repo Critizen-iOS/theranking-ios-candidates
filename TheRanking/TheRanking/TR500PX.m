@@ -10,7 +10,7 @@
 #import "OAuth.h"
 #import "OAuth+Additions.h"
 #import "NSString+URLEncoding.h"
-
+#import "TRParseJSON.h"
 
 
 @interface TR500PX ()
@@ -109,6 +109,7 @@
          if (data.length > 0 && connectionError == nil)
          {
              NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+             parseJSONData(data);
              if (completionBlock)
                  completionBlock();
              

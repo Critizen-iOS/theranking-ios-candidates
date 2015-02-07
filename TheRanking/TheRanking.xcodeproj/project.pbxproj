@@ -22,6 +22,7 @@
 		77F255681A8623A400FF153C /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255641A8623A400FF153C /* OAuth.m */; };
 		77F2556B1A8628DF00FF153C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2556A1A8628DF00FF153C /* User.m */; };
 		77F2556E1A8628E000FF153C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2556D1A8628E000FF153C /* Photo.m */; };
+		77F255711A8629D900FF153C /* TRParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255701A8629D900FF153C /* TRParseJSON.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		77F2556A1A8628DF00FF153C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		77F2556C1A8628E000FF153C /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		77F2556D1A8628E000FF153C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		77F2556F1A8629D900FF153C /* TRParseJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRParseJSON.h; sourceTree = "<group>"; };
+		77F255701A8629D900FF153C /* TRParseJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRParseJSON.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 				77F2555E1A8623A400FF153C /* OAuth */,
 				77F255581A86229F00FF153C /* TR500PX.h */,
 				77F255591A86229F00FF153C /* TR500PX.m */,
+				77F2556F1A8629D900FF153C /* TRParseJSON.h */,
+				77F255701A8629D900FF153C /* TRParseJSON.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				77F2556B1A8628DF00FF153C /* User.m in Sources */,
 				77F255651A8623A400FF153C /* NSString+URLEncoding.m in Sources */,
 				77F2555A1A86229F00FF153C /* TR500PX.m in Sources */,
+				77F255711A8629D900FF153C /* TRParseJSON.m in Sources */,
 				77F255551A86213700FF153C /* TRMasterViewController.m in Sources */,
 				77F255661A8623A400FF153C /* NSData+Base64.m in Sources */,
 				77F255291A861FF700FF153C /* AppDelegate.m in Sources */,
