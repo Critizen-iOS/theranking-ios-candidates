@@ -12,6 +12,7 @@
 #import "Photo.h"
 #import "TRAPIDownloadImage.h"
 #import "AppDelegate.h"
+#import "TRDetailViewController.h"
 
 NSString *const myCell					= @"Cell";
 
@@ -44,12 +45,7 @@ NSString *const myCell					= @"Cell";
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
     [flowLayout setItemSize:CGSizeMake(110, 124)];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
-    
-    UIBarButtonItem *button = [[UIBarButtonItem alloc]
-                               initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                               target:self
-                               action:@selector(refreshButtonSend)];
-    self.navigationItem.rightBarButtonItem = button;
+
     [self.navigationItem setTitle:@"TheRanking"];
 }
 
@@ -65,64 +61,18 @@ NSString *const myCell					= @"Cell";
         [defaults setObject:[NSDate date] forKey:@"firstRun"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
-        [self refresh];
+        [[TR500PX sharedInstance] loadDataCompletionBlock:^{
+            [self.fetchedResultsController performFetch:nil];
+            [self.collectionView reloadData];
+        }];
+
     }
     
-}
-
--(void) clearStorage
-{
-    NSFetchRequest * allPhotos = [[NSFetchRequest alloc] init];
-    [allPhotos setEntity:[NSEntityDescription entityForName:@"Photo" inManagedObjectContext:self.managedObjectContext]];
-    [allPhotos setIncludesPropertyValues:NO]; //only fetch the managedObjectID
-    
-    NSError * error = nil;
-    NSArray * photos = [self.managedObjectContext executeFetchRequest:allPhotos error:&error];
-    
-
-    for (NSManagedObject * photo in photos) {
-        [self.managedObjectContext deleteObject:photo];
-    }
-    
-    NSFetchRequest * allUsers = [[NSFetchRequest alloc] init];
-    [allUsers setEntity:[NSEntityDescription entityForName:@"User" inManagedObjectContext:self.managedObjectContext]];
-    [allUsers setIncludesPropertyValues:NO]; //only fetch the managedObjectID
-    
-    NSArray * users = [self.managedObjectContext executeFetchRequest:allPhotos error:&error];
-    
-    for (NSManagedObject * user in users) {
-        [self.managedObjectContext deleteObject:user];
-    }
-
-    
-    
-    NSError *saveError = nil;
-    [self.managedObjectContext save:&saveError];
-}
-
--(void) refreshButtonSend
-{
-    [self clearStorage];
-    [self refresh];
-}
-
--(void) refresh
-{
-    [[TR500PX sharedInstance] loadDataCompletionBlock:^{
-        [self.collectionView reloadData];
-    }];
 }
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
     if (_fetchedResultsController != nil) {
-        NSError *error = nil;
-        if (![_fetchedResultsController performFetch:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
         return _fetchedResultsController;
     }
     
@@ -171,7 +121,6 @@ NSString *const myCell					= @"Cell";
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    NSLog(@"%lu", (unsigned long)[sectionInfo numberOfObjects]);
     return [sectionInfo numberOfObjects];
 }
 
@@ -192,6 +141,14 @@ NSString *const myCell					= @"Cell";
     cell.url = [object valueForKey:@"image_url"];
 }
 
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    TRDetailViewController *detailViewController =[[TRDetailViewController alloc] initWithNibName:nil bundle:nil];
+    detailViewController.detailItem = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
 
 
 @end
