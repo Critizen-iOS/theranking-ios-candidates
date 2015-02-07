@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TRMasterViewController.h
 //  TheRanking
 //
 //  Created by Jesús Emilio Fernández de Frutos on 07/02/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TRMasterViewController : UIViewController
 
 @end
-

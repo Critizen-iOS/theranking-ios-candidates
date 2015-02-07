@@ -10,11 +10,16 @@
 		77F255261A861FF700FF153C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255251A861FF700FF153C /* main.m */; };
 		77F255291A861FF700FF153C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255281A861FF700FF153C /* AppDelegate.m */; };
 		77F2552C1A861FF700FF153C /* TheRanking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77F2552A1A861FF700FF153C /* TheRanking.xcdatamodeld */; };
-		77F2552F1A861FF700FF153C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2552E1A861FF700FF153C /* ViewController.m */; };
-		77F255321A861FF700FF153C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F255301A861FF700FF153C /* Main.storyboard */; };
 		77F255341A861FF700FF153C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F255331A861FF700FF153C /* Images.xcassets */; };
 		77F255371A861FF700FF153C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F255351A861FF700FF153C /* LaunchScreen.xib */; };
 		77F255431A861FF700FF153C /* TheRankingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255421A861FF700FF153C /* TheRankingTests.m */; };
+		77F255551A86213700FF153C /* TRMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255531A86213700FF153C /* TRMasterViewController.m */; };
+		77F255561A86213700FF153C /* TRMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F255541A86213700FF153C /* TRMasterViewController.xib */; };
+		77F2555A1A86229F00FF153C /* TR500PX.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255591A86229F00FF153C /* TR500PX.m */; };
+		77F255651A8623A400FF153C /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2555D1A8623A400FF153C /* NSString+URLEncoding.m */; };
+		77F255661A8623A400FF153C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255601A8623A400FF153C /* NSData+Base64.m */; };
+		77F255671A8623A400FF153C /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255621A8623A400FF153C /* OAuth+Additions.m */; };
+		77F255681A8623A400FF153C /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255641A8623A400FF153C /* OAuth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +39,24 @@
 		77F255271A861FF700FF153C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77F255281A861FF700FF153C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		77F2552B1A861FF700FF153C /* TheRanking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheRanking.xcdatamodel; sourceTree = "<group>"; };
-		77F2552D1A861FF700FF153C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		77F2552E1A861FF700FF153C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		77F255311A861FF700FF153C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77F255331A861FF700FF153C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		77F255361A861FF700FF153C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		77F2553C1A861FF700FF153C /* TheRankingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheRankingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F255411A861FF700FF153C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F255421A861FF700FF153C /* TheRankingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheRankingTests.m; sourceTree = "<group>"; };
+		77F255521A86213700FF153C /* TRMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMasterViewController.h; sourceTree = "<group>"; };
+		77F255531A86213700FF153C /* TRMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMasterViewController.m; sourceTree = "<group>"; };
+		77F255541A86213700FF153C /* TRMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRMasterViewController.xib; sourceTree = "<group>"; };
+		77F255581A86229F00FF153C /* TR500PX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TR500PX.h; sourceTree = "<group>"; };
+		77F255591A86229F00FF153C /* TR500PX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TR500PX.m; sourceTree = "<group>"; };
+		77F2555C1A8623A400FF153C /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		77F2555D1A8623A400FF153C /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		77F2555F1A8623A400FF153C /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		77F255601A8623A400FF153C /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		77F255611A8623A400FF153C /* OAuth+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OAuth+Additions.h"; sourceTree = "<group>"; };
+		77F255621A8623A400FF153C /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
+		77F255631A8623A400FF153C /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth.h; sourceTree = "<group>"; };
+		77F255641A8623A400FF153C /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +98,10 @@
 		77F255221A861FF700FF153C /* TheRanking */ = {
 			isa = PBXGroup;
 			children = (
-				77F255271A861FF700FF153C /* AppDelegate.h */,
-				77F255281A861FF700FF153C /* AppDelegate.m */,
-				77F2552D1A861FF700FF153C /* ViewController.h */,
-				77F2552E1A861FF700FF153C /* ViewController.m */,
-				77F255301A861FF700FF153C /* Main.storyboard */,
+				77F255571A86228E00FF153C /* Helper */,
+				77F2554E1A86205300FF153C /* Controller */,
+				77F2554D1A86204200FF153C /* Application */,
+				77F2554C1A86203A00FF153C /* Model */,
 				77F255331A861FF700FF153C /* Images.xcassets */,
 				77F255351A861FF700FF153C /* LaunchScreen.xib */,
 				77F2552A1A861FF700FF153C /* TheRanking.xcdatamodeld */,
@@ -120,6 +134,65 @@
 				77F255411A861FF700FF153C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77F2554C1A86203A00FF153C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		77F2554D1A86204200FF153C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				77F255271A861FF700FF153C /* AppDelegate.h */,
+				77F255281A861FF700FF153C /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		77F2554E1A86205300FF153C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77F255521A86213700FF153C /* TRMasterViewController.h */,
+				77F255531A86213700FF153C /* TRMasterViewController.m */,
+				77F255541A86213700FF153C /* TRMasterViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		77F255571A86228E00FF153C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				77F2555B1A8623A400FF153C /* NSString+URLEncoding */,
+				77F2555E1A8623A400FF153C /* OAuth */,
+				77F255581A86229F00FF153C /* TR500PX.h */,
+				77F255591A86229F00FF153C /* TR500PX.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		77F2555B1A8623A400FF153C /* NSString+URLEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				77F2555C1A8623A400FF153C /* NSString+URLEncoding.h */,
+				77F2555D1A8623A400FF153C /* NSString+URLEncoding.m */,
+			);
+			path = "NSString+URLEncoding";
+			sourceTree = "<group>";
+		};
+		77F2555E1A8623A400FF153C /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				77F2555F1A8623A400FF153C /* NSData+Base64.h */,
+				77F255601A8623A400FF153C /* NSData+Base64.m */,
+				77F255611A8623A400FF153C /* OAuth+Additions.h */,
+				77F255621A8623A400FF153C /* OAuth+Additions.m */,
+				77F255631A8623A400FF153C /* OAuth.h */,
+				77F255641A8623A400FF153C /* OAuth.m */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77F255321A861FF700FF153C /* Main.storyboard in Resources */,
 				77F255371A861FF700FF153C /* LaunchScreen.xib in Resources */,
 				77F255341A861FF700FF153C /* Images.xcassets in Resources */,
+				77F255561A86213700FF153C /* TRMasterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,10 +295,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F255651A8623A400FF153C /* NSString+URLEncoding.m in Sources */,
+				77F2555A1A86229F00FF153C /* TR500PX.m in Sources */,
+				77F255551A86213700FF153C /* TRMasterViewController.m in Sources */,
+				77F255661A8623A400FF153C /* NSData+Base64.m in Sources */,
 				77F255291A861FF700FF153C /* AppDelegate.m in Sources */,
 				77F255261A861FF700FF153C /* main.m in Sources */,
-				77F2552F1A861FF700FF153C /* ViewController.m in Sources */,
+				77F255681A8623A400FF153C /* OAuth.m in Sources */,
 				77F2552C1A861FF700FF153C /* TheRanking.xcdatamodeld in Sources */,
+				77F255671A8623A400FF153C /* OAuth+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,14 +326,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		77F255301A861FF700FF153C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77F255311A861FF700FF153C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		77F255351A861FF700FF153C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
