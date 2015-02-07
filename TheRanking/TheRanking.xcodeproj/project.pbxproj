@@ -20,6 +20,8 @@
 		77F255661A8623A400FF153C /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255601A8623A400FF153C /* NSData+Base64.m */; };
 		77F255671A8623A400FF153C /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255621A8623A400FF153C /* OAuth+Additions.m */; };
 		77F255681A8623A400FF153C /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F255641A8623A400FF153C /* OAuth.m */; };
+		77F2556B1A8628DF00FF153C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2556A1A8628DF00FF153C /* User.m */; };
+		77F2556E1A8628E000FF153C /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F2556D1A8628E000FF153C /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		77F255621A8623A400FF153C /* OAuth+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OAuth+Additions.m"; sourceTree = "<group>"; };
 		77F255631A8623A400FF153C /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuth.h; sourceTree = "<group>"; };
 		77F255641A8623A400FF153C /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuth.m; sourceTree = "<group>"; };
+		77F255691A8628DF00FF153C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		77F2556A1A8628DF00FF153C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		77F2556C1A8628E000FF153C /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		77F2556D1A8628E000FF153C /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +110,6 @@
 				77F2554C1A86203A00FF153C /* Model */,
 				77F255331A861FF700FF153C /* Images.xcassets */,
 				77F255351A861FF700FF153C /* LaunchScreen.xib */,
-				77F2552A1A861FF700FF153C /* TheRanking.xcdatamodeld */,
 				77F255231A861FF700FF153C /* Supporting Files */,
 			);
 			path = TheRanking;
@@ -139,6 +144,11 @@
 		77F2554C1A86203A00FF153C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77F2552A1A861FF700FF153C /* TheRanking.xcdatamodeld */,
+				77F2556C1A8628E000FF153C /* Photo.h */,
+				77F2556D1A8628E000FF153C /* Photo.m */,
+				77F255691A8628DF00FF153C /* User.h */,
+				77F2556A1A8628DF00FF153C /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -295,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F2556B1A8628DF00FF153C /* User.m in Sources */,
 				77F255651A8623A400FF153C /* NSString+URLEncoding.m in Sources */,
 				77F2555A1A86229F00FF153C /* TR500PX.m in Sources */,
 				77F255551A86213700FF153C /* TRMasterViewController.m in Sources */,
@@ -302,6 +313,7 @@
 				77F255291A861FF700FF153C /* AppDelegate.m in Sources */,
 				77F255261A861FF700FF153C /* main.m in Sources */,
 				77F255681A8623A400FF153C /* OAuth.m in Sources */,
+				77F2556E1A8628E000FF153C /* Photo.m in Sources */,
 				77F2552C1A861FF700FF153C /* TheRanking.xcdatamodeld in Sources */,
 				77F255671A8623A400FF153C /* OAuth+Additions.m in Sources */,
 			);
